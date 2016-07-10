@@ -1,0 +1,182 @@
+! XTerm Resources [ryanku]
+
+xterm*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-*
+XTerm*utf8: 1
+xterm*savelines: 5000
+xterm*loginshell: true
+xterm*vt100*geometry: 80x25  
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*termName: xterm-256color 
+xterm*eightBitInput: false
+XTerm*ScrollBar: false
+xterm*cursorBlink: true
+
+xterm*selectToClipboard: true
+xterm*VT100.Translations: #override \
+              Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+              Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
+
+! special
+*.foreground:   #f0f0f0
+*.background:   #232c33
+*.cursorColor:  #f0f0f0
+
+! black
+! Second black is grey
+*.color0:       #232c33
+*.color8:       #70838c
+
+! red
+*.color1:       #99736e
+*.color9:       #99736e
+
+! green
+*.color2:       #78a090
+*.color10:      #78a090
+
+! yellow
+*.color3:       #bfb7a1
+*.color11:      #bfb7a1
+
+! blue
+*.color4:       #7c9fa6
+*.color12:      #7c9fa6
+
+! magenta
+*.color5:       #BF9C86
+*.color13:      #BF9C86
+
+! cyan
+*.color6:       #99BFBA
+*.color14:      #99BFBA
+
+! white
+*.color7:       #f0f0f0
+*.color15:      #f0f0f0
+
+/*
+*.foreground:   #8ca48c
+*.background:   #1c2426
+*.cursorColor:  #8ca48c
+
+*.color0:       #384749
+*.color1:       #946447
+*.color2:       #77814c
+*.color3:       #986a4a
+*.color4:       #3a5850
+*.color5:       #c4964d
+*.color6:       #5c7969
+*.color7:       #957b5a
+
+*.color8:       #384749
+*.color9:       #946447
+*.color10:      #77814c
+*.color11:      #986a4a
+*.color12:      #3a5850
+*.color13:      #c4964d
+*.color14:      #5c7969
+*.color15:      #957b5a
+*/
+! Base17 'Matrix'
+/*
+#define base00 #001100
+#define base01 #003300
+#define base02 #005500
+#define base03 #007700
+#define base04 #009900
+#define base05 #00bb00
+#define base06 #00dd00
+#define base07 #00ff00
+#define base08 #007700
+#define base09 #009900
+#define base0A #007700
+#define base0B #00bb00
+#define base0C #005500
+#define base0D #bebebe
+#define base0E #00bb00
+#define base0F #005500
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
+
+!extra colors
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06
+*/
+! jungle (custom)
+/*
+#define base01 #774455
+#define base02 #442233
+#define base03 #443355
+#define base04 #223344
+#define base05 #778899
+#define base06 #336677
+#define base07 #bbdddd
+#define base08 #88AA99
+#define base09 #113322
+#define base10 #4c9627
+#define base11 #c6d786
+#define base12 #889977
+#define base13 #888833
+#define base14 #ddcc88
+#define base15 #dd9944
+#define base16 #eeddcc
+#define base17 #443322
+#define base18 #877766
+#define base19 #884422
+#define base20 #cc5533
+
+.*foreground:   base16
+.*background:   base17
+.*cursorColor:  base05
+
+*.color0:       base20
+*.color1:       base15
+*.color2:       base01
+*.color3:       base02
+*.color4:       base03
+*.color5:       base09
+*.color6:       base20
+*.color7:       base11
+
+*.color8:       base14
+*.color9:       base19
+*.color10:      base14
+*.color11:      base07
+*.color12:      base15
+*.color13:      base13
+*.color14:      base10
+*.color15:      base08
+
+! additional colors
+*.color16:      base18
+*.color17:      base05
+*.color18:      base12
+*.color19:      base20
+*.color20:      base20
+*.color21:      base19
+*/
+
