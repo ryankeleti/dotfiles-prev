@@ -1,5 +1,5 @@
 # ~/.bashrc
-#
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -8,7 +8,6 @@ PS1='[\u@\h \W]\$ '
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -16,23 +15,17 @@ PS1='[\u@\h \W]\$ '
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 #HISTCONTROL=ignoreboth
-
 # append to the history file, don't overwrite it
 #shopt -s histappend
-
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 #HISTSIZE=1000
 #HISTFILESIZE=2000
-
 export HISTFILESIZE=20000
 export HISTSIZE=10000
 shopt -s histappend
-# Combine multiline commands into one in history
 shopt -s cmdhist
-# Ignore duplicates, ls without options and builtin commands
 HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:[bf]g:exit"
-
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -99,10 +92,18 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
+# ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias ll="ls -lh"
+alias lo="ls -o"
+alias lh="ls -lh"
+alias laa="ls -la"
+alias sl="ls"
+alias l="ls"
+alias s="ls"
+alias lsam="ls -am"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -140,35 +141,33 @@ export PAGER="/usr/bin/most -s"
 
 #PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;33m\]$(parse_git_branch)\[\033[00m\]\n\$ '
 #PS1='\u@\h:\w\n\$ '
-
 PS1='┌─ \[\e[0;33m\]\u@\h:\[\e[0m\]\[\e[0;34m\]\w\[\e[0m\]\n└─ \$ '
 
-#neofetch --disable distro icons resolution gpu theme wm font colors --color_blocks off --gtk_shorthand on --line_wrap off --memory_display infobar --cpu_display off infobar --colors 5 7 6 3 2 1
+sh bash-startup-script.sh
 
 bind -x '"\C-b": clear && printf "\e[3J"';
 
 # ----- aliases -----
+alias diskspace="du -S | sort -n -r |more"
+# cd aliases
 alias cdd="cd Desktop"
 alias cdp='cd Desktop/pgrm'
-alias diskspace="du -S | sort -n -r |more"
+alias cdo="cd Downloads"
+alias vim74="cd /usr/share/vim/vim74/"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias ll="ls -lh"
-alias lo="ls -o"
-alias lh="ls -lh"
-alias laa="ls -la"
-alias sl="ls"
-alias l="ls"
-alias s="ls"
-alias lsam="ls -am"
+
+# shortcuts
 alias rm="rm -iv"
 alias cp="cp -vi"
 alias mv="mv -vi"
 alias pac="sudo pacman -S"
 alias sf="screenfetch"
 alias his="history"
+alias qq="exit"
+# vim aliases
 alias v="vim"
 alias i="vim"
 alias iv="vim"
@@ -177,26 +176,26 @@ alias vbash="vim ~/.bashrc"
 alias vrc="vim ~/.vimrc"
 alias xres="vim ~/.Xresources"
 alias xdef="vim ~/.Xdefaults"
-alias vim74="cd /usr/share/vim/vim74/"
+alias i3c="vim ~/.config/i3/config"
+
+
 alias val="valgrind"
-alias lf="ls of"
 alias xrdbm="xrdb -merge ~/.Xresources"
 alias dud1="du -d1 -h . ort -h"
 alias p3="python3"
 alias tarz="tar -zxvf"
-alias xfcetheme="xfconf-query -c xsettings -p /Net/ThemeName -s"
-alias pl="dpkg -l"
+#alias xfcetheme="xfconf-query -c xsettings -p /Net/ThemeName -s"
+#alias pl="dpkg -l"
 alias wm="sudo wifi-menu -o wlp1s0"
 alias pi="pipes.sh-master/pipes.sh ./pipes.sh"
-alias cdo="cd Downloads"
 alias pingg="ping -c 3 www.google.com"
 alias 256p="perl ~/256colors2.pl"
 alias cm="cmatrix -b"
-alias i3c="vim ~/.config/i3/config"
+
+# fetch
 alias nf="neofetch"
 alias nfdd="neofetch --disable distro"
 alias mfetch="neofetch --disable distro --block_range 1 8 --bold off --uptime_shorthand on --gtk_shorthand on --colors 4 1 8 8 8 7"
 alias nff="neofetch --disable distro icons resolution gpu --gtk_shorthand on --block_range 1 6 --block_width 3 --line_wrap off --memory_display infobar --cpu_display off infobar --image ~/Pictures/6799467.png --crop_mode normal --colors 5 7 6 3 2 1"
-alias qq="exit"
 alias folders="find . -maxdepth 1 -type d -print | xargs du -sk | sort -rn"
 
