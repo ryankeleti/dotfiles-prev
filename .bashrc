@@ -148,7 +148,7 @@ sh bash-startup-script.sh
 bind -x '"\C-b": clear && printf "\e[3J"';
 
 # ----- aliases -----
-alias diskspace="du -S | sort -n -r |more"
+
 # cd aliases
 alias cdd="cd Desktop"
 alias cdp='cd Desktop/pgrm'
@@ -164,9 +164,17 @@ alias rm="rm -iv"
 alias cp="cp -vi"
 alias mv="mv -vi"
 alias pac="sudo pacman -S"
-alias sf="screenfetch"
 alias his="history"
 alias qq="exit"
+alias p3="python3"
+alias dud1="du -d1 -h . ort -h"
+alias xrdbm="xrdb -merge ~/.Xresources"
+alias val="valgrind"
+alias tarz="tar -zxvf"
+alias folders="find . -maxdepth 1 -type d -print | xargs du -sk | sort -rn"
+alias wm="sudo wifi-menu -o wlp1s0"
+alias diskspace="du -S | sort -n -r |more"
+
 # vim aliases
 alias v="vim"
 alias i="vim"
@@ -178,24 +186,16 @@ alias xres="vim ~/.Xresources"
 alias xdef="vim ~/.Xdefaults"
 alias i3c="vim ~/.config/i3/config"
 
-
-alias val="valgrind"
-alias xrdbm="xrdb -merge ~/.Xresources"
-alias dud1="du -d1 -h . ort -h"
-alias p3="python3"
-alias tarz="tar -zxvf"
-#alias xfcetheme="xfconf-query -c xsettings -p /Net/ThemeName -s"
-#alias pl="dpkg -l"
-alias wm="sudo wifi-menu -o wlp1s0"
+# scripts / other
 alias pi="pipes.sh-master/pipes.sh ./pipes.sh"
 alias pingg="ping -c 3 www.google.com"
 alias 256p="perl ~/256colors2.pl"
 alias cm="cmatrix -b"
 
 # fetch
+alias sf="screenfetch"
 alias nf="neofetch"
 alias nfdd="neofetch --disable distro"
 alias mfetch="neofetch --disable distro --block_range 1 8 --bold off --uptime_shorthand on --gtk_shorthand on --colors 4 1 8 8 8 7"
 alias nff="neofetch --disable distro icons resolution gpu --gtk_shorthand on --block_range 1 6 --block_width 3 --line_wrap off --memory_display infobar --cpu_display off infobar --image ~/Pictures/6799467.png --crop_mode normal --colors 5 7 6 3 2 1"
-alias folders="find . -maxdepth 1 -type d -print | xargs du -sk | sort -rn"
 
