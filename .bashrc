@@ -145,6 +145,8 @@ PS1='┌─ \[\e[0;33m\]\u@\h:\[\e[0m\]\[\e[0;34m\]\w\[\e[0m\]\n└─ \$ '
 
 sh bash-startup-script.sh
 
+source ~/.bash-powerline.sh
+
 bind -x '"\C-b": clear && printf "\e[3J"';
 
 # ----- aliases -----
