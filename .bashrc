@@ -139,6 +139,10 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 export PAGER="/usr/bin/most -s"
 
+export RTY_EDITOR=vim
+export BROWSER=w3m
+export RTY_URLVIEWER=urlview
+
 #PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;33m\]$(parse_git_branch)\[\033[00m\]\n\$ '
 #PS1='\u@\h:\w\n\$ '
 PS1='┌─ \[\e[0;33m\]\u@\h:\[\e[0m\]\[\e[0;34m\]\w\[\e[0m\]\n└─ \$ '
