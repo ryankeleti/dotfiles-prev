@@ -205,3 +205,6 @@ alias nfdd="neofetch --disable distro"
 alias mfetch="neofetch --disable distro --block_range 1 8 --bold off --uptime_shorthand on --gtk_shorthand on --colors 4 1 8 8 8 7"
 alias nff="neofetch --disable distro icons resolution gpu --gtk_shorthand on --block_range 1 6 --block_width 3 --line_wrap off --memory_display infobar --cpu_display off infobar --image ~/Pictures/6799467.png --crop_mode normal --colors 5 7 6 3 2 1"
 
+
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
