@@ -1,34 +1,24 @@
-# ~/.bashrc
-
+# ~/.bashrc: executed by bash(1) for non-login shells.
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-# ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
 #HISTCONTROL=ignoreboth
-# append to the history file, don't overwrite it
 #shopt -s histappend
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-#HISTSIZE=1000
-#HISTFILESIZE=2000
-export HISTFILESIZE=20000
-export HISTSIZE=10000
+export HISTFILESIZE=10000
+export HISTSIZE=5000
 shopt -s histappend
 shopt -s cmdhist
 HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:[bf]g:exit"
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
@@ -48,11 +38,7 @@ case "$TERM" in
     xterm-color) color_prompt=yes;;
 esac
 
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
 #force_color_prompt=yes
-
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
     # We have color support; assume it's compliant with Ecma-48
@@ -84,8 +70,8 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -105,22 +91,13 @@ alias l="ls"
 alias s="ls"
 alias lsam="ls -am"
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
+# sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
@@ -148,13 +125,12 @@ export RTY_URLVIEWER=urlview
 PS1='┌─ \[\e[0;33m\]\u@\h:\[\e[0m\]\[\e[0;34m\]\w\[\e[0m\]\n└─ \$ '
 
 sh bash-startup-script.sh
-
 source ~/.bash-powerline.sh
-
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 bind -x '"\C-b": clear && printf "\e[3J"';
 
 # ----- aliases -----
-
 # cd aliases
 alias cdd="cd Desktop"
 alias cdp='cd Desktop/pgrm'
@@ -169,42 +145,33 @@ alias .....="cd ../../../.."
 alias rm="rm -iv"
 alias cp="cp -vi"
 alias mv="mv -vi"
-alias pac="sudo pacman -S"
-alias his="history"
+#alias pac="sudo pacman -S"
 alias qq="exit"
-alias p3="python3"
 alias dud1="du -d1 -h . ort -h"
-alias xrdbm="xrdb -merge ~/.Xresources"
-alias val="valgrind"
-alias tarz="tar -zxvf"
+#alias xrdbm="xrdb -merge ~/.Xresources"
+#alias val="valgrind"
+#alias tarz="tar -zxvf"
 alias folders="find . -maxdepth 1 -type d -print | xargs du -sk | sort -rn"
-alias wm="sudo wifi-menu -o wlp1s0"
+#alias wm="sudo wifi-menu -o wlp1s0"
 alias diskspace="du -S | sort -n -r |more"
 
 # vim aliases
-alias v="vim"
-alias i="vim"
-alias iv="vim"
+#alias v="vim"
+#alias i="vim"
+#alias iv="vim"
 alias vi="vim"
-alias vbash="vim ~/.bashrc"
-alias vrc="vim ~/.vimrc"
-alias xres="vim ~/.Xresources"
-alias xdef="vim ~/.Xdefaults"
-alias i3c="vim ~/.config/i3/config"
+#alias vbash="vim ~/.bashrc"
+#alias vrc="vim ~/.vimrc"
+#alias xres="vim ~/.Xresources"
+#alias i3c="vim ~/.config/i3/config"
 
 # scripts / other
-alias pi="pipes.sh-master/pipes.sh ./pipes.sh"
-alias pingg="ping -c 3 www.google.com"
+#alias pingg="ping -c 3 www.google.com"
 alias 256p="perl ~/256colors2.pl"
-alias cm="cmatrix -b"
 
 # fetch
 alias sf="screenfetch"
 alias nf="neofetch"
 alias nfdd="neofetch --disable distro"
 alias mfetch="neofetch --disable distro --block_range 1 8 --bold off --uptime_shorthand on --gtk_shorthand on --colors 4 1 8 8 8 7"
-alias nff="neofetch --disable distro icons resolution gpu --gtk_shorthand on --block_range 1 6 --block_width 3 --line_wrap off --memory_display infobar --cpu_display off infobar --image ~/Pictures/6799467.png --crop_mode normal --colors 5 7 6 3 2 1"
 
-
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
