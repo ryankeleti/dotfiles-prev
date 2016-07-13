@@ -82,14 +82,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias ll="ls -lh"
-alias lo="ls -o"
-alias lh="ls -lh"
 alias laa="ls -la"
-alias sl="ls"
-alias l="ls"
-alias s="ls"
-alias lsam="ls -am"
 
 # sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -142,23 +135,16 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # shortcuts
-alias rm="rm -iv"
-alias cp="cp -vi"
-alias mv="mv -vi"
-#alias pac="sudo pacman -S"
 alias qq="exit"
 alias dud1="du -d1 -h . ort -h"
-#alias xrdbm="xrdb -merge ~/.Xresources"
-#alias val="valgrind"
-#alias tarz="tar -zxvf"
 alias folders="find . -maxdepth 1 -type d -print | xargs du -sk | sort -rn"
-#alias wm="sudo wifi-menu -o wlp1s0"
 alias diskspace="du -S | sort -n -r |more"
+#alias wm="sudo wifi-menu -o wlp1s0"
+#alias xrdbm="xrdb -merge ~/.Xresources"
+#alias pac="sudo pacman -S"
 
 # vim aliases
-#alias v="vim"
-#alias i="vim"
-#alias iv="vim"
+alias v="vim"
 alias vi="vim"
 #alias vbash="vim ~/.bashrc"
 #alias vrc="vim ~/.vimrc"
@@ -166,12 +152,8 @@ alias vi="vim"
 #alias i3c="vim ~/.config/i3/config"
 
 # scripts / other
-#alias pingg="ping -c 3 www.google.com"
 alias 256p="perl ~/256colors2.pl"
-
-# fetch
 alias sf="screenfetch"
 alias nf="neofetch"
 alias nfdd="neofetch --disable distro"
-alias mfetch="neofetch --disable distro --block_range 1 8 --bold off --uptime_shorthand on --gtk_shorthand on --colors 4 1 8 8 8 7"
 
