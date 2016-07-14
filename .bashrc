@@ -1,24 +1,21 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# If not running interactively, don't do anything
+# ~/.bashrc
+# executed by bash(1) for non-login shells.
+
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-
-# If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-#HISTCONTROL=ignoreboth
-#shopt -s histappend
 export HISTFILESIZE=10000
 export HISTSIZE=5000
 shopt -s histappend
 shopt -s cmdhist
 HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:[bf]g:exit"
-
 shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
@@ -78,12 +75,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias laa="ls -la"
-
 # sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
@@ -113,7 +104,6 @@ export RTY_EDITOR=vim
 export BROWSER=w3m
 export RTY_URLVIEWER=urlview
 
-#PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;33m\]$(parse_git_branch)\[\033[00m\]\n\$ '
 #PS1='\u@\h:\w\n\$ '
 PS1='┌─ \[\e[0;33m\]\u@\h:\[\e[0m\]\[\e[0;34m\]\w\[\e[0m\]\n└─ \$ '
 
@@ -125,7 +115,6 @@ bind -x '"\C-b": clear && printf "\e[3J"';
 
 # ----- aliases -----
 # cd aliases
-alias cdd="cd Desktop"
 alias cdp='cd Desktop/pgrm'
 alias cdo="cd Downloads"
 alias vim74="cd /usr/share/vim/vim74/"
@@ -133,6 +122,11 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+
+# ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
 # shortcuts
 alias qq="exit"
@@ -156,4 +150,5 @@ alias 256p="perl ~/256colors2.pl"
 alias sf="screenfetch"
 alias nf="neofetch"
 alias nfdd="neofetch --disable distro"
+alias woman="man -w"
 
