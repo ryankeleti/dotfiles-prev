@@ -186,5 +186,6 @@ bindsym $mod+F6 exec xbacklight -dec 5
 bindsym $mod+Escape exec i3lock
 
 exec_always xfce4-power-manager
-exec_always feh --bg-scale /run/media/ryanku/9614fd64-0577-4c97-82bc-a1c06d0d0fb4/Pictures/wallhaven.jpg
+#exec_always feh --bg-scale /run/media/ryanku/9614fd64-0577-4c97-82bc-a1c06d0d0fb4/Pictures/wallhaven.jpg
+exec_always feh --bg-scale ~/Pictures-Local/Polygon_uhd.jpg
 
