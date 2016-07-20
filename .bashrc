@@ -1,7 +1,10 @@
 # ~/.bashrc
 # executed by bash(1) for non-login shells.
 
+# vim: fdm=marker:noai:ts=4:sw=4
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+
+# main bash config {{{
 
 [[ $- != *i* ]] && return
 
@@ -105,15 +108,53 @@ export BROWSER=w3m
 export RTY_URLVIEWER=urlview
 
 #PS1='\u@\h:\w\n\$ '
-PS1='┌─ \[\e[0;33m\]\u@\h:\[\e[0m\]\[\e[0;34m\]\w\[\e[0m\]\n└─ \$ '
+#PS1='┌─ \[\e[0;33m\]\u@\h:\[\e[0m\]\[\e[0;34m\]\w\[\e[0m\]\n└─ >> \$ '
+# }}}
 
-sh bash-startup-script.sh
-source ~/.bash-powerline.sh
+exitstatus () {
+    if [[ $? == 0 ]]; then
+        echo '<>'
+    else
+        echo '><'
+    fi
+}
+
+connection () {
+
+    PING=$'ping -c1 8.8.8.8'
+    RVAL=$?
+    if [[ $RVAL == 0 ]]; then
+        echo -e "\nW:up\v"
+    else
+        echo -e "\nW:down\v"
+    fi
+        
+    }
+
+bashstart () {
+
+    clear && printf "\e[3J"
+    neofetch --stdout kernel uptime shell
+    echo -e '\n'
+    if [[ $PWD == /home/ryanku ]]; then
+        echo -e "\nLogged in as $PWD"
+    else 
+        echo -e "\nnew phone who dis"
+    fi
+    connection
+
+}
+
+
+PS1='\[\e[0;31m\]\u@\h:\w\n\$ \[\e[0m\] $(exitstatus)  '
+
+bashstart
+#source ~/.bash-powerline.sh
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 bind -x '"\C-b": clear && printf "\e[3J"';
 
-# ----- aliases -----
+# ----- aliases ----- {{{
 # cd aliases
 alias cdp='cd Desktop/pgrm'
 alias cdo="cd Downloads"
@@ -151,4 +192,5 @@ alias sf="screenfetch"
 alias nf="neofetch"
 alias nfdd="neofetch --disable distro"
 alias woman="man -w"
+# }}}
 

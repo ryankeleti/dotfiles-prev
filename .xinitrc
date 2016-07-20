@@ -9,15 +9,10 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 
 if [ -f $sysresources ]; then
 
-
-
-
-
-
-
     xrdb -merge $sysresources
 
 fi
+
 
 if [ -f $sysmodmap ]; then
     xmodmap $sysmodmap
@@ -25,15 +20,10 @@ fi
 
 if [ -f "$userresources" ]; then
 
-
-
-
-
-
-
     xrdb -merge "$userresources"
 
 fi
+
 
 if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
@@ -48,12 +38,13 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-twm &
-#xclock -geometry 50x50-1+1 &
-#xterm -geometry 80x50+494+51 &
-#xterm -geometry 80x20+494-0 &
-#exec xterm -geometry 80x66+0+0 -name login
+xrdb -merge ~/.Xresources
+
+setxkbmap -option compose:ralt
+
+feg --bg-scale ~/Pictures-Local/Polygon_uhd.jpg &
+
+exec i3
 
 #exec startlxde
 #exec startxfce4
-exec i3
