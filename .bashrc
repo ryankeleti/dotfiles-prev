@@ -1,11 +1,7 @@
 # ~/.bashrc
 # executed by bash(1) for non-login shells.
 
-# vim: fdm=marker:noai:ts=4:sw=4
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-
 # main bash config {{{
-
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
@@ -13,37 +9,35 @@ PS1='[\u@\h \W]\$ '
 
 [ -z "$PS1" ] && return
 
-export HISTFILESIZE=10000
-export HISTSIZE=5000
 shopt -s histappend
 shopt -s cmdhist
+shopt -s checkwinsize
 HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:[bf]g:exit"
-shopt -s checkwinsize
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+export PAGER="/usr/bin/most -s"
+export RTY_EDITOR=vim
+export BROWSER=w3m
+export RTY_URLVIEWER=urlview
 
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
-#shopt -s globstar
-
-# make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color) color_prompt=yes;;
 esac
 
-#force_color_prompt=yes
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-    # We have color support; assume it's compliant with Ecma-48
-    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-    # a case would tend to support setf rather than setaf.)
     color_prompt=yes
     else
     color_prompt=
@@ -57,7 +51,6 @@ else
     fi
 unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
@@ -66,59 +59,35 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
-
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
 
-# sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-#export PS1="\e[1;32m[\u@\h \W]\$ \e[m "
+# }}}
+# scripts {{{                              
 parse_git_branch () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-export LESS_TERMCAP_mb=$'\E[01;31m'
-export LESS_TERMCAP_md=$'\E[01;31m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;44;33m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;32m'
-
-export PAGER="/usr/bin/most -s"
-
-export RTY_EDITOR=vim
-export BROWSER=w3m
-export RTY_URLVIEWER=urlview
-
-# }}}
-
 exitstatus () {
     if [[ $? == 0 ]]; then
-        echo ' '
+        echo '  '
     else
-        echo '!'
+        echo ' !'
     fi
 }
 
 connection () {
-    RVAL=$'ping -c1 8.8.8.8'
+    ping -c1 8.8.8.8 2>&1 >/dev/null
     RVAL=$?
     if [[ $RVAL == 0 ]]; then
         echo -e "W:up\v"
@@ -129,13 +98,12 @@ connection () {
 
 bashstart () {
     clear && printf "\e[3J"
-    neofetch --stdout kernel uptime shell
+    echo -e $(uname -r)'  |  '$SHELL'  |  '$(connection)
     if [[ $PWD == /home/ryanku ]]; then
-        echo -e "\nLogged in as $PWD"
+        echo -e "\nLogged in to \e[0;32m$PWD\e[0m\n"
     else 
-        echo -e "\nnew phone who dis"
+        echo -e '\[\e[0;31m\]!dir\[\e[0m\] '
     fi
-    connection
 }
 
 vimthemes () {
@@ -146,12 +114,27 @@ vimthemes () {
     echo -e "\v"
     cd
 }
-pc0=$'\e[0;34m'
+# }}}                                      
 
+pce='\[\e[0m\]'      # esc
+pc0='\[\e[0;30m\]'   # black/grey
+pc1='\[\e[0;31m\]'   # red
+pc2='\[\e[0;32m\]'   # green
+pc3='\[\e[0;33m\]'   # yellow
+pc4='\[\e[0;34m\]'   # blue
+pc5='\[\e[0;35m\]'   # pink
+pc6='\[\e[0;36m\]'   # cyan
+pc7='\[\e[0;37m\]'   # white
+
+#PS1="\n\u@\h (\w) \$  "
 #PS1='\u@\h:\w\n\$ '
-#PS1='\[\e[0;31m\]\u@\h:\w\n\$ \[\e[0m\] $(exitstatus)  '
-#PS1='\n[\u] \h (\W)\n\$ $(exitstatus) '
-PS1='$pc0\n[\u] \h (\W)\n\$ $(exitstatus) '
+#export PS1="\e[1;32m[\u@\h \W]\$ \e[m "
+PS1="\[\e[0;32m\]\n\u\[\e[0m\] ";
+PS1+="| \[\e[0;34m\]\h\[\e[0m\] ";
+PS1+="(\[\e[0;33m\]\w\[\e[0m\])";
+PS1+="\n\$$(exitstatus)";
+export PS1;
+
 
 bashstart
 #source ~/.bash-powerline.sh
@@ -199,5 +182,6 @@ alias nf="neofetch"
 alias nfdd="neofetch --disable distro"
 alias woman="man -w"
 alias rm="rm -i"
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 # }}}
 
