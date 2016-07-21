@@ -42,7 +42,7 @@ xrdb -merge ~/.Xresources
 
 setxkbmap -option compose:ralt
 
-feg --bg-scale ~/Pictures-Local/Polygon_uhd.jpg &
+feg --bg-scale ~/Pictures-Local/bamboo.png &
 
 exec i3
 

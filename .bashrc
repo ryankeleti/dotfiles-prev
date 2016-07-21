@@ -54,7 +54,7 @@ if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
+    fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -107,46 +107,51 @@ export RTY_EDITOR=vim
 export BROWSER=w3m
 export RTY_URLVIEWER=urlview
 
-#PS1='\u@\h:\w\n\$ '
-#PS1='┌─ \[\e[0;33m\]\u@\h:\[\e[0m\]\[\e[0;34m\]\w\[\e[0m\]\n└─ >> \$ '
 # }}}
 
 exitstatus () {
     if [[ $? == 0 ]]; then
-        echo '<>'
+        echo ' '
     else
-        echo '><'
+        echo '!'
     fi
 }
 
 connection () {
-
-    PING=$'ping -c1 8.8.8.8'
+    RVAL=$'ping -c1 8.8.8.8'
     RVAL=$?
     if [[ $RVAL == 0 ]]; then
-        echo -e "\nW:up\v"
+        echo -e "W:up\v"
     else
-        echo -e "\nW:down\v"
+        echo -e "W:down\v"
     fi
-        
-    }
+}
 
 bashstart () {
-
     clear && printf "\e[3J"
     neofetch --stdout kernel uptime shell
-    echo -e '\n'
     if [[ $PWD == /home/ryanku ]]; then
         echo -e "\nLogged in as $PWD"
     else 
         echo -e "\nnew phone who dis"
     fi
     connection
-
 }
 
+vimthemes () {
+    cd
+    cd /usr/share/vim/vim74/colors/
+    echo -e "\v"
+    ls *.vim
+    echo -e "\v"
+    cd
+}
+pc0=$'\e[0;34m'
 
-PS1='\[\e[0;31m\]\u@\h:\w\n\$ \[\e[0m\] $(exitstatus)  '
+#PS1='\u@\h:\w\n\$ '
+#PS1='\[\e[0;31m\]\u@\h:\w\n\$ \[\e[0m\] $(exitstatus)  '
+#PS1='\n[\u] \h (\W)\n\$ $(exitstatus) '
+PS1='$pc0\n[\u] \h (\W)\n\$ $(exitstatus) '
 
 bashstart
 #source ~/.bash-powerline.sh
@@ -171,20 +176,21 @@ alias l='ls -CF'
 
 # shortcuts
 alias qq="exit"
+alias :q="exit"
 alias dud1="du -d1 -h . ort -h"
 alias folders="find . -maxdepth 1 -type d -print | xargs du -sk | sort -rn"
 alias diskspace="du -S | sort -n -r |more"
-#alias wm="sudo wifi-menu -o wlp1s0"
-#alias xrdbm="xrdb -merge ~/.Xresources"
-#alias pac="sudo pacman -S"
+alias wm="sudo wifi-menu -o wlp1s0"
+alias xrdbm="xrdb -merge ~/.Xresources"
+alias pac="sudo pacman -S"
 
 # vim aliases
 alias v="vim"
 alias vi="vim"
-#alias vbash="vim ~/.bashrc"
-#alias vrc="vim ~/.vimrc"
-#alias xres="vim ~/.Xresources"
-#alias i3c="vim ~/.config/i3/config"
+alias vbash="vim ~/.bashrc"
+alias vrc="vim ~/.vimrc"
+alias xres="vim ~/.Xresources"
+alias i3c="vim ~/.config/i3/config"
 
 # scripts / other
 alias 256p="perl ~/256colors2.pl"
@@ -192,5 +198,6 @@ alias sf="screenfetch"
 alias nf="neofetch"
 alias nfdd="neofetch --disable distro"
 alias woman="man -w"
+alias rm="rm -i"
 # }}}
 

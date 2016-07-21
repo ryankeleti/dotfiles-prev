@@ -1,55 +1,83 @@
-! XTerm Resources [@ryankeleti]
+!! @ryankeleti ---  ~/.Xresources
 
-xterm*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-*
-XTerm*utf8: 1
-xterm*savelines: 5000
-xterm*loginshell: true
-xterm*vt100*geometry: 80x25  
-xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
-xterm*termName: xterm-256color 
-xterm*eightBitInput: false
-XTerm*ScrollBar: false
-xterm*cursorBlink: true
+xterm*font:	-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-*
+xterm*utf8:	1
+xterm*savelines:	5000
+xterm*loginshell:	true
+xterm*vt100*geometry:	80x25
+xterm*charClass:	33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*termName:	xterm-256color
+xterm*eightBitInput:	false
+xterm*ScrollBar:	false
+xterm*cursorBlink:	true
 
-xterm*selectToClipboard: true
-xterm*VT100.Translations: #override \
-              Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
-              Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
+xterm*selectToClipboard:	true
+xterm*VT100.Translations:	#override \n\
+  Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 
-#define base00 #1f1f1f 
-#define base01 #d6d6d6
-#define base02 #333333
-#define base03 #eebb66
-#define base05 #ffeeaa
-#define base06 #eeffdd
-#define base08 #ddaa55
-#define base09 #99bfba
+! *.foreground:	#d6d6d6
+! *.background:	#1f1f1f
+! *.color1:	#ffeeaa
 
-*.foreground:   base01
-*.background:   base00
-*.cursorColor:  base01
 
-*.color0:       base03
-*.color8:       base03
+!! Solarized theme
 
-*.color1:       base05
-*.color9:       base05
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
 
-*.color2:       base06
-*.color10:      base06
+*.background:            S_base03
+*.foreground:            S_base00
+*.fading:                40
+*.fadeColor:             S_base03
+*.cursorColor:           S_base1
+*.pointerColorBackground:S_base01
+*.pointerColorForeground:S_base1
 
-*.color3:       base08
-*.color11:      base08
+!! black dark/light
+*.color0:                S_base02
+*.color8:                S_base03
 
-*.color4:       base05
-*.color12:      base05
+!! red dark/light
+*.color1:                S_red
+*.color9:                S_orange
 
-*.color5:       base09
-*.color13:      base09
+!! green dark/light
+*.color2:                S_green
+*.color10:               S_base01
 
-*.color6:       base05
-*.color14:      base05
+!! yellow dark/light
+*.color3:                S_yellow
+*.color11:               S_base00
 
-*.color7:       base02
-*.color15:      base02
+!! blue dark/light
+*.color4:                S_blue
+*.color12:               S_base0
+
+!! magenta dark/light
+*.color5:                S_magenta
+*.color13:               S_violet
+
+!! cyan dark/light
+*.color6:                S_cyan
+*.color14:               S_base1
+
+!! white dark/light
+*.color7:                S_base2
+*.color15:               S_base3
+
 
