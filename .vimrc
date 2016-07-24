@@ -1,15 +1,25 @@
-" .vimrc  [ ryanku / @ryankeleti ]
+"   ~/.vimrc  [ @ryankeleti ]
 
+nore ; :
 syntax on
 filetype on                                                 
 filetype plugin indent on
 
-colorscheme railscasts
+autocmd FileType c setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
+autocmd FileType text setlocal wrap
+
+"colorscheme railscasts
+colorscheme gruvbox
+"colorscheme solarized 
 execute pathogen#infect()
-call pathogen#helptags()
+"call pathogen#helptags()
+set background=dark
+"let g:promptline_preset = '$PS1'
+"let g:promptline_theme = 'airline'
+
 
 " set {{{
-
 set number
 set t_Co=256
 set encoding=utf-8
@@ -18,7 +28,6 @@ set nocompatible
 set title
 set ruler
 set cul
-set background=
 set more
 set showcmd
 
@@ -34,7 +43,6 @@ set shiftround
 set laststatus=2
 set foldmarker={{{,}}}
 set foldmethod=marker                                                                 
-set showbreak="--- "
 set cmdheight=2
 set scrolloff=5
 
@@ -53,34 +61,5 @@ set ff=unix
 
 set wildmenu
 set wildchar=<TAB>
-
 " }}}
-
-" Functions? {{{
-"function! ClearText(type, ...)
-"        let sel_save = &selection
-"        let &selection = "inclusive"
-"        let reg_save = @@
-"        if a:0
-"            silent exe "normal! '<" . a:type . "'>r w"
-"        elseif a:type == 'line'
-"            silent exe "normal! '[V']r w"
-"        elseif a:type == 'line'
-"            silent exe "normal! '[V']r w"
-"    elseif a:type == 'block'
-"        silent exe == "normal! `[\<C-V>`]r w"
-"    else
-"        silent exe == "normal! `[v`]r w"
-"    endif
-"    let &selection = sel_save
-"    let @@ = reg_save
-"endfunction
-" }}}
-
-nore ; :
-
-autocmd FileType c setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
-autocmd FileType text setlocal wrap
-
 

@@ -46,5 +46,4 @@ feg --bg-scale ~/Pictures-Local/bamboo.png &
 
 exec i3
 
-#exec startlxde
 #exec startxfce4

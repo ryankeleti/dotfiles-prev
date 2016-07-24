@@ -16,13 +16,78 @@ xterm*VT100.Translations:	#override \n\
   Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
   Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 
-! *.foreground:	#d6d6d6
-! *.background:	#1f1f1f
+Xcursor.theme: human
+Xcursor.size: 16
+
+
+! Gruvbox
+#define G_base03        #282828
+#define G_base02        #1d2021
+#define G_base01        #504945
+#define G_base00        #ebdbb2
+#define G_base0         #bdae93
+#define G_base1         #7c6f64
+#define G_base2         #fbf1c7
+#define G_base3         #d5c4a1
+#define G_yellow        #fabd2f
+#define G_orange        #fe8019
+#define G_red           #fb4934
+#define G_grey          #928374
+#define G_purple        #d3869b
+#define G_blue          #83a598
+#define G_aqua          #8ec07c
+#define G_green         #b8bb26
+
+*.background:            G_base03
+*.foreground:            G_base00
+*.fading:                40
+*.fadeColor:             G_base03
+*.cursorColor:           G_base1
+*.pointerColorBackground:G_base01
+
+*.color0:                G_base02
+*.color8:                G_base03
+*.color1:                G_red
+*.color9:                G_orange
+*.color2:                G_green
+*.color10:               G_base01
+*.color3:                G_yellow
+*.color11:               G_base00
+*.color4:                G_blue
+*.color12:               G_base0
+*.color5:                G_grey
+*.color13:               G_purple
+*.color6:                G_aqua
+*.color14:               G_base1
+*.color7:                G_base2
+*.color15:               G_base3
+
+! rofi
+rofi.lines: 1
+rofi.columns: 1
+rofi.eh: 1
+rofi.location: 0
+rofi.width: 20
+rofi.padding: 15
+rofi.fullscreen: false
+rofi.opacity: 97
+rofi.bw: 1
+rofi.sidebar-mode: false
+rofi.separator-style: none
+rofi.hide-scrollbar: true
+rofi.font: roboto 10
+rofi.terminal: xterm
+rofi.kb-clear-line: Control+b
+rofi.disable-history: true
+rofi.color-enabled: true
+rofi.fuzzy: false
+rofi.color-normal: G_base03, G_base00, G_base03, G_base03, G_yellow  
+rofi.color-urgent: G_base03, G_base00, G_base03, G_base03, G_yellow  
+rofi.color-active: G_base03, G_base00, G_base03, G_base03, G_yellow  
+rofi.color-window: G_base03, G_base1, G_base1
+/*
 ! *.color1:	#ffeeaa
-
-
 !! Solarized theme
-
 #define S_base03        #002b36
 #define S_base02        #073642
 #define S_base01        #586e75
@@ -48,36 +113,21 @@ xterm*VT100.Translations:	#override \n\
 *.pointerColorBackground:S_base01
 *.pointerColorForeground:S_base1
 
-!! black dark/light
 *.color0:                S_base02
 *.color8:                S_base03
-
-!! red dark/light
 *.color1:                S_red
 *.color9:                S_orange
-
-!! green dark/light
 *.color2:                S_green
 *.color10:               S_base01
-
-!! yellow dark/light
 *.color3:                S_yellow
 *.color11:               S_base00
-
-!! blue dark/light
 *.color4:                S_blue
 *.color12:               S_base0
-
-!! magenta dark/light
 *.color5:                S_magenta
 *.color13:               S_violet
-
-!! cyan dark/light
 *.color6:                S_cyan
 *.color14:               S_base1
-
-!! white dark/light
 *.color7:                S_base2
 *.color15:               S_base3
-
+*/
 
