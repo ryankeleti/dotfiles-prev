@@ -19,6 +19,19 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 export PAGER="/usr/bin/most -s"
+alias cdp='cd Desktop/pgrm'
+alias dir='dir --color=auto'
+alias ls='ls --color=auto'
+alias la='ls -AF'
+alias qq="exit"
+alias dud1="du -d1 -h"
+alias diskspace="du -S | sort -n -r |more"
+alias wm="sudo wifi-menu -o wlp1s0"
+alias xrdbm="xrdb -merge ~/.Xresources"
+alias rm="rm -i"
+alias v="vim"
+alias vi="vim"
+alias i3c="vim ~/.config/i3/config"
 # scripts {{{                              
 export PROMPT_COMMAND=lastcmd
 function lastcmd () {
@@ -38,7 +51,7 @@ function lastcmd () {
   fi
 }
 function pcolor () {
-  T='   '
+  T=' o '
   echo -e "\n                 40m     41m     42m     43m\
      44m     45m     46m     47m";
   for FGs in '    m' '   1m' '  30m' '1;30m' '  31m' '1;31m' '  32m' \
@@ -68,23 +81,10 @@ connection () {
     fi
 }
 bashstart () {
-    clear && printf "\e[3J"
+    clear && printf "\e[3J";
     echo -e '\e[0;36m'$(uname -r)'\e[0m''  |  ''\e[0;35m'$SHELL'\e[0m''  |  '$PWD'  |  '$(connection)
 }
 # }}}                                      
-alias cdp='cd Desktop/pgrm'
-alias dir='dir --color=auto'
-alias ls='ls --color=auto'
-alias la='ls -AF'
-alias qq="exit"
-alias dud1="du -d1 -h"
-alias diskspace="du -S | sort -n -r |more"
-alias wm="sudo wifi-menu -o wlp1s0"
-alias xrdbm="xrdb -merge ~/.Xresources"
-alias rm="rm -i"
-alias v="vim"
-alias vi="vim"
-alias i3c="vim ~/.config/i3/config"
 
 bashstart
 bind -x '"\C-b": clear && printf "\e[3J"';
