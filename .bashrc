@@ -1,7 +1,5 @@
-# ~/.bashrc 
-# executed by bash(1) for non-login shells.
-[[ $- != *i* ]] && return
-PS1='[\u@\h \W]\$ '
+# ~/.bashrc -- executed by bash(1) for non-login shells.
+[[ $- != *i* ]] && return; PS1='[\u@\h \W]\$ '
 shopt -s histappend;shopt -s cmdhist;shopt -s checkwinsize;shopt -s autocd;
 HISTFILE=1000;HISTFILESIZE=2000;HISTCONTROL="erasedups:ignoreboth";       
 export HISTIGNORE="&:ls:[bf]g:exit:qq:la:history:dir:i3c:wm:xrdbm:cdp";
@@ -14,17 +12,14 @@ alias dir='dir --color=auto';alias ls='ls --color=auto';alias la='ls -AF';
 alias dud1="du -d1 -h";alias diskspace="du -S | sort -n -r |more";
 alias wm="sudo wifi-menu -o wlp1s0";alias xrdbm="xrdb -merge ~/.Xresources";
 alias v="vim";alias vi="vim";alias i3c="vim ~/.config/i3/config";
-bind -x '"\C-b": clear && printf "\e[3J"';
-export PROMPT_COMMAND=lastcmd;
+bind -x '"\C-b": clear && printf "\e[3J"';export PROMPT_COMMAND=lastcmd;
 function lastcmd () { 
 local EXIT="$?"; PS1="";
 local ecol='\[\e[0m\]';local rcol='\[\e[0;31m\]';local gcol='\[\e[0;32m\]';
 local ycol='\[\e[0;33m\]';local bcol='\[\e[0;34m\]';local pcol='\[\e[0;35m\]';
 export PS1="${ecol}${bcol}\n\u${ecol} | ${pcol}\h${ecol} (${ycol}\w${ecol}) [$EXIT]\n";
-if [ $EXIT != 0 ]; then 
-PS1+="${rcol}\$ >${ecol}  ";
-else 
-PS1+="${gcol}\$ >${ecol}  "; 
+if [ $EXIT != 0 ]; then PS1+="${rcol}\$ >${ecol}  ";
+else PS1+="${gcol}\$ >${ecol}  "; 
 fi
 }
 padset () { 

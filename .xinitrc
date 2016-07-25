@@ -31,8 +31,8 @@ setxkbmap -option compose:ralt
 
 feg --bg-scale ~/Pictures-Local/hex4.png &
 
-sxhkd &
+#sxhkd &
 xterm &
-exec bspwm
-#exec i3
+#exec bspwm
+exec i3
 #exec startxfce4
