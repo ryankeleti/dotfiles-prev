@@ -8,6 +8,7 @@ execute pathogen#infect()
 autocmd FileType c setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType text setlocal wrap
+let g:airline_theme='gruvbox'
 
 colorscheme gruvbox "railscasts solarized
 set background=dark
@@ -48,4 +49,5 @@ set fileformats=unix
 set ff=unix
 set wildmenu
 set wildchar=<TAB>
+set noshowmode
 

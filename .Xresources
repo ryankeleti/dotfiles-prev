@@ -1,6 +1,6 @@
 !! @ryankeleti ---  ~/.Xresources
 
-xterm*font:	-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-*
+xterm*font:	-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 xterm*utf8:	1
 xterm*savelines:	5000
 xterm*loginshell:	true
@@ -16,19 +16,16 @@ xterm*VT100.Translations:	#override \n\
   Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
   Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 
-Xcursor.theme: human
-Xcursor.size: 16
-
-
 ! Gruvbox
 #define G_base03        #282828
-#define G_base02        #1d2021
+#define G_base02        #d5c4a1
 #define G_base01        #504945
 #define G_base00        #ebdbb2
 #define G_base0         #bdae93
 #define G_base1         #7c6f64
 #define G_base2         #fbf1c7
 #define G_base3         #d5c4a1
+#define G_base4         #a89984
 #define G_yellow        #fabd2f
 #define G_orange        #fe8019
 #define G_red           #fb4934
@@ -46,7 +43,7 @@ Xcursor.size: 16
 *.pointerColorBackground:G_base01
 
 *.color0:                G_base02
-*.color8:                G_base03
+*.color8:                G_base4
 *.color1:                G_red
 *.color9:                G_orange
 *.color2:                G_green
