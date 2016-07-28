@@ -9,7 +9,7 @@ export LESS_TERMCAP_so=$'\E[01;44;33m';export LESS_TERMCAP_ue=$'\E[0m';
 export LESS_TERMCAP_us=$'\E[01;32m';export PAGER="/usr/bin/most -s";
 alias cdp='cd Desktop/pgrm';alias qq="exit";alias rm="rm -i";
 alias dir='dir --color=auto';alias ls='ls --color=auto';alias la='ls -AF';
-alias dud1="du -d1 -h";alias diskspace="du -S | sort -n -r |more";
+alias dud1="du -d1 -h|sort -hr";alias diskspace="du -S | sort -n -r |more";
 alias wm="sudo wifi-menu -o wlp1s0";alias xrdbm="xrdb -merge ~/.Xresources";
 alias v="vim";alias vi="vim";alias i3c="vim ~/.config/i3/config";
 bind -x '"\C-b": clear && printf "\e[3J"';export PROMPT_COMMAND=lastcmd;
