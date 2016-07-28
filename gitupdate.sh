@@ -1,6 +1,6 @@
 #!/bin/bash
 cd;cd ~/dotfiles
-git add .bashrc .Xresources .vimrc .xinitrc
+git add .bashrc .Xresources .vimrc .xinitrc scripts/
 git commit -m "gitupdate.sh dotfiles"
 git push origin master
 function gitRC () {
