@@ -17,47 +17,30 @@ xterm*VT100.Translations:	#override \n\
   Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 
 ! Gruvbox
-#define G_base03        #282828
-#define G_base02        #d5c4a1
-#define G_base01        #504945
-#define G_base00        #ebdbb2
-#define G_base0         #bdae93
-#define G_base1         #7c6f64
-#define G_base2         #fbf1c7
-#define G_base3         #d5c4a1
-#define G_base4         #a89984
-#define G_yellow        #fabd2f
-#define G_orange        #fe8019
-#define G_red           #fb4934
-#define G_grey          #928374
-#define G_purple        #d3869b
-#define G_blue          #83a598
-#define G_aqua          #8ec07c
-#define G_green         #b8bb26
-
-*.background:            G_base03
-*.foreground:            G_base00
+*.background:            #282828
+*.foreground:            #ebdbb2
 *.fading:                40
-*.fadeColor:             G_base03
-*.cursorColor:           G_base1
-*.pointerColorBackground:G_base01
+*.shading:               50
+*.fadeColor:             #282828
+*.cursorColor:           #7c6f64
+*.pointerColorBackground:#504945
 
-*.color0:                G_base02
-*.color8:                G_base4
-*.color1:                G_red
-*.color9:                G_orange
-*.color2:                G_green
-*.color10:               G_green
-*.color3:                G_yellow
-*.color11:               G_base00
-*.color4:                G_blue
-*.color12:               G_base0
-*.color5:                G_grey
-*.color13:               G_purple
-*.color6:                G_aqua
-*.color14:               G_base1
-*.color7:                G_base2
-*.color15:               G_base3
+*.color0:                #d5c4a1
+*.color8:                #a89984
+*.color1:                #fb4934
+*.color9:                #fe8019
+*.color2:                #98971a
+*.color10:               #b8bb26
+*.color3:                #fabd2f
+*.color11:               #ebdbb2
+*.color4:                #83a598
+*.color12:               #bdae93
+*.color5:                #928374
+*.color13:               #d3869b
+*.color6:                #8ec07c
+*.color14:               #7c6f64
+*.color7:                #fbf1c7
+*.color15:               #d5c4a1
 
 ! rofi
 rofi.lines: 1
@@ -78,10 +61,10 @@ rofi.kb-clear-line: Control+b
 rofi.disable-history: true
 rofi.color-enabled: true
 rofi.fuzzy: false
-rofi.color-normal: G_base03, G_base00, G_base03, G_base03, G_yellow  
-rofi.color-urgent: G_base03, G_base00, G_base03, G_base03, G_yellow  
-rofi.color-active: G_base03, G_base00, G_base03, G_base03, G_yellow  
-rofi.color-window: G_base03, G_base1, G_base1
+rofi.color-normal: #282828, #ebdbb2, #282828, #282828, #fabd2f  
+rofi.color-urgent: #282828, #ebdbb2, #282828, #282828, #fabd2f  
+rofi.color-active: #282828, #ebdbb2, #282828, #282828, #fabd2f  
+rofi.color-window: #282828, #7c6f64, #7c6f64
 /*
 ! *.color1:	#ffeeaa
 !! Solarized theme
