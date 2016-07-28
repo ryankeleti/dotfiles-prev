@@ -47,7 +47,7 @@ xterm*VT100.Translations:	#override \n\
 *.color1:                G_red
 *.color9:                G_orange
 *.color2:                G_green
-*.color10:               G_base01
+*.color10:               G_green
 *.color3:                G_yellow
 *.color11:               G_base00
 *.color4:                G_blue

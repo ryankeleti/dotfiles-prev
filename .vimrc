@@ -21,6 +21,7 @@ set title
 set ruler
 set cul
 set more
+set paste
 set showcmd
 set expandtab
 set smarttab
@@ -29,8 +30,10 @@ set softtabstop=2
 set tabstop=2
 set autoindent
 set cindent
+set showmatch
 set shiftround
 set laststatus=2
+set modelines=0
 set foldmarker={{{,}}}
 set foldmethod=marker                                                                 
 set cmdheight=2
