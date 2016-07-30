@@ -22,7 +22,7 @@ set title
 set ruler
 set cul
 set more
-set paste
+"set paste
 set showcmd
 set expandtab
 set smarttab

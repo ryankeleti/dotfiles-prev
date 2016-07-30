@@ -33,7 +33,7 @@ ping -c1 8.8.8.8 2>&1 >/dev/null;if [[ $? == 0 ]]; then echo -e "\e[0;32mW:up\e[
 fi
 }
 bashstart () {
-clear && printf "\e[3J";echo -e '\e[0;36m'$(uname -r)'\e[0m''  |  ''\e[0;35m'$SHELL'\e[0m''  |  '$PWD'  |  '$(connection);
+clear && printf "\e[3J";echo -e '\e[0;36m'$(uname -r)'\e[0m''  |  ''\e[0;35m'$SHELL'\e[0m' #'  |  '$PWD'  |  '$(connection);
 }
 bashstart;
 

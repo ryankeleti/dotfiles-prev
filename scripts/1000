@@ -46,3 +46,19 @@ v peacock
 ./color_squares.sh 
 ./pcolor.sh 
 ./color_codes.sh 
+infocmp 
+home
+man xterm
+v .Xresources 
+cp home-extra/color-scripts/color-scripts/panes dotfiles/scripts/
+cd dotfiles/scripts/
+./panes 
+v panes 
+./panes
+cp panes small-panes
+mv small-panes mini-panes
+v mini-panes 
+./mini-panes 
+cp panes large-panes
+v large-panes 
+./large-panes 
