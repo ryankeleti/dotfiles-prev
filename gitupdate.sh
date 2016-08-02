@@ -9,3 +9,4 @@ if [ $RC != 0 ]; then echo "Error.";
 else echo "Completed.";
 fi
 }
+gitRC
