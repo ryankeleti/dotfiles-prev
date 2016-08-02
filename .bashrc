@@ -1,4 +1,4 @@
-# ~/.bashrc -- executed by bash(1) for non-login shells.
+# ~/.bashrc -- executed by bash(1) for non-login shells -- @ryankeleti
 [[ $- != *i* ]] && return; PS1='[\u@\h \W]\$ ';shopt -s histappend cmdhist checkwinsize autocd
 HISTFILE=1000;HISTFILESIZE=;HISTCONTROL="erasedups:ignoreboth";export HISTIGNORE="&:ls:[bf]g:exit:qq:la:history:dir:i3c:wm:xrdbm:cdp:diskspace:dud1";unset HISTFILE
 export LESS_TERMCAP_mb=$'\E[01;31m';export LESS_TERMCAP_md=$'\E[01;31m';export LESS_TERMCAP_me=$'\E[0m';export LESS_TERMCAP_se=$'\E[0m'

@@ -1,4 +1,4 @@
-"   ~/.vimrc  [ @ryankeleti ]
+"   ~/.vimrc  -- @ryankeleti 
 
 nore ; :
 syntax on
@@ -22,7 +22,6 @@ set title
 set ruler
 set cul
 set more
-"set paste
 set showcmd
 set expandtab
 set smarttab
