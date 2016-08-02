@@ -27,12 +27,12 @@ fi
 xrdb -load ~/.Xresources
 xrdb -merge ~/.Xresources
 
-setxkbmap -option compose:ralt
+setxkbmap -option compose:rctrl
 
-feg --bg-scale ~/Pictures-Local/hex4.png &
+feh --bg-scale ~/Pictures-Local/blaquewood.jpg &
 
-#sxhkd &
 xterm &
+#sxhkd &
 #exec bspwm
 exec i3
 #exec startxfce4

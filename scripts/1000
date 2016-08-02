@@ -62,3 +62,41 @@ v mini-panes
 cp panes large-panes
 v large-panes 
 ./large-panes 
+man string.h
+cd /bin
+v pacman
+sudo pacman -Syu
+sudo pacman -Syu
+pacman -S pv
+man pv
+pacaur -Ss pv
+pacaur -S pv
+pv
+pv -h
+pv -p
+V
+\qq
+v .bashrc
+./gitupdate.sh 
+ranger
+cd pgrm/
+mkdir rj
+cd rj
+thunar
+vim markup.html
+python3 idk.py 
+vim idk.py
+cd game-py/
+v items_core.py 
+..
+python3 pll.py 
+cd
+vim .bashrc
+vim .vimrc
+vim .Xresources 
+cd dotfiles/
+cd scripts/
+./peacock 
+./codes.sh 
+./panes 
+./pcolor.sh 
