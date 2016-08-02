@@ -4,7 +4,7 @@ xterm*font:	-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 xterm*utf8:	1
 xterm*savelines:	5000
 xterm*loginshell:	true
-xterm*vt100*geometry:	80x25
+xterm*vt100.geometry:	80x25
 xterm*charClass:	33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 xterm*termName:	xterm-256color
 xterm*eightBitInput:	false
