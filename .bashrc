@@ -1,7 +1,7 @@
 # ~/.bashrc -- executed by bash(1) for non-login shells.
 [[ $- != *i* ]] && return; PS1='[\u@\h \W]\$ '
 shopt -s histappend;shopt -s cmdhist;shopt -s checkwinsize;shopt -s autocd;
-HISTFILE=1000;HISTFILESIZE=2000;HISTCONTROL="erasedups:ignoreboth";       
+HISTFILE=1000;HISTFILESIZE=;HISTCONTROL="erasedups:ignoreboth";       
 export HISTIGNORE="&:ls:[bf]g:exit:qq:la:history:dir:i3c:wm:xrdbm:cdp:diskspace:dud1";
 export LESS_TERMCAP_mb=$'\E[01;31m';export LESS_TERMCAP_md=$'\E[01;31m';
 export LESS_TERMCAP_me=$'\E[0m';export LESS_TERMCAP_se=$'\E[0m';
@@ -15,8 +15,8 @@ alias v="vim";alias vi="vim";alias i3c="vim ~/.config/i3/config";
 bind -x '"\C-b": clear && printf "\e[3J"';export PROMPT_COMMAND=lastcmd;
 function lastcmd () { 
 local EXIT="$?"; PS1="";
-local ecol='\[\e[0m\]';local rcol='\[\e[0;31m\]';local gcol='\[\e[0;32m\]';
-local ycol='\[\e[0;33m\]';local bcol='\[\e[0;34m\]';local pcol='\[\e[0;35m\]';
+local ecol='\[\e[0m\]';local rcol='\[\e[0;31m\]';local gcol='\[\e[1;32m\]';
+local ycol='\[\e[0;36m\]';local bcol='\[\e[0;34m\]';local pcol='\[\e[0;35m\]';
 #export PS1="${ecol}${bcol}\n\u${ecol} | ${pcol}\h${ecol} (${ycol}\w${ecol}) [$EXIT]\n";
 export PS1="${ycol}\n\w${ecol} \n"
 if [ $EXIT != 0 ]; then PS1+="${rcol}\$ >${ecol}  ";
@@ -37,4 +37,5 @@ bashstart () {
 clear && printf "\e[3J";echo -e '\e[0;36m'$(uname -r)'\e[0m''  |  ''\e[0;35m'$SHELL'\e[0m' #'  |  '$PWD'  |  '$(connection);
 }
 #bashstart;
+unset HISTFILE;
 
