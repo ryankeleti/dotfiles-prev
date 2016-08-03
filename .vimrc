@@ -36,7 +36,7 @@ set laststatus=2
 set modelines=0
 set foldmarker={{{,}}}
 set foldmethod=marker                                                                 
-set cmdheight=2
+"set cmdheight=2
 set scrolloff=5
 set noerrorbells
 set nobackup

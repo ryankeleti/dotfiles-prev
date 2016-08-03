@@ -10,25 +10,20 @@ xterm*termName:	xterm-256color
 xterm*eightBitInput:	false
 xterm*ScrollBar:	false
 xterm*cursorBlink:	true
-xterm*reverse-video: on
 
 xterm*selectToClipboard:	true
 xterm*VT100.Translations:	#override \n\
   Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
   Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 
-*.background:   #000000
-*.foreground:   #ffffff
-*.cursorColor:  #ffffff
-
 ! Gruvbox
-!*.background:            #282828
-!*.foreground:            #ebdbb2
-!*.fading:                40
-!*.shading:               50
-!*.fadeColor:             #282828
-!*.cursorColor:           #7c6f64
-!*.pointerColorBackground:#504945
+*.background:            #282828
+*.foreground:            #ebdbb2
+*.fading:                40
+*.shading:               50
+*.fadeColor:             #282828
+*.cursorColor:           #7c6f64
+*.pointerColorBackground:#504945
 
 *.color0:                #d5c4a1
 *.color8:                #a89984
