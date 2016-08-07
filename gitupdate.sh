@@ -4,12 +4,12 @@ cd;cd ~/dotfiles
 files=".bashrc .vimrc .Xresources .xinitrc"
 sdir="scripts/"
 
-echo -en ":: $files $sdir auto included\n"
+echo -en ":: $sdir $files -> auto included\n"
 echo -en ":: Enter other files: "
 read efiles
 
 git add $files $sdir $efiles
-git commit -m "gitupdate.sh dotfiles"
+git commit -m "gitupdate.sh >> dotfiles"
 git push origin master
 
 function gitRC () {
