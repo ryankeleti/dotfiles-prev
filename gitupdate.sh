@@ -2,7 +2,7 @@
 
 cd;cd ~/dotfiles
 files=".bashrc .vimrc .Xresources .xinitrc"
-sdir="scripts/"
+sdir="scripts/ pgrm/"
 
 echo -en ":: $sdir $files -> auto included\n"
 echo -en ":: Enter other files: "
