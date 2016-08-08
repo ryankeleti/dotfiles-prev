@@ -10,7 +10,7 @@ autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType text setlocal wrap
 let g:airline_theme='gruvbox'
 
-colorscheme gruvbox "railscasts solarized
+"colorscheme gruvbox "railscasts solarized
 set background=dark
 set number
 set relativenumber
