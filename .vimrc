@@ -4,13 +4,12 @@ nore ; :
 syntax on
 filetype on                                                 
 filetype plugin indent on
-execute pathogen#infect()
+"execute pathogen#infect()
 autocmd FileType c setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType text setlocal wrap
-let g:airline_theme='gruvbox'
 
-"colorscheme gruvbox "railscasts solarized
+colorscheme railscasts "gruvbox solarized
 set background=dark
 set number
 set relativenumber

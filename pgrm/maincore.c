@@ -5,7 +5,7 @@
 #include <time.h>
 
 // slowprintf, refresh {{{
-/*void slowprintf(char *str) {
+void slowprintf(char *str) {
   int i = 0;                                                      
   while (str[i] != '\0') {
     putchar(str[i]);
@@ -17,19 +17,8 @@
 
 void refresh(void) {
   system("clear && printf '\033[3J'");
-} */
-// }}}
-
-void prompt() {
-  //int u;
-  char in[80];           
-  
-  fprintf(stdout,"\n[ root@core1 / ]# ");
-  scanf("%s",in);
- // printf("%s",in);
-
-  //Segmentation fault (core dumped)
 }
+// }}}
 // progressbar {{{
 void progressbar(void) {
 #define W 50
@@ -51,7 +40,7 @@ int ch = 0; int x = 0; int lch = 0;
     progress = p*50.0/M;
     ch = (int)progress;
 fprintf(stdout, "\n\033[F");
-    fprintf(stdout, ":: %3d%%",(int)progress*2)
+    fprintf(stdout, ":: %3d%%",(int)progress*2);
     fprintf(stdout, "\033[1C");
     fprintf(stdout, "\033[%dC#",lch);
     for (x = lch; x < ch; x++) {
@@ -66,13 +55,43 @@ fprintf(stdout, "\n\033[F");
 }
 // }}}
 
-int main () {
+void prompt(void) {
+  char in[80];
+  char wd[80] = "/";
 
-//char c;
-char in[80];
-char ins[80];
+  while (1) {
+    fprintf(stdout,"\n[root@core1 /]# ");
+    scanf("%s",in);
+    printf("%s\n",in);
+
+    while (1) {
+      if ((strcmp(in,"ls")==0)&&(strcmp(wd,"/")==0)) {
+        printf("bin  boot  dev  etc  home  lib  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var\n\n");
+        break;                       
+      }      
+      else break;
+    } 
+    void cd(void) {
+      while (1) {
+        if (((strcmp(in,"cd")==0)||(strcmp(in,"cd /")==0))&&(strcmp(wd,"/")==0)) {
+          printf("cd /\n\n");
+          break;                       
+        }      
+        if ((strcmp(in,"cd")==0)&&(strcmp(wd,"/")!=0)) {
+          printf("cd /\n\n");
+          wd[80] = "/";
+          break;                       
+        } 
+        else break;
+      }
+    }
+  }
+  //Segmentation fault (core dumped)
+}
+
+int main () {
 // {{{
-/*
+char c;
 refresh();
 printf(":: ");
 slowprintf("Boot [Y/n] ");
@@ -102,19 +121,19 @@ sleep(1);
   printf(":: ");
   slowprintf("Security framework up\n");
   printf(":: ");
-  slowprintf("Scanning for low memory corruptio
+  slowprintf("Scanning for low memory corruption\n");
 sleep(1);
   progressbar();
   printf(":: ");
-  slowprintf("Initialize system trusted keyring
+  slowprintf("Initialize system trusted keyring\n");
 sleep(1);
   progressbar();
   printf(":: ");
-  slowprintf("ACPI: bus type PCI registered\n")
+  slowprintf("ACPI: bus type PCI registered\n");
   printf(":: ");
   slowprintf("SCSI subsystem initialized\n");
   printf(":: ");
-  slowprintf("Disabling non-boot CPUs ... done\
+  slowprintf("Disabling non-boot CPUs ... done\n");
   printf(":: ");
   slowprintf("CPU1 is up\n");
   printf(":: ");
@@ -137,22 +156,12 @@ sleep(1);
 sleep(1);
   printf(":: ");
   slowprintf("Boot complete\n\n");
-sleep(2);*/
+sleep(2);
   // }}}
+refresh();
 printf("Last login: Thu Oct 16 15:17:01 UTC 2067 on tty1\n");
 prompt();
-strcmp(
 
-  while (1) {
-    if (ins == "ls") {
-      printf("bin\tboot\tdev\tetc\thome\tlib\tmnt\topt\tproc\troot\trun\tsbin\tsrv\tsys\ttmp\tusr\tvar\t\n\n");
-      break;                       
-    }      
-    else return 0;
-  } 
   
-
 }
-
-
 
