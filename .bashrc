@@ -3,7 +3,7 @@
 HISTFILE=1000;HISTFILESIZE=;HISTCONTROL="erasedups:ignoreboth";export HISTIGNORE="&:ls:[bf]g:exit:qq:la:history:dir:i3c:wm:xrdbm:cdp:diskspace:dud1";unset HISTFILE
 export LESS_TERMCAP_mb=$'\E[01;31m';export LESS_TERMCAP_md=$'\E[01;31m';export LESS_TERMCAP_me=$'\E[0m';export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m';export LESS_TERMCAP_ue=$'\E[0m';export LESS_TERMCAP_us=$'\E[01;32m';export PAGER="/usr/bin/most -s"
-alias cdp="cd ~/pgrm";alias cdd="cd ~/dotfiles";alias qq="exit";alias rm="rm -i";alias mv="mv -i";alias dir='dir --color=auto';alias ls='ls --color=auto';alias la='ls -AF'
+alias cdd="cd ~/dotfiles";alias qq="exit";alias rm="rm -i";alias mv="mv -i";alias dir='dir --color=auto';alias ls='ls --color=auto';alias la='ls -AF'
 alias dud1="du -d1 -h|sort -hr";alias diskspace="du -S | sort -n -r |more";alias wm="sudo wifi-menu -o wlp1s0";alias xrdbm="xrdb -merge ~/.Xresources"
 alias v="vim --noplugins";alias vi="vim";alias i3c="vim ~/.config/i3/config";bind -x '"\C-b": clear && printf "\e[3J"';export PROMPT_COMMAND=lastcmd;
 function lastcmd () { local EXIT="$?"; PS1=""
