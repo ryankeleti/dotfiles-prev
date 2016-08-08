@@ -4,7 +4,7 @@
 
 dir=~/dotfiles                
 olddir=~/bdotfiles
-files=".bashrc .vimrc .Xresources .xinitrc"
+files=".bashrc .vimrc .Xresources .xinitrc ._bashrc"
 
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
 mkdir -p $olddir

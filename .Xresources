@@ -16,6 +16,11 @@ xterm*VT100.Translations:	#override \n\
   Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
   Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 
+*.background: #000000
+*.foreground: #ffffff
+
+
+/*
 ! Gruvbox
 *.background:            #282828
 *.foreground:            #ebdbb2
@@ -41,7 +46,7 @@ xterm*VT100.Translations:	#override \n\
 *.color14:               #7c6f64
 *.color7:                #fbf1c7
 *.color15:               #d5c4a1    
-
+*/
 ! rofi
 rofi.lines: 1
 rofi.columns: 1

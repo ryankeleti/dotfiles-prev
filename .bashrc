@@ -8,7 +8,9 @@ alias dud1="du -d1 -h|sort -hr";alias diskspace="du -S | sort -n -r |more";alias
 alias v="vim --noplugins";alias vi="vim";alias i3c="vim ~/.config/i3/config";bind -x '"\C-b": clear && printf "\e[3J"';export PROMPT_COMMAND=lastcmd;
 function lastcmd () { local EXIT="$?"; PS1=""
 local ecol='\[\e[0m\]';local rcol='\[\e[0;31m\]';local gcol='\[\e[1;32m\]';local ycol='\[\e[0;36m\]';local bcol='\[\e[0;34m\]';local pcol='\[\e[0;35m\]';local ocol='\[\e[1;31m\]'
-export PS1="\n${pcol}[\u@\h ${ocol}\W${pcol}]${ecol} ${ycol}\w${ecol} ]\n";if [ $EXIT != 0 ]; then PS1+="${rcol}\$ >${ecol}  ";else PS1+="${gcol}\$ >${ecol}  ";fi
+#export PS1="\n${pcol}[\u@\h ${ocol}\W${pcol}]${ecol} ${ycol}\w${ecol} ]\n"
+export PS1="[\u@\h \W] "
+if [ $EXIT != 0 ]; then PS1+="${rcol}\$ >${ecol}  ";else PS1+="${gcol}\$ >${ecol}  ";fi
 }
 padset () { synclient TapButton1=1;synclient TapButton2=3;synclient TapButton3=2
 }
