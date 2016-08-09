@@ -60,7 +60,7 @@ void prompt(void) {
   char wd[80] = "/";
 
   while (1) {
-    fprintf(stdout,"\n[root@core1 /]# ");
+    fprintf(stdout,"[root@core1 /]# ");
     scanf("%s",in);
     printf("%s\n",in);
 
