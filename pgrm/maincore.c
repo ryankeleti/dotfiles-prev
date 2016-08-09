@@ -62,7 +62,7 @@ void prompt(void) {
   while (1) {
     fprintf(stdout,"[root@core1 /]# ");
     scanf("%s",in);
-    printf("%s\n",in);
+    //printf("%s\n",in);
 
     while (1) {
       if ((strcmp(in,"ls")==0)&&(strcmp(wd,"/")==0)) {
