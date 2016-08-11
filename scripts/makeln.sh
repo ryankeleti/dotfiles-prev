@@ -5,6 +5,7 @@
 dir=~/dotfiles                
 olddir=~/bdotfiles
 files=".bashrc .vimrc .Xresources .xinitrc ._bashrc"
+scripts="clone.sh gitupdate.sh makeln.sh"
 
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
 mkdir -p $olddir
@@ -21,4 +22,8 @@ for file in $files; do
   ln -s $dir/$file ~/$file
 done
 
+for file in $scripts; do
+  echo "Creating symlink to $file in $dir."
+  ln -s $dir/scripts/$file $dir
+done
 
