@@ -57,22 +57,40 @@ fprintf(stdout, "\n\033[F");
 
 void prompt(void) {
   char in[80];
-  char wd[80] = "/";
+  char wd[80];
+  char dest[80];
+
+
+  void pwd(void) {
+    memset(dest, '\0', sizeof(dest));
+
+    while (1) {
+      if ((strcmp(in,"pwd")==0)) {
+        strcpy(wd, "/");
+        strcpy(dest, wd);
+        printf("%s\n",dest);
+        break;                       
+      }      
+      else break;
+    }
+  }
+  pwd();
 
   while (1) {
     fprintf(stdout,"[root@core1 /]# ");
     scanf("%s",in);
-    //printf("%s\n",in);
+    printf("\n%s\n",in);
 
     while (1) {
       if ((strcmp(in,"ls")==0)&&(strcmp(wd,"/")==0)) {
         //printf("bin  boot  dev  etc  home  lib  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var\n\n");
-        system("ls core/");
+        system("ls coredata/rootcore/");
+        printf("\n");
         break;                       
       }      
       else break;
     } 
-    void cd(void) {
+
       while (1) {
         if (((strcmp(in,"cd")==0)||(strcmp(in,"cd /")==0))&&(strcmp(wd,"/")==0)) {
           printf("cd /\n\n");
@@ -80,18 +98,17 @@ void prompt(void) {
         }      
         if ((strcmp(in,"cd")==0)&&(strcmp(wd,"/")!=0)) {
           printf("cd /\n\n");
-          wd[80] = "/";
           break;                       
         } 
         else break;
       }
     }
-  }
   //Segmentation fault (core dumped)
 }
 
 int main () {
 // {{{
+/*
 char c;
 refresh();
 printf(":: ");
@@ -157,7 +174,7 @@ sleep(1);
 sleep(1);
   printf(":: ");
   slowprintf("Boot complete\n\n");
-sleep(2);
+sleep(2);*/
   // }}}
 refresh();
 printf("Last login: Thu Oct 16 15:17:01 UTC 2067 on tty1\n");
