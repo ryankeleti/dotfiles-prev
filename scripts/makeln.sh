@@ -27,3 +27,5 @@ for file in $scripts; do
   ln -s $dir/scripts/$file $dir
 done
 
+ln -s $dir/scripts/clone.sh ~
+
