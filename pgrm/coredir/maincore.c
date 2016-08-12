@@ -83,7 +83,6 @@ void prompt(void) {
 
     while (1) {
       if ((strcmp(in,"ls")==0)&&(strcmp(wd,"/")==0)) {
-        //printf("bin  boot  dev  etc  home  lib  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var\n\n");
         system("ls coredata/rootcore/");
         printf("\n");
         break;                       
