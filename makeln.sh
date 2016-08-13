@@ -1,1 +1,1 @@
-/home/ryanku/dotfiles/scripts/makesymln.sh
+/home/ryanku/dotfiles/scripts/makeln.sh
