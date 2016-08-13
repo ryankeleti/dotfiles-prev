@@ -16,37 +16,7 @@ xterm*VT100.Translations:	#override \n\
   Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
   Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 
-*.background: #000000
-*.foreground: #ffffff
 
-
-/*
-! Gruvbox
-*.background:            #282828
-*.foreground:            #ebdbb2
-*.fading:                40
-*.shading:               50
-*.fadeColor:             #282828
-*.cursorColor:           #7c6f64
-*.pointerColorBackground:#504945
-
-*.color0:                #d5c4a1
-*.color8:                #a89984
-*.color1:                #fb4934
-*.color9:                #fe8019
-*.color2:                #98971a
-*.color10:               #b8bb26
-*.color3:                #fabd2f
-*.color11:               #ebdbb2
-*.color4:                #83a598
-*.color12:               #bdae93
-*.color5:                #928374
-*.color13:               #d3869b
-*.color6:                #8ec07c
-*.color14:               #7c6f64
-*.color7:                #fbf1c7
-*.color15:               #d5c4a1    
-*/
 ! rofi
 rofi.lines: 1
 rofi.columns: 1
@@ -71,8 +41,57 @@ rofi.color-urgent: #282828, #ebdbb2, #282828, #282828, #fabd2f
 rofi.color-active: #282828, #ebdbb2, #282828, #282828, #fabd2f  
 rofi.color-window: #282828, #7c6f64, #7c6f64
 
-/*    ! #ffeeaa
-! Solarized
+! gruvbox / solarized colors {{{  
+!*.background: #282828
+!*.foreground: #ffffff
+
+! dark
+! hard contrast: *.background: #1d2021
+*.background: #282828
+! soft *.background: #32302f
+*.foreground: #ebdbb2
+*.color0:  #282828
+*.color8:  #928374
+*.color1:  #cc241d
+*.color9:  #fb4934
+*.color2:  #98971a
+*.color10: #b8bb26
+*.color3:  #d79921
+*.color11: #fabd2f
+*.color4:  #458588
+*.color12: #83a598
+*.color5:  #b16286
+*.color13: #d3869b
+*.color6:  #689d6a
+*.color14: #8ec07c
+*.color7:  #a89984
+*.color15: #ebdbb2
+
+/*
+! light
+! hard *.background: #f9f5d7
+*.background: #fbf1c7                                                                                    
+! soft *.background: #f2e5bc
+*.foreground: #3c3836
+*.color0:  #fdf4c1
+*.color8:  #928374
+*.color1:  #cc241d
+*.color9:  #9d0006
+*.color2:  #98971a
+*.color10: #79740e
+*.color3:  #d79921
+*.color11: #b57614
+*.color4:  #458588
+*.color12: #076678
+*.color5:  #b16286
+*.color13: #8f3f71
+*.color6:  #689d6a
+*.color14: #427b58
+*.color7:  #7c6f64
+*.color15: #3c3836    */
+                      
+/*
+! solarized  /  #ffeeaa
 *.background:            #002b36
 *.foreground:            #657b83
 *.fading:                40
@@ -97,4 +116,6 @@ rofi.color-window: #282828, #7c6f64, #7c6f64
 *.color14:               #93a1a1
 *.color7:                #eee8d5
 *.color15:               #fdf6e3    */
+
+! }}}
 

@@ -9,7 +9,7 @@ autocmd FileType c setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType text setlocal wrap
 
-colorscheme railscasts "gruvbox solarized
+colorscheme gruvbox "solarized railscasts
 set background=dark
 set number
 set relativenumber
