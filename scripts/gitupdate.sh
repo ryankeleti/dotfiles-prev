@@ -2,9 +2,9 @@
 
 cd;cd ~/dotfiles
 files=".bashrc .vimrc .Xresources .xinitrc ._bashrc"
-sdir="scripts/ pgrm/"
+sdir="scripts/ pgrm/ .cconfig/"
 
-echo -en ":: $sdir $files -> auto included\n"
+echo -en ":: ( $sdir $files ) -> auto included\n"
 echo -en ":: Enter other files: "
 read efiles
 
