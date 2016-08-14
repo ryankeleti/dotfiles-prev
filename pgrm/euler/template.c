@@ -10,6 +10,8 @@ int power(int base,unsigned int ep) {
 
 int main() {
 
+  system("clear");
+
 
   return 0;
 }

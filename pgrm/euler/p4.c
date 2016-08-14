@@ -12,18 +12,20 @@ int main() {
   int n,even,odd;
 
   system("clear");
-  printf("prints the largest palendromic number from the product of 2 same-digit numbers.\n");
+  //printf("prints the largest palendromic number from the product of 2 same-digit numbers.\n");
   printf("input digit size:\t");
   scanf("%d",&n);
 
   while (n!=0&&n!='\0') {
     if (n%2==0) {
       n = n/2;
-      even = ; 
+      even = 2*power(10,n)-1; 
+      printf("%d\n",even);
     }
     else {
       n = (n-1)/2;
-      odd = ;
+      odd = 11*power(10,n)-2;
+      printf("%d\n",odd);
     }
 
   }
