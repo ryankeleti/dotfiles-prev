@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <math.h>
 
-int power(int base, unsigned int exp) {
-  int i, result=1;
-  for(i=0;i<exp;i++) result*=base;
-  return result;
+int power(int base,unsigned int ep) {
+  int i, res=1;
+  for(i=0;i<ep;i++) res*=base;
+  return res;
 }
 
 int main() {
