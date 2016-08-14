@@ -1,36 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <math.h>
 
-int power(int base,unsigned int ep) {
-  int i, res=1;
-  for(i=0;i<ep;i++) res*=base;
-  return res;
-}
-
 int main() {
-  int n,even,odd;
 
   system("clear");
-  //printf("prints the largest palendromic number from the product of 2 same-digit numbers.\n");
-  printf("input digit size:\t");
-  scanf("%d",&n);
+  //printf("prints the largest palendromic number from the product of 2 3-digit numbers.\n");
 
-  while (n!=0&&n!='\0') {
-    if (n%2==0) {
-      n = n/2;
-      even = 2*power(10,n)-1; 
-      printf("%d\n",even);
+  bool found = false;
+  for (int i=998;i>=100;i--) {
+    char c[7];
+    sprintf(c,"%d",i);
+    c[3]=c[2];
+    c[4]=c[1];
+    c[5]=c[0];
+    int n=atoi(c);
+    int lim=sqrt((float) n);
+    for (int m=999;m>=lim;m--) {
+      if (n%m==0) {
+        printf("%d\n",n);
+        found = true;
+        break;
+      }
     }
-    else {
-      n = (n-1)/2;
-      odd = 11*power(10,n)-2;
-      printf("%d\n",odd);
-    }
-
-  }
-
+    if (found) break;
 
   return 0;
+  }
 }
 
