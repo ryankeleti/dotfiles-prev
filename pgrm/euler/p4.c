@@ -26,7 +26,6 @@ int main() {
     }
     if (found) break;
 
-  return 0;
   }
 }
 
