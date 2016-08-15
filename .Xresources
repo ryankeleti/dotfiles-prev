@@ -45,6 +45,41 @@ rofi.color-window: #282828, #7c6f64, #7c6f64
 !*.background: #282828
 !*.foreground: #ffffff
 
+#define bg  #1b1b1b
+#define fg  #777777
+#define red #7e5c62
+#define grn #658861
+#define blu #628b87
+
+*.background: bg
+*.foreground: fg
+*.cursorColor: blu
+
+*.color0: bg
+*.color8: fg
+
+*.color1: red
+*.color9: red
+
+*.color2: grn
+*.color10: grn
+
+*.color3: grn
+*.color11: grn
+
+*.color4: blu
+*.color12: blu
+
+*.color5: blu
+*.color13: blu
+
+*.color6: blu
+*.color14: blu
+
+*.color7: fg
+*.color15: fg
+
+/*
 ! dark
 ! hard contrast: *.background: #1d2021
 *.background: #282828
@@ -66,7 +101,7 @@ rofi.color-window: #282828, #7c6f64, #7c6f64
 *.color14: #8ec07c
 *.color7:  #a89984
 *.color15: #ebdbb2
-
+*/
 /*
 ! light
 ! hard *.background: #f9f5d7
