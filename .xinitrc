@@ -1,4 +1,5 @@
-#!/bin/sh -- @ryankeleti
+#!/bin/sh 
+# -- @ryankeleti
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -27,12 +28,13 @@ fi
 xrdb -load $userresources
 xrdb -merge $userresources
 setxkbmap -option compose:rctrl
-feh --bg-scale ~/Pictures-Local/blaquewood.jpg &
+feh --bg-scale ~/Pictures-Local/triangle1.jpg &
+xfce4-power-manager &
 xterm &
-#sxhkd &
-#exec bspwm
-#exec startxfce4
+conky &
+sxhkd &
+exec bspwm
 #exec i3
-exec herbstluftwm
-
+#exec startxfce4
+#exec herbstluftwm
 

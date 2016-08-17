@@ -16,7 +16,5 @@ padset () { synclient TapButton1=1;synclient TapButton2=3;synclient TapButton3=2
 #parse_git_branch () { git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'}
 #connection () { ping -c1 8.8.8.8 2>&1 >/dev/null;if [[ $? == 0 ]]; then echo -e "\e[0;32mW:up\e[0m\v";else echo -e "\e[0;31mW:down\e[0m\v";fi}
 #bashstart () { clear && printf "\e[3J";echo -e '\e[0;36m'$(uname -r)'\e[0m''  |  ''\e[0;35m'$SHELL'\e[0m'}
-. ~/.commacd.bash
-#. ~/shml/shml.sh
-#[ -n "$DESK_ENV" ] && . "$DESK_ENV" || true
+. ~/dotfiles/scripts/.commacd.bash
 
