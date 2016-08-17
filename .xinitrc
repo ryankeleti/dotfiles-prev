@@ -32,5 +32,7 @@ xterm &
 #sxhkd &
 #exec bspwm
 #exec startxfce4
-exec i3
+#exec i3
+exec herbstluftwm
+
 

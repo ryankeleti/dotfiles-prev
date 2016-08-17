@@ -3,7 +3,7 @@
 HISTFILE=;HISTFILESIZE=;HISTCONTROL="erasedups:ignoreboth";export HISTIGNORE="&:ls:[bf]g:exit:qq:la:lla:history:dir:i3c:wm:xrdbm:xrdbl:cdd:diskspace:dud1:svi:sem";unset HISTFILE
 export LESS_TERMCAP_mb=$'\E[01;31m';export LESS_TERMCAP_md=$'\E[01;31m';export LESS_TERMCAP_me=$'\E[0m';export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m';export LESS_TERMCAP_ue=$'\E[0m';export LESS_TERMCAP_us=$'\E[01;32m';export PAGER='/usr/bin/less';export SUDO_EDITOR='/usr/bin/vim'
-alias cdd="cd ~/dotfiles";alias qq="exit";alias rm="rm -i";alias mv="mv -i";alias dir='dir --color=auto';alias ls='ls --color=auto';alias la='ls -AF';alias lla='ls -AFl'
+alias cdd="cd ~/dotfiles";alias qq="exit";alias rm="rm -i";alias mv="mv -i";alias dir='dir --color=auto';alias ls='ls --color=auto';alias la='ls -AF';alias lla='ls -AFl';alias cla='clear && ls -AF'
 alias dud1="du -d1 -h|sort -hr";alias diskspace="du -S | sort -n -r |more";alias wm="sudo wifi-menu -o wlp1s0";alias xrdbm="xrdb -merge ~/.Xresources";alias tl="find . -print | sed 's;[^/]*/;|__;g;s;__|; |;g'"
 alias v="vim --noplugins";alias vi="vim --noplugins";alias i3c="vim ~/.config/i3/config";alias svi="set -o vi";alias sem="set -o emacs";alias xrdbl="xrdb -load ~/.Xresources"
 bind -x '"\C-b": clear && printf "\e[3J"';export PROMPT_COMMAND=lastcmd;
