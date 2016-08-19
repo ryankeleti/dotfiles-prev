@@ -1,6 +1,4 @@
 #!/bin/bash
-# .make.sh
-#  creates symlink from ~ to ~/dotfiles
 
 dir=~/dotfiles                
 olddir=~/bdotfiles
