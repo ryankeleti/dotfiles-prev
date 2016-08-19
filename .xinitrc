@@ -33,6 +33,7 @@ xfce4-power-manager &
 xterm &
 conky -c $HOME/.config/conky/conky.conf &
 sxhkd &
+xscreensaver &
 exec bspwm
 #exec i3
 #exec startxfce4

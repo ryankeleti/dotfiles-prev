@@ -1,49 +1,31 @@
 ! @ryankeleti ---  ~/.Xresources
 
-xterm*font:	-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+*font:	-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+*savelines:	5000
+*loginshell:	true
+*eightBitInput:	false
+*scrollBar:	false
+*cursorBlink:	true
 xterm*utf8:	1
-xterm*savelines:	5000
-xterm*loginshell:	true
 xterm*vt100.geometry:	80x25
 xterm*charClass:	33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 xterm*termName:	xterm-256color
-xterm*eightBitInput:	false
-xterm*ScrollBar:	false
-xterm*cursorBlink:	true
 
 xterm*selectToClipboard:	true
 xterm*VT100.Translations:	#override \n\
   Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
   Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 
+urxvt*transparent: 1
+urxvt*internalBorder: 10
+xft.antialias:  1
+xft.hinting:  1
+xft.hintstyle:  hintslight
+xft.rgba: rgb
+xft.lcdfilter:  lcddefault
+xft.dpi:  96
+xcursor.theme: Human
 
-! rofi
-rofi.lines: 1
-rofi.columns: 1
-rofi.eh: 1
-rofi.location: 0
-rofi.width: 20
-rofi.padding: 15
-rofi.fullscreen: false
-rofi.opacity: 97
-rofi.bw: 1
-rofi.sidebar-mode: false
-rofi.separator-style: none
-rofi.hide-scrollbar: true
-rofi.font: roboto 10
-rofi.terminal: xterm
-rofi.kb-clear-line: Control+b
-rofi.disable-history: true
-rofi.color-enabled: true
-rofi.fuzzy: false
-rofi.color-normal: #282828, #ebdbb2, #282828, #282828, #fabd2f  
-rofi.color-urgent: #282828, #ebdbb2, #282828, #282828, #fabd2f  
-rofi.color-active: #282828, #ebdbb2, #282828, #282828, #fabd2f  
-rofi.color-window: #282828, #7c6f64, #7c6f64
-
-! gruvbox / solarized colors {{{  
-!*.background: #282828
-!*.foreground: #ffffff
 
 #define bg  #1b1b1b
 #define fg  #777777
@@ -70,6 +52,34 @@ rofi.color-window: #282828, #7c6f64, #7c6f64
 *.color14: blu
 *.color7: fg
 *.color15: fg
+
+! rofi
+rofi.lines: 1
+rofi.columns: 1
+rofi.eh: 1
+rofi.location: 0
+rofi.width: 20
+rofi.padding: 15
+rofi.fullscreen: false
+rofi.opacity: 97
+rofi.bw: 1
+rofi.sidebar-mode: false
+rofi.separator-style: none
+rofi.hide-scrollbar: true
+rofi.font: roboto 10
+rofi.terminal: xterm
+rofi.kb-clear-line: Control+b
+rofi.disable-history: true
+rofi.color-enabled: true
+rofi.fuzzy: false
+rofi.color-normal: #282828, #ebdbb2, #282828, #282828, #fabd2f  
+rofi.color-urgent: #282828, #ebdbb2, #282828, #282828, #fabd2f  
+rofi.color-active: #282828, #ebdbb2, #282828, #282828, #fabd2f  
+rofi.color-window: #282828, #7c6f64, #7c6f64
+
+! gruvbox / solarized {{{  
+!*.background: #282828
+!*.foreground: #ffffff
 
 /*! dark
 ! hard contrast: *.background: #1d2021
@@ -112,8 +122,7 @@ rofi.color-window: #282828, #7c6f64, #7c6f64
 *.color6:  #689d6a
 *.color14: #427b58
 *.color7:  #7c6f64
-*.color15: #3c3836    */
-                    /*
+*.color15: #3c3836    *//*
 ! solarized  /  #ffeeaa
 *.background:            #002b36
 *.foreground:            #657b83
@@ -139,6 +148,5 @@ rofi.color-window: #282828, #7c6f64, #7c6f64
 *.color14:               #93a1a1
 *.color7:                #eee8d5
 *.color15:               #fdf6e3    */
-
 ! }}}
 
