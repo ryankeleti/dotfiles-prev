@@ -28,7 +28,7 @@ fi
 xrdb -load $userresources
 xrdb -merge $userresources
 setxkbmap -option compose:rctrl
-feh --bg-scale ~/Pictures-Local/street1.jpg &
+feh --bg-scale ~/Pictures-Local/irontexture.jpg &
 xfce4-power-manager &
 xterm &
 conky -c $HOME/.config/conky/conky.conf &
