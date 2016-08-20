@@ -3,6 +3,9 @@
 super + Return
 	xterm
 
+super + shift + Return
+  urxvt
+
 super + d
 	rofi -show run
 
