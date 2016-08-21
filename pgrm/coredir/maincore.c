@@ -6,7 +6,7 @@
 
 // slowprintf, refresh {{{
 void slowprintf(char *str) {
-  int i = 0;                                                      
+  int i = 0;
   while (str[i] != '\0') {
     putchar(str[i]);
     i++;
@@ -69,8 +69,8 @@ void prompt(void) {
         strcpy(wd, "/");
         strcpy(dest, wd);
         printf("%s\n",dest);
-        break;                       
-      }      
+        break;
+      }
       else break;
     }
   }
@@ -85,19 +85,19 @@ void prompt(void) {
       if ((strcmp(in,"ls")==0)&&(strcmp(wd,"/")==0)) {
         system("ls coredata/rootcore/");
         printf("\n");
-        break;                       
-      }      
+        break;
+      }
       else break;
     } 
 
       while (1) {
         if (((strcmp(in,"cd")==0)||(strcmp(in,"cd /")==0))&&(strcmp(wd,"/")==0)) {
           printf("cd /\n\n");
-          break;                       
-        }      
+          break;
+        }
         if ((strcmp(in,"cd")==0)&&(strcmp(wd,"/")!=0)) {
           printf("cd /\n\n");
-          break;                       
+          break;
         } 
         else break;
       }
@@ -118,7 +118,7 @@ scanf("%c",&c);
     if (c == 'y') break;
     else return 0;
   }
-                                               
+
   int f;
   FILE *file = fopen("coreboot.txt", "r");
   if (file) {
@@ -179,6 +179,6 @@ refresh();
 printf("Last login: Thu Oct 16 15:17:01 UTC 2067 on tty1\n");
 prompt();
 
-  
+
 }
 
