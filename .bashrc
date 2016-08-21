@@ -7,7 +7,7 @@ export PAGER='/usr/bin/less';export SUDO_EDITOR='/usr/bin/vim'
 alias cdd="cd ~/dotfiles";alias qq="exit";alias rm="rm -i";alias mv="mv -i";alias dir='dir --color=auto';alias ls='ls --color=auto';alias la='ls -AF';alias lla='ls -AFl';alias cla='clear && ls -AF'
 alias dud1="du -d1 -h|sort -hr";alias diskspace="du -S | sort -n -r |more";alias wm="sudo wifi-menu -o wlp1s0";alias xrdbm="xrdb -merge ~/.Xresources";alias tl="find . -print | sed 's;[^/]*/;|__;g;s;__|; |;g'"
 alias v="vim --noplugins";alias vi="vim --noplugins";alias cdc="cd ~/.config";alias svi="set -o vi";alias sem="set -o emacs";alias xrdbl="xrdb -load ~/.Xresources"
-bind -x '"\C-b": clear && printf "\e[3J"';export PROMPT_COMMAND=lastcmd;
+bind -x '"\C-b": clear &&reset && printf "\e[3J"';export PROMPT_COMMAND=lastcmd;
 function lastcmd () { local EXIT="$?"; PS1=""
 local ecol='\[\e[0m\]';local rcol='\[\e[1;31m\]';local gcol='\[\e[1;32m\]'
 export PS1="[\u@\h \W] ";if [ $EXIT != 0 ]; then PS1+="${rcol}>> ${ecol}  ";else PS1+="${gcol}>> ${ecol}  ";fi
