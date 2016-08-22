@@ -39,8 +39,8 @@ xfce4-power-manager &
 
 sxhkd &
 
-exec openbox
-#exec bspwm
+#exec openbox
+exec bspwm
 #exec i3
 #exec startxfce4
 #exec herbstluftwm

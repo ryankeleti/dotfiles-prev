@@ -6,19 +6,21 @@
 int main() {
 
   system("clear");
-  int i,n,mod;
+  int i,j,n;
+
+  printf("range:  ");
+  scanf("%d ",&j);
 
   bool found = false;
-  for (i=1;i<21;i+=2) {
 
-  }
-  for (n=1;n<100000;n++)  mod = n%i;
-  while (mod!=0) {
-  if (mod==0) {
-        printf("%d\t",n);
+  for (n=1;n<j;n++) { 
+
+    for (i=1;i<21;i++) { 
+      if (n%i==0) {
+        printf("%d ",n);
         found = true;
-        break;
-  }
+    }
+    }
   }
   if (found==true) return 0;
 
