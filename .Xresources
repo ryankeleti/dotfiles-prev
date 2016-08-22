@@ -104,10 +104,10 @@ rofi.kb-clear-line: Control+b
 rofi.disable-history: true
 rofi.color-enabled: true
 rofi.fuzzy: false
-!rofi.color-normal: bg. fg, bg, fg, c7 
-!rofi.color-urgent: bg, fg, bg, fg, c7 
-!rofi.color-active: bg, fg, bg, fg, c7 
-!rofi.color-window: bg, #7c6f64, #7c6f64
+rofi.color-normal: bg, fg, bg, fg, c7 
+rofi.color-urgent: bg, fg, bg, fg, c7 
+rofi.color-active: bg, fg, bg, fg, c7 
+rofi.color-window: bg, #7c6f64, #7c6f64
 
 ! gruvbox / solarized {{{  
 !*.background: #282828
