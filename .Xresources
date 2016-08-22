@@ -1,36 +1,36 @@
 ! @ryankeleti ---  ~/.Xresources
 
-*font:	-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-*savelines:	5000
-*loginshell:	true
-*eightBitInput:	false
-*scrollBar:	false
-*cursorBlink:	true
-xterm*utf8:	1
-xterm*vt100.geometry:	80x25
-xterm*charClass:	33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
-xterm*termName:	xterm-256color
+*font:	                                    -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+*savelines:	                                5000
+*loginshell:	                              true
+*eightBitInput:	                            false
+*scrollBar:	                                false
+*cursorBlink:	                              true
+xterm*utf8:	                                1
+xterm*vt100.geometry:	                      80x25
+xterm*charClass:	                          33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*termName:	                            xterm-256color
 
-xterm*selectToClipboard:	true
-xterm*VT100.Translations:	#override \n\
-  Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
-  Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
+xterm*selectToClipboard:	                  true
+xterm*VT100.Translations:	                  #override \n\
+  Ctrl Shift <Key>V:                        insert-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>C:                        copy-selection(CLIPBOARD)
 
 !urxvt.keysym.C-M-c:  
 !urxvt.keysym.C-M-c:  
 
-urxvt*transparent: 1
-urxvt*internalBorder: 10
-urxvt*iso14755: false
-xft.antialias:  1
-xft.hinting:  1
-xft.hintstyle:  hintslight
-xft.rgba: rgb
-xft.lcdfilter:  lcddefault
-xft.dpi:  96
-xcursor.theme: Human
+urxvt*transparent:                          0
+urxvt*internalBorder:                       10
+urxvt*iso14755:                             false
+xft.antialias:                              1
+xft.hinting:                                1
+xft.hintstyle:                              hintslight
+xft.rgba:                                   rgb
+xft.lcdfilter:                              lcddefault
+xft.dpi:                                    96
+xcursor.theme:                              Human
 xscreensaver.Dialog.Button.background:      #444
-xscreensaver.Dialog.Button.foreground:      #ededff  
+xscreensaver.Dialog.Button.foreground:      #ededff
 xscreensaver.Dialog.background:             #202020
 xscreensaver.Dialog.borderWidth:            0
 xscreensaver.Dialog.bottomShadowColor:      #202024
@@ -46,116 +46,111 @@ xscreensaver.passwd.thermometer.background: #202020
 xscreensaver.passwd.thermometer.foreground: #a9b7c4
 xscreensaver.passwd.thermometer.width:      8
 
-lal*font: roboto
-lal*fontsize: 12
+lal*font:                                   roboto
+lal*fontsize:                               12
 
+#define c0  #a6e22e                         /* light green  */
+#define c1  #beed5f                         /* lime         */
+#define c2  #fd971f                         /* light orange */
+#define c3  #ff669d                         /* pink         */
+#define c4  #9e6ffe                         /* purple       */
+#define c5  #00cbee                         /* blue         */
+#define c6  #6ec6d4                         /* light grey   */
+#define c7  #d3d3d3                         /* white        */
 
-#define c0  #a6e22e  /* light green */
-#define c1  #beed5f  /* lime */
-#define c2  #fd971f  /* light orange */
-#define c3  #ff669d  /* pink */
-#define c4  #9e6ffe  /* purple */
-#define c5  #00cbee  /* blue */
-#define c6  #6ec6d4  /* light grey */
-#define c7  #d3d3d3  /* white */
+#define bg  #1b1b1b                         /* dark grey    */
+#define fg  #777777                         /* soft grey    */
+#define red #7e5c62                         /* soft red     */
+#define grn #658861                         /* soft green   */
+#define blu #628b87                         /* soft blue    */
 
-#define bg  #1b1b1b
-#define fg  #777777
-#define red #7e5c62
-#define grn #658861
-#define blu #628b87
+*.background:                               bg
+*.foreground:                               c7
+*.cursorColor:                              blu
+*.color0:                                   bg
+*.color8:                                   fg
+*.color1:                                   red
+*.color9:                                   red
+*.color2:                                   grn
+*.color10:                                  grn
+*.color3:                                   grn
+*.color11:                                  grn
+*.color4:                                   blu
+*.color12:                                  blu
+*.color5:                                   blu
+*.color13:                                  blu
+*.color6:                                   blu
+*.color14:                                  blu
+*.color7:                                   fg
+*.color15:                                  fg
 
-*.background: bg
-*.foreground: c7
-*.cursorColor: blu
-*.color0: bg
-*.color8: fg
-*.color1: red
-*.color9: red
-*.color2: grn
-*.color10: grn
-*.color3: grn
-*.color11: grn
-*.color4: blu
-*.color12: blu
-*.color5: blu
-*.color13: blu
-*.color6: blu
-*.color14: blu
-*.color7: fg
-*.color15: fg
-
-! rofi
-rofi.lines: 1
-rofi.columns: 1
-rofi.eh: 1
-rofi.location: 0
-rofi.width: 20
-rofi.padding: 15
-rofi.fullscreen: false
-rofi.opacity: 97
-rofi.bw: 1
-rofi.sidebar-mode: false
-rofi.separator-style: none
-rofi.hide-scrollbar: true
-rofi.font: roboto 10
-rofi.terminal: xterm
-rofi.kb-clear-line: Control+b
-rofi.disable-history: true
-rofi.color-enabled: true
-rofi.fuzzy: false
-rofi.color-normal: bg, fg, bg, fg, c7 
-rofi.color-urgent: bg, fg, bg, fg, c7 
-rofi.color-active: bg, fg, bg, fg, c7 
-rofi.color-window: bg, #7c6f64, #7c6f64
+rofi.lines:                                 1
+rofi.columns:                               1
+rofi.eh:                                    1
+rofi.location:                              0
+rofi.width:                                 20
+rofi.padding:                               15
+rofi.fullscreen:                            false
+rofi.opacity:                               97
+rofi.bw:                                    1
+rofi.sidebar-mode:                          false
+rofi.separator-style:                       none
+rofi.hide-scrollbar:                        true
+rofi.font:                                  roboto 10
+rofi.terminal:                              xterm
+rofi.kb-clear-line:                         Control+b
+rofi.disable-history:                       true
+rofi.color-enabled:                         true
+rofi.fuzzy:                                 false
+rofi.color-normal:                          bg, fg, bg, fg, c7
+rofi.color-urgent:                          bg, fg, bg, fg, c7
+rofi.color-active:                          bg, fg, bg, fg, c7
+rofi.color-window:                          bg, #7c6f64, #7c6f64
 
 ! gruvbox / solarized {{{  
-!*.background: #282828
-!*.foreground: #ffffff
-
 /*! dark
-! hard contrast: *.background: #1d2021
-*.background: #282828
-! soft *.background: #32302f
-*.foreground: #ebdbb2
-*.color0:  #282828
-*.color8:  #928374
-*.color1:  #cc241d
-*.color9:  #fb4934
-*.color2:  #98971a
-*.color10: #b8bb26
-*.color3:  #d79921
-*.color11: #fabd2f
-*.color4:  #458588
-*.color12: #83a598
-*.color5:  #b16286
-*.color13: #d3869b
-*.color6:  #689d6a
-*.color14: #8ec07c
-*.color7:  #a89984
-*.color15: #ebdbb2
-*//*! light
-! hard *.background: #f9f5d7
-*.background: #fbf1c7                                                                                    
-! soft *.background: #f2e5bc
-*.foreground: #3c3836
-*.color0:  #fdf4c1
-*.color8:  #928374
-*.color1:  #cc241d
-*.color9:  #9d0006
-*.color2:  #98971a
-*.color10: #79740e
-*.color3:  #d79921
-*.color11: #b57614
-*.color4:  #458588
-*.color12: #076678
-*.color5:  #b16286
-*.color13: #8f3f71
-*.color6:  #689d6a
-*.color14: #427b58
-*.color7:  #7c6f64
-*.color15: #3c3836    *//*
-! solarized  /  #ffeeaa
+! hard*.background:      #1d2021
+*.background:            #282828
+! soft *.background:     #32302f
+*.foreground:            #ebdbb2
+*.color0:                #282828
+*.color8:                #928374
+*.color1:                #cc241d
+*.color9:                #fb4934
+*.color2:                #98971a
+*.color10:               #b8bb26
+*.color3:                #d79921
+*.color11:               #fabd2f
+*.color4:                #458588
+*.color12:               #83a598
+*.color5:                #b16286
+*.color13:               #d3869b
+*.color6:                #689d6a
+*.color14:               #8ec07c
+*.color7:                #a89984
+*.color15:               #ebdbb2
+! light
+! hard *.background:     #f9f5d7
+*.background:            #fbf1c7
+! soft *.background:     #f2e5bc
+*.foreground:            #3c3836
+*.color0:                #fdf4c1
+*.color8:                #928374
+*.color1:                #cc241d
+*.color9:                #9d0006
+*.color2:                #98971a
+*.color10:               #79740e
+*.color3:                #d79921
+*.color11:               #b57614
+*.color4:                #458588
+*.color12:               #076678
+*.color5:                #b16286
+*.color13:               #8f3f71
+*.color6:                #689d6a
+*.color14:               #427b58
+*.color7:                #7c6f64
+*.color15:               #3c3836
+! solarized  /           #ffeeaa
 *.background:            #002b36
 *.foreground:            #657b83
 *.fading:                40
@@ -163,7 +158,6 @@ rofi.color-window: bg, #7c6f64, #7c6f64
 *.cursorColor:           #93a1a1
 *.pointerColorBackground:#586e75
 *.pointerColorForeground:#93a1a1
-
 *.color0:                #073642
 *.color8:                #002b36
 *.color1:                #dc322f
@@ -179,6 +173,6 @@ rofi.color-window: bg, #7c6f64, #7c6f64
 *.color6:                #859900
 *.color14:               #93a1a1
 *.color7:                #eee8d5
-*.color15:               #fdf6e3    */
+*.color15:               #fdf6e3 */
 ! }}}
 

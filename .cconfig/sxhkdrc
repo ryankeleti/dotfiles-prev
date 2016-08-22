@@ -6,8 +6,17 @@ super + Return
 super + shift + Return
 	xterm
 
+super + shift + e
+  xkill
+
 super + d
 	rofi -show run
+
+super + a
+	rofi -show window
+
+super + s
+	rofi -dmenu
 
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -71,12 +80,6 @@ super + ctrl + shift + space
 
 super + alt + {h,j,k,l}
 	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
-
-super + alt + shift + {h,j,k,l}
-	bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
-
-super + {Left,Down,Up,Right}
-	xdo move {-x -20,-y +20,-y -20,-x +20}
 
 ~button1
 	bspc pointer -g focus
