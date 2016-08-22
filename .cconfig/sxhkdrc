@@ -1,10 +1,10 @@
 # @ryankeleti
 
 super + Return
-	xterm
+  urxvt
 
 super + shift + Return
-  urxvt
+	xterm
 
 super + d
 	rofi -show run

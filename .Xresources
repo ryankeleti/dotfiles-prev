@@ -16,8 +16,12 @@ xterm*VT100.Translations:	#override \n\
   Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
   Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 
+!urxvt.keysym.C-M-c:  
+!urxvt.keysym.C-M-c:  
+
 urxvt*transparent: 1
 urxvt*internalBorder: 10
+urxvt*iso14755: false
 xft.antialias:  1
 xft.hinting:  1
 xft.hintstyle:  hintslight
@@ -42,6 +46,19 @@ xscreensaver.passwd.thermometer.background: #202020
 xscreensaver.passwd.thermometer.foreground: #a9b7c4
 xscreensaver.passwd.thermometer.width:      8
 
+lal*font: roboto
+lal*fontsize: 12
+
+
+#define c0  #a6e22e  /* light green */
+#define c1  #beed5f  /* lime */
+#define c2  #fd971f  /* light orange */
+#define c3  #ff669d  /* pink */
+#define c4  #9e6ffe  /* purple */
+#define c5  #00cbee  /* blue */
+#define c6  #6ec6d4  /* light grey */
+#define c7  #d3d3d3  /* white */
+
 #define bg  #1b1b1b
 #define fg  #777777
 #define red #7e5c62
@@ -49,7 +66,7 @@ xscreensaver.passwd.thermometer.width:      8
 #define blu #628b87
 
 *.background: bg
-*.foreground: fg
+*.foreground: c7
 *.cursorColor: blu
 *.color0: bg
 *.color8: fg
@@ -87,10 +104,10 @@ rofi.kb-clear-line: Control+b
 rofi.disable-history: true
 rofi.color-enabled: true
 rofi.fuzzy: false
-rofi.color-normal: #282828, #ebdbb2, #282828, #282828, #fabd2f  
-rofi.color-urgent: #282828, #ebdbb2, #282828, #282828, #fabd2f  
-rofi.color-active: #282828, #ebdbb2, #282828, #282828, #fabd2f  
-rofi.color-window: #282828, #7c6f64, #7c6f64
+!rofi.color-normal: bg. fg, bg, fg, c7 
+!rofi.color-urgent: bg, fg, bg, fg, c7 
+!rofi.color-active: bg, fg, bg, fg, c7 
+!rofi.color-window: bg, #7c6f64, #7c6f64
 
 ! gruvbox / solarized {{{  
 !*.background: #282828

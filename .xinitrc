@@ -28,13 +28,19 @@ fi
 xrdb -load $userresources
 xrdb -merge $userresources
 setxkbmap -option compose:rctrl
+
 feh --bg-scale ~/Pictures-Local/irontexture.jpg &
-xfce4-power-manager &
+
 xterm &
+lal &
 conky -c $HOME/.config/conky/conky.conf &
-sxhkd &
 xscreensaver &
-exec bspwm
+xfce4-power-manager &
+
+sxhkd &
+
+exec openbox
+#exec bspwm
 #exec i3
 #exec startxfce4
 #exec herbstluftwm
