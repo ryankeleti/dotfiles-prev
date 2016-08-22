@@ -16,9 +16,6 @@ xterm*VT100.Translations:	                  #override \n\
   Ctrl Shift <Key>V:                        insert-selection(CLIPBOARD) \n\
   Ctrl Shift <Key>C:                        copy-selection(CLIPBOARD)
 
-!urxvt.keysym.C-M-c:  
-!urxvt.keysym.C-M-c:  
-
 urxvt*transparent:                          0
 urxvt*internalBorder:                       10
 urxvt*iso14755:                             false
@@ -39,7 +36,7 @@ xscreensaver.Dialog.internalBorderWidth:    24
 xscreensaver.Dialog.shadowThickness:        2
 xscreensaver.Dialog.text.background:        #444
 xscreensaver.Dialog.text.foreground:        #ededff
-xscreensaver.Dialog.text.font:              -misc-roboto-medium-r-normal--0-0-0-0-p-0iso10646-1
+xscreensaver.Dialog.text.font:              -misc-roboto-medium-r-normal--0-0-0-0-p-iso10646-1
 xscreensaver.Dialog.topShadowColor:         #202024
 xscreensaver.dateFormat:                    %I:%M%P %a %b %d, %Y
 xscreensaver.passwd.thermometer.background: #202020
