@@ -1,15 +1,14 @@
 # My dotfiles
-  @ryankeleti 's (my) personal dotfiles and programs (WIPs).
 
                           _        _      _   _ 
-   _ __ _   _  __ _ _ __ | | _____| | ___| |_(_)
-  | '__| | | |/ _` | '_ \| |/ / _ \ |/ _ \ __| |
-  | |  | |_| | (_| | | | |   <  __/ |  __/ |_| |
-  |_|   \__, |\__,_|_| |_|_|\_\_ _|_|\_ _|\__|_|
+#   _ __ _   _  __ _ _ __ | | _____| | ___| |_(_)
+#  | '__| | | |/ _` | '_ \| |/ / _ \ |/ _ \ __| |
+#  | |  | |_| | (_| | | | |   <  __/ |  __/ |_| |
+#  |_|   \__, |\__,_|_| |_|_|\_\_ _|_|\_ _|\__|_|
         |___/                                   
             
 
-        <h1>My current setup</h1>
+        my current setup
 
         --  window manager    bspwm (w/ sxhkd) or openbox
         --  term font         terminus
@@ -33,6 +32,7 @@
 
 
 
+  @ryankeleti 's (my) personal dotfiles and programs (WIPs).
 
   Contains scripts, configs, and some half-completed programs that I like to keep backed up.
  
