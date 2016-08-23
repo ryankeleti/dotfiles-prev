@@ -19,9 +19,9 @@ int main() {
     }
     printf("%ld\t",up);
     if (up%2 == 0) {
-    sum = sum + up;
+    sum += up;
     }
-    all = all + up;
+    all += up;
   }
   printf("\n\nsum:  %ld\n",sum);
   printf("\nall:  %ld\nwarning: negative numbers are a result of data overflow\n\n",all);
