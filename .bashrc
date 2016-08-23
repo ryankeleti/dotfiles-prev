@@ -1,4 +1,4 @@
-# ~/.bashrc -- executed by bash(1) for non-login shells -- @ryankeleti
+# ~/.bashrc -- executed by bash(1) for non-login shells -- https://github.com/ryankeleti/dotfiles
 [[ $- != *i* ]] && return; PS1='[\u@\h \W]\$ ';shopt -s histappend cmdhist checkwinsize autocd
 HISTFILE=;HISTFILESIZE=;HISTCONTROL="erasedups:ignoreboth";export HISTIGNORE="&:ls:[bf]g:exit:qq:la:lla:history:dir:wm:cdd:diskspace:dud1:svi:sem";unset HISTFILE
 #export LESS_TERMCAP_mb=$'\E[01;31m';export LESS_TERMCAP_md=$'\E[01;31m';export LESS_TERMCAP_me=$'\E[0m';export LESS_TERMCAP_se=$'\E[0m'

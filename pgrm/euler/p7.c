@@ -9,7 +9,16 @@ int power(int b,unsigned int e) {
 
 int main() {
 
+  long int n = 10001;
 
+  for (int i=3;i<=sqrt(n);i+=2) {
+    while (n%i==0) {
+      printf("%d\n",i);
+      n/=i;
+    }
+  }
+
+  return 0;
 
 }
 
