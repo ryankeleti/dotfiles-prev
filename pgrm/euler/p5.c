@@ -1,28 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include <math.h>
+
+int gcd(int a, int b) {
+  while (a!=b) {
+    if (a>b) a-=b;
+    else b-=a;
+  }
+  return a;
+}
+
+int lcm(int x, int y) {
+  return (x/gcd(x,y)*y);
+}
 
 int main() {
 
-  system("clear");
-  int i,j,n;
-
-  printf("range:  ");
-  scanf("%d ",&j);
+  int n=1;
 
   bool found = false;
-
-  for (n=1;n<j;n++) { 
-
-    for (i=1;i<21;i++) { 
-      if (n%i==0) {
-        printf("%d ",n);
-        found = true;
-    }
-    }
+  for (int i=1;i<21;i++) {
+    n=lcm(n,i+1);
   }
-  if (found==true) return 0;
+  found=true;
+  
+  if (found==true) printf("%d\n",n);
+  return 0;
 
 }
 
