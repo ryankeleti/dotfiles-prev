@@ -1,4 +1,4 @@
-!  ~/.Xresources --- https://github.com/ryankeleti/dotfiles
+!  ~/.Xresources                            https://github.com/ryankeleti/dotfiles
 
 *font:	                                    -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 *savelines:	                                5000
@@ -86,21 +86,23 @@ lal*fontsize:                               12
 rofi.lines:                                 1
 rofi.columns:                               1
 rofi.eh:                                    1
+rofi.bw:                                    1
 rofi.location:                              0
 rofi.width:                                 20
 rofi.padding:                               15
-rofi.fullscreen:                            false
-rofi.opacity:                               97
-rofi.bw:                                    1
-rofi.sidebar-mode:                          false
-rofi.separator-style:                       none
+rofi.opacity:                               95
+rofi.fake-transparency:                     true
 rofi.hide-scrollbar:                        true
-rofi.font:                                  roboto 10
-rofi.terminal:                              xterm
-rofi.kb-clear-line:                         Control+b
 rofi.disable-history:                       true
 rofi.color-enabled:                         true
+rofi.fullscreen:                            false
+rofi.sidebar-mode:                          false
 rofi.fuzzy:                                 false
+rofi.separator-style:                       none
+rofi.terminal:                              xterm
+rofi.fake-background:                       background
+rofi.font:                                  roboto 10
+rofi.kb-clear-line:                         Control+b
 rofi.color-normal:                          bg, fg, bg, fg, c7
 rofi.color-urgent:                          bg, fg, bg, fg, c7
 rofi.color-active:                          bg, fg, bg, fg, c7

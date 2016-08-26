@@ -33,6 +33,7 @@ feh --bg-scale ~/dotfiles/.cconfig/triangle.jpg &
 
 xterm &
 #lal &
+#compton &
 conky -c $HOME/.config/conky/conky.conf &
 xscreensaver &
 xfce4-power-manager &
