@@ -29,7 +29,7 @@ xrdb -load $userresources
 xrdb -merge $userresources
 setxkbmap -option compose:rctrl
 
-#feh --bg-scale ~/Pictures-Local/.jpg &
+feh --bg-scale ~/dotfiles/.cconfig/triangle.jpg &
 
 xterm &
 #lal &

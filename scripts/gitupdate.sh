@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd;cd ~/dotfiles
-files=".bashrc .vimrc .Xresources .xinitrc ._bashrc"
+files=".bashrc .vimrc .Xresources .xinitrc"
 sdir="scripts/ pgrm/ .cconfig/"
 
 echo -en ":: ( $sdir $files ) -> auto included\n"
