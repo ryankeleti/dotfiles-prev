@@ -54,6 +54,8 @@ lal*fontsize:                               12
 #define c5  #00cbee                         /* blue         */
 #define c6  #6ec6d4                         /* light grey   */
 #define c7  #d3d3d3                         /* white        */
+#define c8  #ff8100                         /* amber        */
+#define c9  #000000                         /* black        */
 
 #define bg  #1b1b1b                         /* dark grey    */
 #define fg  #777777                         /* soft grey    */

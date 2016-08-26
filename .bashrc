@@ -1,8 +1,9 @@
 # ~/.bashrc -- executed by bash(1) for non-login shells -- https://github.com/ryankeleti/dotfiles
 [[ $- != *i* ]] && return; PS1='[\u@\h \W]\$ ';shopt -s histappend cmdhist checkwinsize autocd
-HISTFILE=;HISTFILESIZE=;HISTCONTROL="erasedups:ignoreboth";export HISTIGNORE="&:ls:[bf]g:la:lla:history:cdd";unset HISTFILE
+HISTFILE=;HISTFILESIZE=;HISTCONTROL="erasedups:ignoreboth";export HISTIGNORE="&:[bf]g";unset HISTFILE
 export PAGER='/usr/bin/less';export SUDO_EDITOR='/usr/bin/vim'
-alias cdd="cd ~/dotfiles";alias qq="exit";alias rm="rm -i";alias mv="mv -i";alias dir='dir --color=auto';alias ls='ls --color=auto';alias la='ls -AF';alias lla='ls -AFl';alias cla='clear && ls -AF'
+alias cdd="cd ~/dotfiles";alias qq="exit";alias rm="rm -i";alias mv="mv -i";alias dir='dir --color=auto'
+alias ls='ls --color=auto';alias la='ls -AF';alias lla='ls -AFl';alias cla='clear && ls -AF';alias lf='ls -F'
 alias dud1="du -d1 -h|sort -hr";alias diskspace="du -S|sort -n -r|more";alias wm="sudo wifi-menu -o wlp1s0";alias xrdbm="xrdb -merge ~/.Xresources";alias tl="find . -print|sed 's;[^/]*/;|__;g;s;__|; |;g'"
 alias v="vim";alias vi="vim";alias cdc="cd ~/.config"
 bind -x '"\C-b": clear && printf "\e[3J"';export PROMPT_COMMAND=lastcmd;
