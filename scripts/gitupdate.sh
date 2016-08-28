@@ -7,7 +7,7 @@ else echo ":: Done";fi
 }
 
 cd;cd $HOME/dotfiles
-files=".bashrc .vimrc .Xresources .xinitrc"
+files=".bashrc .vimrc .Xresources .xinitrc info"
 sdir="scripts/ pgrm/ .cconfig/"
 
 echo -en ":: ( $sdir $files ) -> auto included\n"
