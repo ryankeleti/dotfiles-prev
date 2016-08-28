@@ -1,6 +1,12 @@
 #!/bin/bash
 
-cd;cd ~/dotfiles
+function gitEX () {
+local EX="$?"
+if [ $EX != 0 ]; then echo ":: Error";
+else echo ":: Done";fi
+}
+
+cd;cd $HOME/dotfiles
 files=".bashrc .vimrc .Xresources .xinitrc"
 sdir="scripts/ pgrm/ .cconfig/"
 
@@ -12,11 +18,5 @@ git add $files $sdir $efiles
 git commit -m "gitupdate.sh >> dotfiles"
 git push origin master
 
-function gitRC () {
-local RC="$?"
-if [ $RC != 0 ]; then echo "Error.";
-else echo ":: Done";
-fi
-}
-gitRC
+gitEX
 
