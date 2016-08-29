@@ -11,7 +11,7 @@ function lastcmd () { local EX="$?";PS1="";
 #export PS1="[\u@\h \W $(branch)] $EX ";if [ $EX != 0 ];then PS1+="${rc}>> ${ec}  ";else PS1+="${gc}>> ${ec}  ";fi
 export PS1=' >  '
 }
-files=~/dotfiles
+files=$HOME/dotfiles
 #synclient TapButton1=1;synclient TapButton2=3;synclient TapButton3=2
 branch () { git branch 2> /dev/null|sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
