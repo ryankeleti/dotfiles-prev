@@ -40,9 +40,9 @@
 
 
 
-  @ryankeleti 's (my) personal dotfiles
+  @ryankeleti personal dotfiles
 
-  Contains scripts & configs
+  contains scripts & configs
 
-  Some content may not be original
+  some content may not be original
 
