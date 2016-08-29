@@ -1,5 +1,5 @@
 #!/bin/sh 
-# -- @ryankeleti
+# https://github.com/ryankeleti/dotfiles
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -30,21 +30,19 @@ xrdb -load $userresources
 xrdb -merge $userresources
 setxkbmap -option compose:rctrl
 
-#feh --bg-scale $files/.cconfig/triangle.jpg &
 #feh --bg-scale $files/.cconfig/street.jpg &
 feh --bg-fill $files/.cconfig/black.png
 
-xterm &
 #lal &
 #compton &
-conky -c $HOME/.config/conky/conky.conf &
+#conky -c $HOME/.config/conky/conky.conf &
+xterm &
+sxhkd &
 xscreensaver &
 xfce4-power-manager &
 
-sxhkd &
-
-#exec openbox
 exec bspwm
+#exec openbox
 #exec i3
 #exec startxfce4
 #exec herbstluftwm
