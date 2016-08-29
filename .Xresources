@@ -62,7 +62,7 @@ lal*fontsize:                               12
 #define red #7e5c62                         /* soft red     */
 #define grn #658861                         /* soft green   */
 #define blu #628b87                         /* soft blue    */
-
+/*
 *.background:                               bg
 *.foreground:                               c7
 *.cursorColor:                              blu
@@ -82,7 +82,7 @@ lal*fontsize:                               12
 *.color14:                                  blu
 *.color7:                                   fg
 *.color15:                                  fg
-
+*/
 rofi.lines:                                 1
 rofi.columns:                               1
 rofi.eh:                                    1

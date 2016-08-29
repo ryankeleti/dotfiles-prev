@@ -30,8 +30,8 @@ xrdb -load $userresources
 xrdb -merge $userresources
 setxkbmap -option compose:rctrl
 
-#feh --bg-scale $files/.cconfig/street.jpg &
-feh --bg-fill $files/.cconfig/black.png
+#feh --bg-scale $files/cconfig/street.jpg &
+feh --bg-fill $files/cconfig/black.png
 
 #lal &
 #compton &
