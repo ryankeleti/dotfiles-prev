@@ -1,0 +1,98 @@
+# @ryankeleti
+
+super + Return
+  urxvt
+
+super + shift + Return
+	xterm
+
+super + shift + e
+  xkill
+
+super + d
+	rofi -show run
+
+super + a
+	rofi -show window
+
+super + s
+	rofi -dmenu
+
+super + Escape
+	pkill -USR1 -x sxhkd
+
+super + alt + Escape
+	bspc quit
+
+super + {_,shift + }q
+	bspc node -{c,k}
+
+super + m
+	bspc desktop -l next
+
+super + y
+	bspc query -N -n focused.automatic && bspc node -n last.!automatic || bspc node last.leaf -n focused
+
+super + g
+	bspc node -s biggest
+
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+super + space
+  bspc node -t floating
+
+super + ctrl + {x,y,z}
+	bspc node -g {locked,sticky,private}
+
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+super + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
+
+super + {_,shift + }c
+	bspc node -f {next,prev}
+
+super + bracket{left,right}
+	bspc desktop -f {prev,next}
+
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus the older or newer node in the focus history super + {o,i} bspc wm -h off; \ bspc node {older,newer} -f; \
+	bspc wm -h on
+
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+super + ctrl + space
+	bspc node -p cancel
+
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+super + alt + {h,j,k,l}
+	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
+
+~button1
+	bspc pointer -g focus
+
+super + button{1-3}
+	; bspc pointer -g {move,resize_side,resize_corner}
+
+super + @button{1-3}
+	bspc pointer -u
+
+super + F7
+  exec xbacklight -inc 5
+
+super + F6
+  exec xbacklight -dec 5
+

@@ -1,0 +1,162 @@
+# i3 config file (v4)
+# @ryankeleti
+
+set $mod Mod4
+
+#font pango:monospace 8
+#font pango:DejaVu Sans Mono 8
+# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+font pango:roboto 10
+
+floating_modifier $mod
+
+bindsym $mod+Return exec xterm
+
+bindsym $mod+o exec xterm htop
+
+bindsym $mod+q kill
+
+bindsym $mod+d exec rofi -show run
+#bindsym $mod+d exec dmenu_run
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+b split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout
+bindsym $mod+s layout stacking
+bindsym $mod+t layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+bindsym $mod+c focus child
+
+set $wks1 "main"
+set $wks2 ">_"
+set $wks3 "code"
+#set $wks4 "4"
+#set $wks5 "5"
+#set $wks6 "6"
+#set $wks7 "7"
+#set $wks8 "8"
+#set $wks9 "9"
+#set $wks10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace $wks1
+bindsym $mod+2 workspace $wks2
+bindsym $mod+3 workspace $wks3
+#bindsym $mod+4 workspace $wks4
+#bindsym $mod+5 workspace $wks5
+#bindsym $mod+6 workspace $wks6
+#bindsym $mod+7 workspace $wks7
+#bindsym $mod+8 workspace $wks8
+#bindsym $mod+9 workspace $wks9
+#bindsym $mod+0 workspace $wks10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $wks1
+bindsym $mod+Shift+2 move container to workspace $wks2
+bindsym $mod+Shift+3 move container to workspace $wks3
+#bindsym $mod+Shift+4 move container to workspace $wks4
+#bindsym $mod+Shift+5 move container to workspace $wks5
+#bindsym $mod+Shift+6 move container to workspace $wks6
+#bindsym $mod+Shift+7 move container to workspace $wks7
+#bindsym $mod+Shift+8 move container to workspace $wks8
+#bindsym $mod+Shift+9 move container to workspace $wks9
+#bindsym $mod+Shift+0 move container to workspace $wks10
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+set $bg_clr       #fabd2f
+set $inact_bg     #83a598
+set $txt_clr      #fbf1c7
+set $inact_txt    #d5c4a1
+set $urg_bg       #ffd7af
+
+client.focused            $bg_clr       $bg_clr      $txt_clr     #fe8019
+client.unfocused          $inact_bg     $inact_bg    $inact_txt   #fe8019
+client.focused_inactive   $inact_bg     $inact_bg    $inact_txt   #fe8019
+client.urgent             $urg_bg       $urg_bg      $txt_clr     #fe8019
+bar {
+       status_command i3status
+}
+                                       
+# pulseaudio
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# brightness
+bindsym $mod+F7 exec xbacklight -inc 5
+bindsym $mod+F6 exec xbacklight -dec 5
+
+bindsym $mod+Escape exec i3lock
+
+gaps inner 30
+gaps outer 4
+for_window [class="^.*"] border pixel 1 
+
+exec_always xfce4-power-manager &
+#exec -no-startup-id sleep 3 && conky
+#exec_always feh --bg-scale ~/Pictures-Local/triangle1.jpg &  
+exec_always feh --bg-scale ~/Pictures-Local/street1.jpg &  
+exec –no-startup-id sleep 3 && xfce4-power-manager
+
