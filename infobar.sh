@@ -1,8 +1,10 @@
 #!/bin/bash
 
+files=$HOME/dotfiles
+
 while true
   
-do ./infobar
+do $files/infobar
   sleep 10
 done
 
