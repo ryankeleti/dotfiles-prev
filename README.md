@@ -1,4 +1,4 @@
-# My dotfiles
+# dotfiles
 
                               _        _      _   _ 
        _ __ _   _  __ _ _ __ | | _____| | ___| |_(_)
@@ -6,6 +6,14 @@
       | |  | |_| | (_| | | | |   <  __/ |  __/ |_| |
       |_|   \__, |\__,_|_| |_|_|\_\_ _|_|\_ _|\__|_|
             |___/                                   
+
+
+           _       _    __ _ _           
+        __| | ___ | |_ / _(_) | ___  ___ 
+       / _` |/ _ \| __| |_| | |/ _ \/ __|
+      | (_| | (_) | |_|  _| | |  __/\__ \
+       \__,_|\___/ \__|_| |_|_|\___||___/
+                                                         
             
 
         my current setup
@@ -15,14 +23,14 @@
         --  gui font          roboto
         --  shell             bash
         --  editor            vim
-        --  term emulators    xterm & urxvt
+        --  term emulators    xterm, urxvt & crt
         --  file managers     ranger & thunar
         --  browser           firefox
         --  theme (gtk)       arc-dark
         --  icons             arc
         --  statusbar         conky
+        --  launcher          rofi
 
-        
         general info
 
         --  computer          ASUS C300 Chromebook
@@ -32,11 +40,9 @@
 
 
 
-  @ryankeleti 's (my) personal dotfiles and programs (WIPs).
+  @ryankeleti 's (my) personal dotfiles
 
-  Contains scripts, configs, and some half-completed programs that I like to keep backed up.
- 
-  Mainly shell scripts and C programs.
+  Contains scripts & configs
 
-  Some content may not be original.
+  Some content may not be original
 
