@@ -5,8 +5,6 @@
 #
 #   https://github.com/ryankeleti
 
-
-#   function to add confirmation prompt
 step () {
   local RC=$?
   echo ':: do you wish to continue [Y/n]   '
@@ -17,7 +15,6 @@ step () {
   fi
 }
 
-#   function to get network status
 isup () { 
   local RC=$?
   ping -c3 8.8.8.8
@@ -26,7 +23,6 @@ isup () {
   fi
 }
 
-#   function to configure time settings
 timeset () {
   local RC=$?
   timedatectl set-ntp true
@@ -38,7 +34,6 @@ timeset () {
   fi
 }
 
-#   function to partition the disks
 diskset () {
   echo ':: do you want to lsblk [Y/n]   '
   read local input
@@ -63,7 +58,6 @@ diskset () {
   swapon -L $whatswap
 }
 
-#   function to edit host info
 hostset () {
   echo '/etc/hostname   '
   read etchostname
@@ -117,7 +111,7 @@ hwclock --systohc --utc
 
 echo 'pacman -S --noconfirm wpa_supplicant dialog vim'
 step
-pacman -S --noconfirm wpa_supplicant dialog vim
+pacman -S --noconfirm wpa_supplicant dialog vim grub
 
 echo 'grub-install  [/dev/somedisk]'
 step
