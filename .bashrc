@@ -12,10 +12,11 @@ function lastcmd () { local EX="$?";PS1="";
 export PS1=' >  '
 }
 files=$HOME/dotfiles
-#synclient TapButton1=1;synclient TapButton2=3;synclient TapButton3=2
+synclient TapButton1=1;synclient TapButton2=3;synclient TapButton3=2
 branch () { git branch 2> /dev/null|sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 . $files/scripts/.commacd.bash
-. $files/info
+. $files/info/info
+. ~/homex/hhighlighter/h.sh
 cd
 
