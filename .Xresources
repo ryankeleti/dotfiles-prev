@@ -16,6 +16,15 @@ xterm*VT100.Translations:	                  #override \n\
   Ctrl Shift <Key>V:                        insert-selection(CLIPBOARD) \n\
   Ctrl Shift <Key>C:                        copy-selection(CLIPBOARD)
 
+urxvt.perl-ext-common:                      default,clipboard,keyboard-select  
+urxvt.keysym.M-escape:                      perl:keyboard-select  
+urxvt.keysym.M-c:                           perl:keyboard-copy  
+urxvt.keysym.C-v:                           perl:keyboard-paste
+urxvt.keysym.M-C-v:                         perl:keyboard-paste_escaped  
+urxvt.clipboard.copycmd:                    xsel -ib
+urxvt.clipboard.pastecmd:                   xsel -ob
+
+
 urxvt*transparent:                          1
 urxvt*internalBorder:                       10
 urxvt*iso14755:                             false
@@ -55,13 +64,31 @@ lal*fontsize:                               12
 #define c6  #6ec6d4                         /* light grey   */
 #define c7  #d3d3d3                         /* white        */
 #define c8  #ff8100                         /* amber        */
-#define c9  #000000                         /* black        */
-
 #define bg  #1b1b1b                         /* dark grey    */
 #define fg  #777777                         /* soft grey    */
 #define red #7e5c62                         /* soft red     */
 #define grn #658861                         /* soft green   */
 #define blu #628b87                         /* soft blue    */
+
+*background:                                #0d1014
+*foreground:                                #959ca4
+*cursorColor:                               #959ca4
+*color0:                                    #3a3d42
+*color8:                                    #3a3d42
+*color1:                                    #4C505b
+*color9:                                    #4C505b
+*color2:                                    #bec7d1
+*color10:                                   #bec7d1
+*color3:                                    #4C505b
+*color11:                                   #4C505b
+*color4:                                    #bec7d1
+*color12:                                   #bec7d1
+*color5:                                    #373a42
+*color13:                                   #373a42
+*color6:                                    #373a42
+*color14:                                   #373a42
+*color7:                                    #959ca4
+*color15:                                   #ffffff
 /*
 *.background:                               bg
 *.foreground:                               c7
@@ -108,72 +135,70 @@ rofi.color-urgent:                          bg, fg, bg, fg, c7
 rofi.color-active:                          bg, fg, bg, fg, c7
 rofi.color-window:                          bg, #7c6f64, #7c6f64
 
-! gruvbox / solarized {{{  
 /*! dark
-! hard*.background:      #1d2021
-*.background:            #282828
-! soft *.background:     #32302f
-*.foreground:            #ebdbb2
-*.color0:                #282828
-*.color8:                #928374
-*.color1:                #cc241d
-*.color9:                #fb4934
-*.color2:                #98971a
-*.color10:               #b8bb26
-*.color3:                #d79921
-*.color11:               #fabd2f
-*.color4:                #458588
-*.color12:               #83a598
-*.color5:                #b16286
-*.color13:               #d3869b
-*.color6:                #689d6a
-*.color14:               #8ec07c
-*.color7:                #a89984
-*.color15:               #ebdbb2
+! hard*.background:                         #1d2021
+*.background:                               #282828
+! soft *.background:                        #32302f
+*.foreground:                               #ebdbb2
+*.color0:                                   #282828
+*.color8:                                   #928374
+*.color1:                                   #cc241d
+*.color9:                                   #fb4934
+*.color2:                                   #98971a
+*.color10:                                  #b8bb26
+*.color3:                                   #d79921
+*.color11:                                  #fabd2f
+*.color4:                                   #458588
+*.color12:                                  #83a598
+*.color5:                                   #b16286
+*.color13:                                  #d3869b
+*.color6:                                   #689d6a
+*.color14:                                  #8ec07c
+*.color7:                                   #a89984
+*.color15:                                  #ebdbb2
 ! light
-! hard *.background:     #f9f5d7
-*.background:            #fbf1c7
-! soft *.background:     #f2e5bc
-*.foreground:            #3c3836
-*.color0:                #fdf4c1
-*.color8:                #928374
-*.color1:                #cc241d
-*.color9:                #9d0006
-*.color2:                #98971a
-*.color10:               #79740e
-*.color3:                #d79921
-*.color11:               #b57614
-*.color4:                #458588
-*.color12:               #076678
-*.color5:                #b16286
-*.color13:               #8f3f71
-*.color6:                #689d6a
-*.color14:               #427b58
-*.color7:                #7c6f64
-*.color15:               #3c3836
-! solarized  /           #ffeeaa
-*.background:            #002b36
-*.foreground:            #657b83
-*.fading:                40
-*.fadeColor:             #002b36
-*.cursorColor:           #93a1a1
-*.pointerColorBackground:#586e75
-*.pointerColorForeground:#93a1a1
-*.color0:                #073642
-*.color8:                #002b36
-*.color1:                #dc322f
-*.color9:                #cb4b16
-*.color2:                #2aa198
-*.color10:               #586e75
-*.color3:                #b58900
-*.color11:               #657b83
-*.color4:                #268bd2
-*.color12:               #839496
-*.color5:                #d33682
-*.color13:               #6c71c4
-*.color6:                #859900
-*.color14:               #93a1a1
-*.color7:                #eee8d5
-*.color15:               #fdf6e3 */
-! }}}
+! hard *.background:                        #f9f5d7
+*.background:                               #fbf1c7
+! soft *.background:                        #f2e5bc
+*.foreground:                               #3c3836
+*.color0:                                   #fdf4c1
+*.color8:                                   #928374
+*.color1:                                   #cc241d
+*.color9:                                   #9d0006
+*.color2:                                   #98971a
+*.color10:                                  #79740e
+*.color3:                                   #d79921
+*.color11:                                  #b57614
+*.color4:                                   #458588
+*.color12:                                  #076678
+*.color5:                                   #b16286
+*.color13:                                  #8f3f71
+*.color6:                                   #689d6a
+*.color14:                                  #427b58
+*.color7:                                   #7c6f64
+*.color15:                                  #3c3836
+! solarized  /  #ffeeaa
+*.background:                               #002b36
+*.foreground:                               #657b83
+*.fading:                                   40
+*.fadeColor:                                #002b36
+*.cursorColor:                              #93a1a1
+*.pointerColorBackground:                   #586e75
+*.pointerColorForeground:                   #93a1a1
+*.color0:                                   #073642
+*.color8:                                   #002b36
+*.color1:                                   #dc322f
+*.color9:                                   #cb4b16
+*.color2:                                   #2aa198
+*.color10:                                  #586e75
+*.color3:                                   #b58900
+*.color11:                                  #657b83
+*.color4:                                   #268bd2
+*.color12:                                  #839496
+*.color5:                                   #d33682
+*.color13:                                  #6c71c4
+*.color6:                                   #859900
+*.color14:                                  #93a1a1
+*.color7:                                   #eee8d5
+*.color15:                                  #fdf6e3 */
 
