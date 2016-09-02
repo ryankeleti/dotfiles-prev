@@ -1,10 +1,10 @@
 #!/bin/bash
 
-files=$HOME/dotfiles
+files=$HOME/dotfiles/info
 
 while true
   
-do $files/infobar
+do clear && $files/infobar
   sleep 10
 done
 
