@@ -2,7 +2,7 @@
 [[ $- != *i* ]] && return; PS1='[\u@\h \W]\$ ';shopt -s histappend cmdhist checkwinsize autocd
 HISTFILE=;HISTFILESIZE=;HISTCONTROL="erasedups:ignoreboth";unset HISTFILE
 export PAGER='/usr/bin/less';export SUDO_EDITOR='/usr/bin/vim';export PROMPT_COMMAND=lastcmd
-alias cdd='cd ~/dotfiles';alias qq='exit';alias rm='rm -i';alias mv='mv -i';alias dir='dir --color=auto';alias v='vim';alias vi='vim';alias cdc='cd ~/.config'
+alias cdd='cd ~/dotfiles';alias qq='exit';alias rm='rm -i';alias mv='mv -i';alias dir='dir --color=auto';alias vi='vim';alias cdc='cd ~/.config'
 alias ls='ls --color=auto';alias la='ls -AF';alias lla='ls -Al';alias lf='ls -F'
 alias dud1='du -d1 -h|sort -hr';alias diskspace='du -S|sort -nr|more';alias wm='sudo wifi-menu -o wlp1s0';alias xrdbm='xrdb -merge ~/.Xresources';alias tl="find . -print|sed 's;[^/]*/;|__;g;s;__|; |;g'"
 bind -x '"\C-b": clear && printf "\e[3J"'

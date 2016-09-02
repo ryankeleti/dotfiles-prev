@@ -1,5 +1,17 @@
 !  ~/.Xresources                            https://github.com/ryankeleti/dotfiles
 
+#define c0  #a6e22e
+#define c1  #beed5f
+#define c2  #fd971f
+#define c3  #ff669d
+#define c4  #9e6ffe
+#define c5  #00cbee
+#define c6  #6ec6d4
+#define c8  #ff8100
+#define red #7e5c62
+#define grn #658861
+#define blu #628b87
+
 *font:	                                    -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 *savelines:	                                5000
 *loginshell:	                              true
@@ -24,17 +36,19 @@ urxvt.keysym.M-C-v:                         perl:keyboard-paste_escaped
 urxvt.clipboard.copycmd:                    xsel -ib
 urxvt.clipboard.pastecmd:                   xsel -ob
 
-
 urxvt*transparent:                          1
 urxvt*internalBorder:                       10
 urxvt*iso14755:                             false
+
 xft.antialias:                              1
 xft.hinting:                                1
 xft.hintstyle:                              hintslight
-xft.rgba:                                   rgb
 xft.lcdfilter:                              lcddefault
+xft.rgba:                                   rgb
 xft.dpi:                                    96
+
 xcursor.theme:                              Human
+
 xscreensaver.Dialog.Button.background:      #444
 xscreensaver.Dialog.Button.foreground:      #ededff
 xscreensaver.Dialog.background:             #202020
@@ -55,61 +69,6 @@ xscreensaver.passwd.thermometer.width:      8
 lal*font:                                   roboto
 lal*fontsize:                               12
 
-#define c0  #a6e22e                         /* light green  */
-#define c1  #beed5f                         /* lime         */
-#define c2  #fd971f                         /* light orange */
-#define c3  #ff669d                         /* pink         */
-#define c4  #9e6ffe                         /* purple       */
-#define c5  #00cbee                         /* blue         */
-#define c6  #6ec6d4                         /* light grey   */
-#define c7  #d3d3d3                         /* white        */
-#define c8  #ff8100                         /* amber        */
-#define bg  #1b1b1b                         /* dark grey    */
-#define fg  #777777                         /* soft grey    */
-#define red #7e5c62                         /* soft red     */
-#define grn #658861                         /* soft green   */
-#define blu #628b87                         /* soft blue    */
-
-*background:                                #0d1014
-*foreground:                                #959ca4
-*cursorColor:                               #959ca4
-*color0:                                    #3a3d42
-*color8:                                    #3a3d42
-*color1:                                    #4C505b
-*color9:                                    #4C505b
-*color2:                                    #bec7d1
-*color10:                                   #bec7d1
-*color3:                                    #4C505b
-*color11:                                   #4C505b
-*color4:                                    #bec7d1
-*color12:                                   #bec7d1
-*color5:                                    #373a42
-*color13:                                   #373a42
-*color6:                                    #373a42
-*color14:                                   #373a42
-*color7:                                    #959ca4
-*color15:                                   #ffffff
-/*
-*.background:                               bg
-*.foreground:                               c7
-*.cursorColor:                              blu
-*.color0:                                   bg
-*.color8:                                   fg
-*.color1:                                   red
-*.color9:                                   red
-*.color2:                                   grn
-*.color10:                                  grn
-*.color3:                                   grn
-*.color11:                                  grn
-*.color4:                                   blu
-*.color12:                                  blu
-*.color5:                                   blu
-*.color13:                                  blu
-*.color6:                                   blu
-*.color14:                                  blu
-*.color7:                                   fg
-*.color15:                                  fg
-*/
 rofi.lines:                                 1
 rofi.columns:                               1
 rofi.eh:                                    1
@@ -130,12 +89,75 @@ rofi.terminal:                              xterm
 rofi.fake-background:                       background
 rofi.font:                                  roboto 10
 rofi.kb-clear-line:                         Control+b
-rofi.color-normal:                          bg, fg, bg, fg, c7
-rofi.color-urgent:                          bg, fg, bg, fg, c7
-rofi.color-active:                          bg, fg, bg, fg, c7
-rofi.color-window:                          bg, #7c6f64, #7c6f64
+rofi.color-normal:                          #1b1b1b, #777777, #1b1b1b, #777777, #d3d3d3
+rofi.color-urgent:                          #1b1b1b, #777777, #1b1b1b, #777777, #d3d3d3
+rofi.color-active:                          #1b1b1b, #777777, #1b1b1b, #777777, #d3d3d3
+rofi.color-window:                          #1b1b1b, #7c6f64, #7c6f64
 
-/*! dark
+! streelgrey
+*background:                                #0a0a0a
+*foreground:                                #aaaaaa
+*cursorColor:                               #aaaaaa
+*color0:                                    #333333
+*color8:                                    #333333
+*color1:                                    #555555
+*color9:                                    #555555
+*color2:                                    #cccccc
+*color10:                                   #cccccc
+*color3:                                    #555555
+*color11:                                   #555555
+*color4:                                    #cccccc
+*color12:                                   #cccccc
+*color5:                                    #777777
+*color13:                                   #777777
+*color6:                                    #777777
+*color14:                                   #777777
+*color7:                                    #aaaaaa
+*color15:                                   #ffffff
+/*
+! steel
+*background:                                #0d1014
+*foreground:                                #959ca4
+*cursorColor:                               #959ca4
+*color0:                                    #3a3d42
+*color8:                                    #3a3d42
+*color1:                                    #4C505b
+*color9:                                    #4C505b
+*color2:                                    #bec7d1
+*color10:                                   #bec7d1
+*color3:                                    #4C505b
+*color11:                                   #4C505b
+*color4:                                    #bec7d1
+*color12:                                   #bec7d1
+*color5:                                    #373a42
+*color13:                                   #373a42
+*color6:                                    #373a42
+*color14:                                   #373a42
+*color7:                                    #959ca4
+*color15:                                   #ffffff
+*//*
+! soft colors
+*.background:                               #1b1b1b
+*.foreground:                               #d3d3d3
+*.cursorColor:                              blu
+*.color0:                                   #1b1b1b
+*.color8:                                   #777777
+*.color1:                                   red
+*.color9:                                   red
+*.color2:                                   grn
+*.color10:                                  grn
+*.color3:                                   grn
+*.color11:                                  grn
+*.color4:                                   blu
+*.color12:                                  blu
+*.color5:                                   blu
+*.color13:                                  blu
+*.color6:                                   blu
+*.color14:                                  blu
+*.color7:                                   #777777
+*.color15:                                  #777777
+*/
+/*! dark gruvbox
 ! hard*.background:                         #1d2021
 *.background:                               #282828
 ! soft *.background:                        #32302f
@@ -156,7 +178,7 @@ rofi.color-window:                          bg, #7c6f64, #7c6f64
 *.color14:                                  #8ec07c
 *.color7:                                   #a89984
 *.color15:                                  #ebdbb2
-! light
+! light gruvbox
 ! hard *.background:                        #f9f5d7
 *.background:                               #fbf1c7
 ! soft *.background:                        #f2e5bc
@@ -177,7 +199,7 @@ rofi.color-window:                          bg, #7c6f64, #7c6f64
 *.color14:                                  #427b58
 *.color7:                                   #7c6f64
 *.color15:                                  #3c3836
-! solarized  /  #ffeeaa
+! solarized / #ffeeaa
 *.background:                               #002b36
 *.foreground:                               #657b83
 *.fading:                                   40
