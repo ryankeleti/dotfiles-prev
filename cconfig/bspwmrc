@@ -1,10 +1,15 @@
-#! /bin/sh
+#!/bin/sh
 
 sxhkd -c $HOME/.config/sxhkd/sxhkdrc &
-conky &
+#conky &
 
-bspc config border_width            1
+bspc config border_width            0
 bspc config window_gap              30
+
+bspc config top_padding             
+bspc config bottom_padding
+bspc config right_padding
+bspc config left_padding
 
 bspc config normal_border_color             
 bspc config active_border_color     
@@ -15,7 +20,7 @@ bspc config borderless_monocle      true
 bspc config gapless_monocle         true
 bspc config focus_follows_pointer   true
 
-bspc monitor -d I II III IV V
+bspc monitor -d I II III
 
 bspc rule -a Firefox desktop=^2
 bspc rule -a Screenkey manage=off
