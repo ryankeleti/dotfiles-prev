@@ -95,7 +95,8 @@ rofi.color-active:                          #1b1b1b, #777777, #1b1b1b, #777777, 
 rofi.color-window:                          #1b1b1b, #7c6f64, #7c6f64
 
 ! streelgrey
-*background:                                #0a0a0a
+!*background:                                #0a0a0a
+*background:                                #000000
 *foreground:                                #aaaaaa
 *cursorColor:                               #aaaaaa
 *color0:                                    #333333
