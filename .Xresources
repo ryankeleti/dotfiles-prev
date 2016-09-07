@@ -29,11 +29,11 @@ xterm*VT100.Translations:	                  #override \n\
   Ctrl Shift <Key>V:                        insert-selection(CLIPBOARD) \n\
   Ctrl Shift <Key>C:                        copy-selection(CLIPBOARD)
 
-urxvt.perl-ext-common:                      default,clipboard,keyboard-select  
-urxvt.keysym.M-escape:                      perl:keyboard-select  
-urxvt.keysym.M-c:                           perl:keyboard-copy  
+urxvt.perl-ext-common:                      default,clipboard,keyboard-select
+urxvt.keysym.M-escape:                      perl:keyboard-select
+urxvt.keysym.M-c:                           perl:keyboard-copy
 urxvt.keysym.C-v:                           perl:keyboard-paste
-urxvt.keysym.M-C-v:                         perl:keyboard-paste_escaped  
+urxvt.keysym.M-C-v:                         perl:keyboard-paste_escaped
 urxvt.clipboard.copycmd:                    xsel -ib
 urxvt.clipboard.pastecmd:                   xsel -ob
 
@@ -96,7 +96,7 @@ rofi.color-active:                          #1b1b1b, #777777, #1b1b1b, #777777, 
 rofi.color-window:                          #1b1b1b, #7c6f64, #7c6f64
 
 ! streelgrey
-!*background:                                #0a0a0a
+!*background:                               #0a0a0a
 *background:                                #000000
 *foreground:                                #aaaaaa
 *cursorColor:                               #aaaaaa
@@ -137,7 +137,7 @@ rofi.color-window:                          #1b1b1b, #7c6f64, #7c6f64
 *color14:                                   #373a42
 *color7:                                    #959ca4
 *color15:                                   #ffffff
-*//*
+
 ! soft colors
 *.background:                               #1b1b1b
 *.foreground:                               #d3d3d3
@@ -158,11 +158,11 @@ rofi.color-window:                          #1b1b1b, #7c6f64, #7c6f64
 *.color14:                                  blu
 *.color7:                                   #777777
 *.color15:                                  #777777
-*/
-/*! dark gruvbox
-! hard*.background:                         #1d2021
+
+! dark gruvbox
+!*.background:                              #1d2021
 *.background:                               #282828
-! soft *.background:                        #32302f
+!*.background:                              #32302f
 *.foreground:                               #ebdbb2
 *.color0:                                   #282828
 *.color8:                                   #928374
@@ -180,27 +180,6 @@ rofi.color-window:                          #1b1b1b, #7c6f64, #7c6f64
 *.color14:                                  #8ec07c
 *.color7:                                   #a89984
 *.color15:                                  #ebdbb2
-! light gruvbox
-! hard *.background:                        #f9f5d7
-*.background:                               #fbf1c7
-! soft *.background:                        #f2e5bc
-*.foreground:                               #3c3836
-*.color0:                                   #fdf4c1
-*.color8:                                   #928374
-*.color1:                                   #cc241d
-*.color9:                                   #9d0006
-*.color2:                                   #98971a
-*.color10:                                  #79740e
-*.color3:                                   #d79921
-*.color11:                                  #b57614
-*.color4:                                   #458588
-*.color12:                                  #076678
-*.color5:                                   #b16286
-*.color13:                                  #8f3f71
-*.color6:                                   #689d6a
-*.color14:                                  #427b58
-*.color7:                                   #7c6f64
-*.color15:                                  #3c3836
 ! solarized / #ffeeaa
 *.background:                               #002b36
 *.foreground:                               #657b83
@@ -224,5 +203,6 @@ rofi.color-window:                          #1b1b1b, #7c6f64, #7c6f64
 *.color6:                                   #859900
 *.color14:                                  #93a1a1
 *.color7:                                   #eee8d5
-*.color15:                                  #fdf6e3 */
+*.color15:                                  #fdf6e3
+*/
 
