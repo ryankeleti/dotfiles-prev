@@ -1,44 +1,48 @@
 !  ~/.Xresources                            https://github.com/ryankeleti/dotfiles
 
-#define c00 #a6e22e
-#define c01 #beed5f
-#define c02 #fd971f
-#define c03 #ff669d
-#define c04 #9e6ffe
-#define c05 #00cbee
-#define c06 #6ec6d4
-#define c07 #87ffaf
-#define c08 #ff8100
-#define c09 #777777
-#define c10 #1b1b1b
-#define c11 #d3d3d3
-#define c12 #ffffff
-#define c13 #555555
-#define c14 #333333
-#define c15 #aaaaaa
-#define c16 #cccccc
+#define c00                                 #a6e22e
+#define c01                                 #beed5f
+#define c02                                 #fd971f
+#define c03                                 #ff669d
+#define c04                                 #9e6ffe
+#define c05                                 #00cbee
+#define c06                                 #6ec6d4
+#define c07                                 #87ffaf
+#define c08                                 #ff8100
+#define c09                                 #777777
+#define c10                                 #1b1b1b
+#define c11                                 #d3d3d3
+#define c12                                 #ffffff
+#define c13                                 #555555
+#define c14                                 #333333
+#define c15                                 #aaaaaa
+#define c16                                 #cccccc
+#define c17                                 #7c6f64
+#define c18                                 #000000
+#define c19                                 #0a0a0a
+#define c20                                 #ffeeaa
 
-#define red #7e5c62
-#define grn #658861
-#define blu #628b87
+#define red                                 #7e5c62
+#define grn                                 #658861
+#define blu                                 #628b87
 
-#define base0   #0c1014
-#define base1   #11151c
-#define base2   #091f2e
-#define base3   #0a3749
-#define base4   #245361
-#define base5   #599cab
-#define base6   #99d1ce
-#define base7   #d3ebe9
-#define red0    #c23127
-#define orange  #d26937
-#define yellow  #edb443
-#define magenta #888ca6
-#define violet  #4e5166
-#define blue    #195466
-#define cyan    #33859e
-#define green   #2aa889
-/*
+#define base0                               #0c1014
+#define base1                               #11151c
+#define base2                               #091f2e
+#define base3                               #0a3749
+#define base4                               #245361
+#define base5                               #599cab
+#define base6                               #99d1ce
+#define base7                               #d3ebe9
+#define red0                                #c23127
+#define orange                              #d26937
+#define yellow                              #edb443
+#define magenta                             #888ca6
+#define violet                              #4e5166
+#define blue                                #195466
+#define cyan                                #33859e
+#define green                               #2aa889
+
 *background:                                #0a0f14
 *foreground:                                #98d1ce
 *cursorColor:                               #98d1ce
@@ -58,7 +62,7 @@
 *color14:                                   #599caa
 *color7:                                    #98d1ce
 *color15:                                   #d3ebe9
-*/
+
 *font:	                                    -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 *savelines:	                                5000
 *loginshell:	                              true
@@ -139,11 +143,11 @@ rofi.kb-clear-line:                         Control+b
 rofi.color-normal:                          c10, c09, c10, c09, c11
 rofi.color-urgent:                          c10, c09, c10, c09, c11
 rofi.color-active:                          c10, c09, c10, c09, c11
-rofi.color-window:                          c10, #7c6f64, #7c6f64
+rofi.color-window:                          c10, c17, c17
 /*
 ! streelgrey
-!*background:                               #0a0a0a
-*background:                                #000000
+! *background:                              c19
+*background:                                c18
 *foreground:                                c15
 *cursorColor:                               c15
 *color0:                                    c14
@@ -163,28 +167,7 @@ rofi.color-window:                          c10, #7c6f64, #7c6f64
 *color7:                                    c15
 *color15:                                   c12
 
-! steel
-*background:                                #0d1014
-*foreground:                                #959ca4
-*cursorColor:                               #959ca4
-*color0:                                    #3a3d42
-*color8:                                    #3a3d42
-*color1:                                    #4C505b
-*color9:                                    #4C505b
-*color2:                                    #bec7d1
-*color10:                                   #bec7d1
-*color3:                                    #4C505b
-*color11:                                   #4C505b
-*color4:                                    #bec7d1
-*color12:                                   #bec7d1
-*color5:                                    #373a42
-*color13:                                   #373a42
-*color6:                                    #373a42
-*color14:                                   #373a42
-*color7:                                    #959ca4
-*color15:                                   c12
-
-! soft colors
+! soft
 *.background:                               c10
 *.foreground:                               c11
 *.cursorColor:                              blu
@@ -204,6 +187,5 @@ rofi.color-window:                          c10, #7c6f64, #7c6f64
 *.color14:                                  blu
 *.color7:                                   c09
 *.color15:                                  c09
-!#ffeeaa
 */
 
