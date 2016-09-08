@@ -1,10 +1,10 @@
 # @ryankeleti
 
 super + Return
-  urxvt
+	xterm
 
 super + shift + Return
-	xterm
+  urxvt
 
 super + alt + Return
 	cool-retro-term
@@ -98,4 +98,10 @@ super + F7
 
 super + F6
   exec xbacklight -dec 5
+
+super + F9
+  exec redshift-adjust +1000
+
+super + F8
+  exec redshift-adjust -1000
 
