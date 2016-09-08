@@ -1,14 +1,23 @@
 !  ~/.Xresources                            https://github.com/ryankeleti/dotfiles
 
-#define c0  #a6e22e
-#define c1  #beed5f
-#define c2  #fd971f
-#define c3  #ff669d
-#define c4  #9e6ffe
-#define c5  #00cbee
-#define c6  #6ec6d4
-#define c7  #87ffaf
-#define c8  #ff8100
+#define c00 #a6e22e
+#define c01 #beed5f
+#define c02 #fd971f
+#define c03 #ff669d
+#define c04 #9e6ffe
+#define c05 #00cbee
+#define c06 #6ec6d4
+#define c07 #87ffaf
+#define c08 #ff8100
+#define c09 #777777
+#define c10 #1b1b1b
+#define c11 #d3d3d3
+#define c12 #ffffff
+#define c13 #555555
+#define c14 #333333
+#define c15 #aaaaaa
+#define c16 #cccccc
+
 #define red #7e5c62
 #define grn #658861
 #define blu #628b87
@@ -29,7 +38,7 @@
 #define blue    #195466
 #define cyan    #33859e
 #define green   #2aa889
-
+/*
 *background:                                #0a0f14
 *foreground:                                #98d1ce
 *cursorColor:                               #98d1ce
@@ -49,7 +58,7 @@
 *color14:                                   #599caa
 *color7:                                    #98d1ce
 *color15:                                   #d3ebe9
-
+*/
 *font:	                                    -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 *savelines:	                                5000
 *loginshell:	                              true
@@ -127,32 +136,32 @@ rofi.terminal:                              xterm
 rofi.fake-background:                       background
 rofi.font:                                  roboto 10
 rofi.kb-clear-line:                         Control+b
-rofi.color-normal:                          #1b1b1b, #777777, #1b1b1b, #777777, #d3d3d3
-rofi.color-urgent:                          #1b1b1b, #777777, #1b1b1b, #777777, #d3d3d3
-rofi.color-active:                          #1b1b1b, #777777, #1b1b1b, #777777, #d3d3d3
-rofi.color-window:                          #1b1b1b, #7c6f64, #7c6f64
+rofi.color-normal:                          c10, c09, c10, c09, c11
+rofi.color-urgent:                          c10, c09, c10, c09, c11
+rofi.color-active:                          c10, c09, c10, c09, c11
+rofi.color-window:                          c10, #7c6f64, #7c6f64
 /*
 ! streelgrey
 !*background:                               #0a0a0a
 *background:                                #000000
-*foreground:                                #aaaaaa
-*cursorColor:                               #aaaaaa
-*color0:                                    #333333
-*color8:                                    #333333
-*color1:                                    #555555
-*color9:                                    #555555
-*color2:                                    #cccccc
-*color10:                                   #cccccc
-*color3:                                    #555555
-*color11:                                   #555555
-*color4:                                    #cccccc
-*color12:                                   #cccccc
-*color5:                                    #777777
-*color13:                                   #777777
-*color6:                                    #777777
-*color14:                                   #777777
-*color7:                                    #aaaaaa
-*color15:                                   #ffffff
+*foreground:                                c15
+*cursorColor:                               c15
+*color0:                                    c14
+*color8:                                    c14
+*color1:                                    c13
+*color9:                                    c13
+*color2:                                    c16
+*color10:                                   c16
+*color3:                                    c13
+*color11:                                   c13
+*color4:                                    c16
+*color12:                                   c16
+*color5:                                    c09
+*color13:                                   c09
+*color6:                                    c09
+*color14:                                   c09
+*color7:                                    c15
+*color15:                                   c12
 
 ! steel
 *background:                                #0d1014
@@ -173,14 +182,14 @@ rofi.color-window:                          #1b1b1b, #7c6f64, #7c6f64
 *color6:                                    #373a42
 *color14:                                   #373a42
 *color7:                                    #959ca4
-*color15:                                   #ffffff
+*color15:                                   c12
 
 ! soft colors
-*.background:                               #1b1b1b
-*.foreground:                               #d3d3d3
+*.background:                               c10
+*.foreground:                               c11
 *.cursorColor:                              blu
-*.color0:                                   #1b1b1b
-*.color8:                                   #777777
+*.color0:                                   c10
+*.color8:                                   c09
 *.color1:                                   red
 *.color9:                                   red
 *.color2:                                   grn
@@ -193,30 +202,8 @@ rofi.color-window:                          #1b1b1b, #7c6f64, #7c6f64
 *.color13:                                  blu
 *.color6:                                   blu
 *.color14:                                  blu
-*.color7:                                   #777777
-*.color15:                                  #777777
-
-! dark gruvbox
-!*.background:                              #1d2021
-*.background:                               #282828
-!*.background:                              #32302f
-*.foreground:                               #ebdbb2
-*.color0:                                   #282828
-*.color8:                                   #928374
-*.color1:                                   #cc241d
-*.color9:                                   #fb4934
-*.color2:                                   #98971a
-*.color10:                                  #b8bb26
-*.color3:                                   #d79921
-*.color11:                                  #fabd2f
-*.color4:                                   #458588
-*.color12:                                  #83a598
-*.color5:                                   #b16286
-*.color13:                                  #d3869b
-*.color6:                                   #689d6a
-*.color14:                                  #8ec07c
-*.color7:                                   #a89984
-*.color15:                                  #ebdbb2
+*.color7:                                   c09
+*.color15:                                  c09
 !#ffeeaa
 */
 
