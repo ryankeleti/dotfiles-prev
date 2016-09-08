@@ -43,25 +43,25 @@
 #define cyan                                #33859e
 #define green                               #2aa889
 
-*background:                                #0a0f14
-*foreground:                                #98d1ce
-*cursorColor:                               #98d1ce
-*color0:                                    #0a0f14
-*color8:                                    #10151b
-*color1:                                    #c33027
-*color9:                                    #d26939
-*color2:                                    #26a98b
-*color10:                                   #081f2d
-*color3:                                    #edb54b
-*color11:                                   #245361
-*color4:                                    #195465
-*color12:                                   #093748
-*color5:                                    #4e5165
-*color13:                                   #888ba5
-*color6:                                    #33859d
-*color14:                                   #599caa
-*color7:                                    #98d1ce
-*color15:                                   #d3ebe9
+*.background:                               c10
+*.foreground:                               c11
+*.cursorColor:                              blu
+*.color0:                                   c10
+*.color8:                                   c09
+*.color1:                                   red
+*.color9:                                   red
+*.color2:                                   grn
+*.color10:                                  grn
+*.color3:                                   grn
+*.color11:                                  grn
+*.color4:                                   blu
+*.color12:                                  blu
+*.color5:                                   blu
+*.color13:                                  blu
+*.color6:                                   blu
+*.color14:                                  blu
+*.color7:                                   c09
+*.color15:                                  c09
 
 *font:	                                    -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 *savelines:	                                5000
@@ -88,6 +88,7 @@ urxvt.clipboard.copycmd:                    xsel -ib
 urxvt.clipboard.pastecmd:                   xsel -ob
 
 urxvt*transparent:                          1
+urxvt*depth:                                32
 urxvt*internalBorder:                       10
 urxvt*iso14755:                             false
 
@@ -110,12 +111,12 @@ xscreensaver.Dialog.internalBorderWidth:    24
 xscreensaver.Dialog.shadowThickness:        2
 xscreensaver.Dialog.text.background:        #444
 xscreensaver.Dialog.text.foreground:        #ededff
-xscreensaver.Dialog.text.font:              -misc-roboto-medium-r-normal--17-120-100-100-p-0-iso10646-1
+xscreensaver.Dialog.text.font:              roboto 10
 xscreensaver.Dialog.topShadowColor:         #202024
 xscreensaver.dateFormat:                    %I:%M%P %a %b %d, %Y
 xscreensaver.passwd.thermometer.background: #202020
 xscreensaver.passwd.thermometer.foreground: #a9b7c4
-xscreensaver.passwd.thermometer.width:      8
+xscreensaver.passwd.thermometer.width:      3
 
 lal*font:                                   roboto
 lal*fontsize:                               12
@@ -144,48 +145,4 @@ rofi.color-normal:                          c10, c09, c10, c09, c11
 rofi.color-urgent:                          c10, c09, c10, c09, c11
 rofi.color-active:                          c10, c09, c10, c09, c11
 rofi.color-window:                          c10, c17, c17
-/*
-! streelgrey
-! *background:                              c19
-*background:                                c18
-*foreground:                                c15
-*cursorColor:                               c15
-*color0:                                    c14
-*color8:                                    c14
-*color1:                                    c13
-*color9:                                    c13
-*color2:                                    c16
-*color10:                                   c16
-*color3:                                    c13
-*color11:                                   c13
-*color4:                                    c16
-*color12:                                   c16
-*color5:                                    c09
-*color13:                                   c09
-*color6:                                    c09
-*color14:                                   c09
-*color7:                                    c15
-*color15:                                   c12
-
-! soft
-*.background:                               c10
-*.foreground:                               c11
-*.cursorColor:                              blu
-*.color0:                                   c10
-*.color8:                                   c09
-*.color1:                                   red
-*.color9:                                   red
-*.color2:                                   grn
-*.color10:                                  grn
-*.color3:                                   grn
-*.color11:                                  grn
-*.color4:                                   blu
-*.color12:                                  blu
-*.color5:                                   blu
-*.color13:                                  blu
-*.color6:                                   blu
-*.color14:                                  blu
-*.color7:                                   c09
-*.color15:                                  c09
-*/
 

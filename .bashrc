@@ -22,3 +22,5 @@ files=$HOME/dotfiles
 . $files/scripts/.commacd.bash
 . $files/info/infobar
 
+xrdb -merge $HOME/.Xresources
+
