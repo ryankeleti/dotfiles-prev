@@ -32,7 +32,8 @@ xrdb -merge $files/cconfig/colors/dex-ui.xr
 setxkbmap -option compose:rctrl
 
 #feh --bg-scale $files/cconfig/street.jpg &
-feh --bg-fill $files/cconfig/black.png
+#feh --bg-fill $files/cconfig/black.png &
+feh --bg-scale $HOME/images/city2.jpg &
 
 #lal &
 #compton &

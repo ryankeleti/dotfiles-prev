@@ -13,6 +13,43 @@
 #define grn #658861
 #define blu #628b87
 
+#define base0   #0c1014
+#define base1   #11151c
+#define base2   #091f2e
+#define base3   #0a3749
+#define base4   #245361
+#define base5   #599cab
+#define base6   #99d1ce
+#define base7   #d3ebe9
+#define red0    #c23127
+#define orange  #d26937
+#define yellow  #edb443
+#define magenta #888ca6
+#define violet  #4e5166
+#define blue    #195466
+#define cyan    #33859e
+#define green   #2aa889
+
+*background:                                #0a0f14
+*foreground:                                #98d1ce
+*cursorColor:                               #98d1ce
+*color0:                                    #0a0f14
+*color8:                                    #10151b
+*color1:                                    #c33027
+*color9:                                    #d26939
+*color2:                                    #26a98b
+*color10:                                   #081f2d
+*color3:                                    #edb54b
+*color11:                                   #245361
+*color4:                                    #195465
+*color12:                                   #093748
+*color5:                                    #4e5165
+*color13:                                   #888ba5
+*color6:                                    #33859d
+*color14:                                   #599caa
+*color7:                                    #98d1ce
+*color15:                                   #d3ebe9
+
 *font:	                                    -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 *savelines:	                                5000
 *loginshell:	                              true
@@ -94,7 +131,7 @@ rofi.color-normal:                          #1b1b1b, #777777, #1b1b1b, #777777, 
 rofi.color-urgent:                          #1b1b1b, #777777, #1b1b1b, #777777, #d3d3d3
 rofi.color-active:                          #1b1b1b, #777777, #1b1b1b, #777777, #d3d3d3
 rofi.color-window:                          #1b1b1b, #7c6f64, #7c6f64
-
+/*
 ! streelgrey
 !*background:                               #0a0a0a
 *background:                                #000000
@@ -116,7 +153,7 @@ rofi.color-window:                          #1b1b1b, #7c6f64, #7c6f64
 *color14:                                   #777777
 *color7:                                    #aaaaaa
 *color15:                                   #ffffff
-/*
+
 ! steel
 *background:                                #0d1014
 *foreground:                                #959ca4
@@ -180,29 +217,6 @@ rofi.color-window:                          #1b1b1b, #7c6f64, #7c6f64
 *.color14:                                  #8ec07c
 *.color7:                                   #a89984
 *.color15:                                  #ebdbb2
-! solarized / #ffeeaa
-*.background:                               #002b36
-*.foreground:                               #657b83
-*.fading:                                   40
-*.fadeColor:                                #002b36
-*.cursorColor:                              #93a1a1
-*.pointerColorBackground:                   #586e75
-*.pointerColorForeground:                   #93a1a1
-*.color0:                                   #073642
-*.color8:                                   #002b36
-*.color1:                                   #dc322f
-*.color9:                                   #cb4b16
-*.color2:                                   #2aa198
-*.color10:                                  #586e75
-*.color3:                                   #b58900
-*.color11:                                  #657b83
-*.color4:                                   #268bd2
-*.color12:                                  #839496
-*.color5:                                   #d33682
-*.color13:                                  #6c71c4
-*.color6:                                   #859900
-*.color14:                                  #93a1a1
-*.color7:                                   #eee8d5
-*.color15:                                  #fdf6e3
+!#ffeeaa
 */
 

@@ -21,5 +21,4 @@ branch () { git branch 2> /dev/null|sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/';}
 files=$HOME/dotfiles
 . $files/scripts/.commacd.bash
 . $files/info/infobar
-. $HOME/homex/hhighlighter/h.sh
 
