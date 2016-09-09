@@ -2,16 +2,21 @@
 
 function gitEX () {
 local EX="$?"
-if [ $EX != 0 ]; then echo ":: Error";
-else echo ":: Done";fi
+
+  if [ $EX != 0 ]; then
+    echo ":: error"
+  else
+    echo ":: done"
+  fi
 }
 
-cd;cd $HOME/dotfiles
+cd $HOME/dotfiles
+
 files=".bashrc .vimrc .Xresources .xinitrc info* README.md"
 sdir="scripts/ cconfig/"
 
-echo -en ":: ( $sdir $files ) -> auto included\n"
-echo -en ":: Enter other files: "
+echo -e ":: ( $sdir $files ) »» auto included"
+echo -en ":: enter other files    "
 read efiles
 
 git add $files $sdir $efiles
