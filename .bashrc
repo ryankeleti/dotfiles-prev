@@ -14,8 +14,18 @@ alias dud1='du -d1 -h|sort -hr';alias diskspace='du -S|sort -nr|more';alias tl="
 
 branch () { git branch 2> /dev/null|sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/';}
 
-lcmd () { local EX="$?";PS1="";local ec='\[\e[0m\]';local rc='\[\e[1;31m\]';local gc='\[\e[1;32m\]'
-export PS1="";if [ $EX != 0 ];then PS1+="${rc}»   ${ec}";else PS1+="${gc}¶   ${ec}";fi;}
+lcmd () {
+local ex="$?"; PS1=""; local ec='\033[0m'; local rc='\033[1;31m'; local gc='\033[1;32m'
+export PS1=""
+
+  if [ $ex != 0 ]; then
+    PS1+="${rc} »   ${ec}"
+    printf "%${COLUMNS}s\n" "$ex"
+  else
+    PS1+="${gc} ¶   ${ec}"
+    printf "%${COLUMNS}s\n" "$ex"
+  fi
+}
 
 files=$HOME/dotfiles
 . $files/scripts/.commacd.bash
