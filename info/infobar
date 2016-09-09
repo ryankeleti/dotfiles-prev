@@ -25,10 +25,10 @@ chrg=`printf $(( 100 * $bn / $bf ))`
 
 temp=`sensors | awk '/Core\ 0/ {gsub(/\+/,"",$3); gsub(/\..+/,"",$3)    ; print $3}'`
 
-printf "   \e[0;36m%-4s \e[1;36m%-5s %-25s " " cpu" "$c_lvl%" `bar $c_lvl 10`
-printf "   \e[0;36m%-4s \e[1;36m%-5s %-25s " " ram" "$ram%" `bar $ram 10`
-printf "   \e[0;36m%-4s \e[1;36m%-5s %-25s " " /" "$spc%" `bar $spc 10`
-printf "   \e[0;36m%-4s \e[1;36m%-5s %-25s " " bat" "$chrg%" `bar $chrg 10`
-printf "   \e[0;36m%-4s \e[1;36m%-5s %-25s \n\n\n" "$temp°c " `bar $temp 10`
+printf "   \e[0;36m%-4s \e[1;36m%-5s %-25s " " cpu" "$c_lvl%" `bar $c_lvl 5`
+printf "   \e[0;36m%-4s \e[1;36m%-5s %-25s " " ram" "$ram%" `bar $ram 5`
+printf "   \e[0;36m%-4s \e[1;36m%-5s %-25s " " /" "$spc%" `bar $spc 5`
+printf "   \e[0;36m%-4s \e[1;36m%-5s %-25s " " bat" "$chrg%" `bar $chrg 5`
+printf "   \e[0;36m%-4s \e[1;36m%-5s %-25s \n\n\n" "$temp°c " `bar $temp 5`
 echo -en "\e[0m"
 
