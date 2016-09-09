@@ -44,8 +44,8 @@ xscreensaver &
 xfce4-power-manager &
 
 exec bspwm
-#exec openbox
 #exec i3
+#exec openbox
 #exec startxfce4
 #exec herbstluftwm
 

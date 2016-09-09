@@ -13,35 +13,11 @@
 #define c10                                 #1b1b1b
 #define c11                                 #d3d3d3
 #define c12                                 #ffffff
-#define c13                                 #555555
-#define c14                                 #333333
-#define c15                                 #aaaaaa
-#define c16                                 #cccccc
-#define c17                                 #7c6f64
-#define c18                                 #000000
-#define c19                                 #0a0a0a
-#define c20                                 #ffeeaa
-
+#define c13                                 #7c6f64
+#define c14                                 #ffeeaa
 #define red                                 #7e5c62
 #define grn                                 #658861
 #define blu                                 #628b87
-
-#define base0                               #0c1014
-#define base1                               #11151c
-#define base2                               #091f2e
-#define base3                               #0a3749
-#define base4                               #245361
-#define base5                               #599cab
-#define base6                               #99d1ce
-#define base7                               #d3ebe9
-#define red0                                #c23127
-#define orange                              #d26937
-#define yellow                              #edb443
-#define magenta                             #888ca6
-#define violet                              #4e5166
-#define blue                                #195466
-#define cyan                                #33859e
-#define green                               #2aa889
 
 *.background:                               c10
 *.foreground:                               c11
@@ -63,6 +39,17 @@
 *.color7:                                   c09
 *.color15:                                  c09
 
+urxvt.transparent:                          1
+urxvt.internalBorder:                       10
+urxvt.depth:                                32
+urxvt.shading:                              25
+urxvt.iso14755:                             false
+
+urxvt.keysym.S-Up:                          \033[1;2A
+urxvt.keysym.S-Down:                        \033[1;2B
+urxvt.keysym.S-Left:                        \033[1;5D
+urxvt.keysym.S-Right:                       \033[1;5C
+
 *font:	                                    -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 *savelines:	                                5000
 *loginshell:	                              true
@@ -78,19 +65,6 @@ xterm*selectToClipboard:	                  true
 xterm*VT100.Translations:	                  #override \n\
   Ctrl Shift <Key>V:                        insert-selection(CLIPBOARD) \n\
   Ctrl Shift <Key>C:                        copy-selection(CLIPBOARD)
-
-urxvt.perl-ext-common:                      default,clipboard,keyboard-select
-urxvt.keysym.M-escape:                      perl:keyboard-select
-urxvt.keysym.M-c:                           perl:keyboard-copy
-urxvt.keysym.C-v:                           perl:keyboard-paste
-urxvt.keysym.M-C-v:                         perl:keyboard-paste_escaped
-urxvt.clipboard.copycmd:                    xsel -ib
-urxvt.clipboard.pastecmd:                   xsel -ob
-
-urxvt*transparent:                          1
-urxvt*depth:                                32
-urxvt*internalBorder:                       10
-urxvt*iso14755:                             false
 
 xft.antialias:                              1
 xft.hinting:                                1
@@ -144,5 +118,5 @@ rofi.kb-clear-line:                         Control+b
 rofi.color-normal:                          c10, c09, c10, c09, c11
 rofi.color-urgent:                          c10, c09, c10, c09, c11
 rofi.color-active:                          c10, c09, c10, c09, c11
-rofi.color-window:                          c10, c17, c17
+rofi.color-window:                          c10, c13, c13
 
