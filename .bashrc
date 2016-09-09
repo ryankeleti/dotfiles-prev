@@ -15,7 +15,7 @@ alias dud1='du -d1 -h|sort -hr';alias diskspace='du -S|sort -nr|more';alias tl="
 branch () { git branch 2> /dev/null|sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/';}
 
 lcmd () { local EX="$?";PS1="";local ec='\[\e[0m\]';local rc='\[\e[1;31m\]';local gc='\[\e[1;32m\]'
-export PS1="$EX ";if [ $EX != 0 ];then PS1+="${rc}»   ${ec}";else PS1+="${ec}¶   ${ec}";fi;}
+export PS1="";if [ $EX != 0 ];then PS1+="${rc}»   ${ec}";else PS1+="${gc}¶   ${ec}";fi;}
 
 files=$HOME/dotfiles
 . $files/scripts/.commacd.bash
