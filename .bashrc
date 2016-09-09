@@ -5,11 +5,13 @@ PS1='[\u@\h \W]\$ '
 HISTFILE=; HISTFILESIZE=; HISTCONTROL="erasedups:ignoreboth"; unset HISTFILE
 export PAGER='/usr/bin/less'; export SUDO_EDITOR='/usr/bin/vim'; export PROMPT_COMMAND=
 bind -x '"\C-b": clear && printf "\e[3J"'
+#bind -x '"\C-p": export PS1=" »   "'
+#bind -x '"\C-i": export PS1=" ¶   "'
 
 synclient TapButton1=1;synclient TapButton2=3;synclient TapButton3=2
 
 alias cdd='cd ~/dotfiles';alias qq='exit';alias rm='rm -i';alias mv='mv -i';alias v="vim"
-alias ls='ls --color=auto';alias la='ls -AF';alias lla='ls -Al';alias lf='ls -F';alias wm='sudo wifi-menu -o wlp1s0'
+alias ls='ls --color=auto';alias la='ls -AF';alias lla='ls -Al';alias wm='sudo wifi-menu -o wlp1s0'
 alias dud1='du -d1 -h|sort -hr';alias diskspace='du -S|sort -nr|more';alias tl="find . -print|sed 's;[^/]*/;|__;g;s;__|; |;g'"
 
 branch () { git branch 2> /dev/null|sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/';}
