@@ -1,17 +1,15 @@
 #!/bin/bash
 
-# script for git cloning --- @ryankeleti
-
-echo -en ":: Enter gituser: "
+echo -en ":: enter gituser    "
 read gituser
-echo -en ":: Enter gitrepo: "
+echo -en ":: enter gitrepo    "
 read gitrepo
-echo -en ":: Enter gitdir: "
+echo -en ":: enter gitdir   "
 read gitdir
 echo     
 
 echo -e "git clone https://github.com/$gituser/$gitrepo.git $gitdir\n"
-echo -en ":: Continue? "
+echo -en ":: continue   "
 read confirm
 
 if [[ $confirm == 'y' ]]; then
@@ -21,8 +19,10 @@ else
 fi
 
 if [[ $? == 0 ]]; then
-  echo -e ":: Done"
+  echo -e ":: done"
+  exit 0
 else
-  echo -e ":: Error"
+  echo -e ":: error"
+  exit 1
 fi
 

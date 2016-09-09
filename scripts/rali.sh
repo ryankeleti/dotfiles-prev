@@ -3,6 +3,7 @@
 #   personal arch linux install script
 #   do not use, may break things
 #
+#   WIP
 #   https://github.com/ryankeleti
 
 step () {
