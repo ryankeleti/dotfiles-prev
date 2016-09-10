@@ -21,10 +21,10 @@ export PS1="\[\033[0;37m\]§\W"
 
   if [ $ex != 0 ]; then
     PS1+="${rc} ¬   ${ec}"
-    printf "%${COLUMNS}s\n" "$ex"
+    printf "%${COLUMNS}s\n" "ƒ $ex"
   else
     PS1+="${gc} ¶   ${ec}"
-    printf "%${COLUMNS}s\n" "$ex"
+    printf "%${COLUMNS}s\n" "ƒ $ex"
   fi
 }
 
