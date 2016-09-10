@@ -20,7 +20,7 @@ local ex="$?"; PS1=""; local ec='\[\033[0m\]'; local rc='\[\033[1;31m\]'; local 
 export PS1="\[\033[0;37m\]§\W"
 
   if [ $ex != 0 ]; then
-    PS1+="${rc} »   ${ec}"
+    PS1+="${rc} ¬   ${ec}"
     printf "%${COLUMNS}s\n" "$ex"
   else
     PS1+="${gc} ¶   ${ec}"
@@ -34,7 +34,4 @@ files=$HOME/dotfiles
 
 xrdb -load $HOME/.Xresources
 xrdb -merge $HOME/.Xresources
-
-#export PS1=' »   '
-#export PS1=' ¶   '
 

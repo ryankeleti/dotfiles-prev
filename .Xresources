@@ -12,7 +12,7 @@
 #define mid_grey                            #777777
 #define l_grey                              #d3d3d3
 #define l_blu                               #87afd7
-#define l_brown                             #7c6f64
+#define l_bwn                               #7c6f64
 #define mustard                             #ae7b00
 #define gold                                #ffeeaa
 #define red                                 #7e5c62
@@ -140,8 +140,8 @@ rofi.terminal:                              xterm
 rofi.fake-background:                       background
 rofi.font:                                  roboto 10
 rofi.kb-clear-line:                         Control+b
-rofi.color-normal:                          c10, c09, c10, c09, c11
-rofi.color-urgent:                          c10, c09, c10, c09, c11
-rofi.color-active:                          c10, c09, c10, c09, c11
-rofi.color-window:                          c10, c13, c13
+rofi.color-normal:                          dark, l_grey, dark, c09, c11
+rofi.color-urgent:                          dark, l_grey, dark, c09, c11
+rofi.color-active:                          dark, l_grey, dark, c09, c11
+rofi.color-window:                          dark, l_bwn, l_bwn
 
