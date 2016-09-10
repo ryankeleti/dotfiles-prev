@@ -16,8 +16,8 @@ alias dud1='du -d1 -h|sort -hr';alias diskspace='du -S|sort -nr|more';alias tl="
 branch () { git branch 2> /dev/null|sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/';}
 
 lcmd () {
-local ex="$?"; PS1=""; local ec='\033[0m'; local rc='\033[1;31m'; local gc='\033[1;32m'
-export PS1=""
+local ex="$?"; PS1=""; local ec='\[\033[0m\]'; local rc='\[\033[1;31m\]'; local gc='\[\033[1;32m\]'
+export PS1="\[\033[0;37m\]§\W"
 
   if [ $ex != 0 ]; then
     PS1+="${rc} »   ${ec}"
