@@ -1,14 +1,12 @@
 # UTF-8 (Unicode) compose sequence
 
-# Part 1 - Manual definitions
-
 <Multi_key> <backslash> <comma> : " " U202F # thin nonbreaking space
 
 <Multi_key> <g> <a> : "α"
 <Multi_key> <g> <b> : "β"
 <Multi_key> <g> <g> : "γ"
 <Multi_key> <g> <d> : "δ"
-<Multi_key> <g> <3> : "ε" # note! 
+<Multi_key> <g> <3> : "ε" # note!
 <Multi_key> <g> <z> : "ζ"
 <Multi_key> <g> <e> : "η"
 <Multi_key> <g> <h> : "θ" # note!
@@ -85,9 +83,9 @@
 <Multi_key> <greater> <less>                    : "⋄"   U22c4   # > < DIAMOND OPERATOR
 <Multi_key> <U2227> <U2228>                     : "⋄"   U22c4   # ∧ ∨ DIAMOND OPERATOR
 <Multi_key> <U2228> <U2227>                     : "⋄"   U22c4   # ∨ ∧ DIAMOND OPERATOR
-<Multi_key> <f> <f>                             : "ƒ"   function  # F
 <Multi_key> <colon> <period>                    : "∴"   therefore # : . THEREFORE
 <Multi_key> <period> <colon>                    : "∵"   because   # . : BECAUSE
+<Multi_key> <f> <f>                             : "ƒ"   function  # F
 
 <Multi_key> <U22a4> <U22a5>                     : "⌶"   U2336   # ⊥ ⊤ APL FUNCTIONAL SYMBOL I-BEAM
 <Multi_key> <bracketleft> <bracketright>        : "⌷"   U2337   # [ ] APL FUNCTIONAL SYMBOL SQUISH QUAD
@@ -228,7 +226,7 @@
 <Multi_key> <O> <E>              	              : "Œ"   OE # LATIN CAPITAL LIGATURE OE
 <Multi_key> <a> <e>              	              : "æ"   ae # LATIN SMALL LETTER AE
 <Multi_key> <A> <E>              	              : "Æ"   AE # LATIN CAPITAL LETTER AE
-<Multi_key> <f> <f> <f>                        	: "ﬀ"   Ufb00 # LATIN SMALL LIGATURE FF
+<Multi_key> <F> <F>                           	: "ﬀ"   Ufb00 # LATIN SMALL LIGATURE FF
 <Multi_key> <f> <i>              	              : "ﬁ"   Ufb01 # LATIN SMALL LIGATURE FI
 <Multi_key> <f> <l>              	              : "ﬂ"   Ufb02 # LATIN SMALL LIGATURE FL
 <Multi_key> <I> <J>              	              : "Ĳ"   U0132 # LATIN CAPITAL LIGATURE IJ
