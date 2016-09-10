@@ -17,14 +17,14 @@ branch () { git branch 2> /dev/null|sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/';}
 
 lcmd () {
 local ex="$?"; PS1=""; local ec='\[\033[0m\]'; local rc='\[\033[1;31m\]'; local gc='\[\033[1;32m\]'
-export PS1="\[\033[0;37m\]§\W"
+export PS1="\[\033[0;37m\]§\W "
 
   if [ $ex != 0 ]; then
-    PS1+="${rc} ¬   ${ec}"
-    printf "%${COLUMNS}s\n" "ƒ $ex"
+    PS1+="${rc} ƒ   ${ec}"
+    printf "%${COLUMNS}s\n" "¬ $ex"
   else
-    PS1+="${gc} ¶   ${ec}"
-    printf "%${COLUMNS}s\n" "ƒ $ex"
+    PS1+="${gc} ƒ   ${ec}"
+    printf "%${COLUMNS}s\n" "¬ $ex"
   fi
 }
 
