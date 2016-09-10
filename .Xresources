@@ -1,29 +1,29 @@
 !  ~/.Xresources                            https://github.com/ryankeleti/dotfiles
 
-#define c00                                 #a6e22e
-#define c01                                 #beed5f
-#define c02                                 #fd971f
-#define c03                                 #ff669d
-#define c04                                 #9e6ffe
-#define c05                                 #00cbee
-#define c06                                 #6ec6d4
-#define c07                                 #87ffaf
-#define c08                                 #ff8100
-#define c09                                 #777777
-#define c10                                 #1b1b1b
-#define c11                                 #d3d3d3
-#define c12                                 #ffffff
-#define c13                                 #7c6f64
-#define c14                                 #ffeeaa
+#define hl_blu                              #00cbee
+#define hl_grn                              #a6e22e
+#define hl_grn_l                            #beed5f
+#define hl_pink                             #ff669d
+#define hl_orange                           #fd971f
+#define hl_purple                           #9e6ffe
+#define b_blu                               #6ec6d4
+#define b_grn                               #87ffaf
+#define dark                                #1b1b1b
+#define mid_grey                            #777777
+#define l_grey                              #d3d3d3
+#define l_blu                               #87afd7
+#define l_brown                             #7c6f64
+#define mustard                             #ae7b00
+#define gold                                #ffeeaa
 #define red                                 #7e5c62
 #define grn                                 #658861
 #define blu                                 #628b87
 
-*.background:                               c10
-*.foreground:                               c11
+*.background:                               dark
+*.foreground:                               l_grey
 *.cursorColor:                              blu
-*.color0:                                   c10
-*.color8:                                   c09
+*.color0:                                   dark
+*.color8:                                   mid_grey
 *.color1:                                   red
 *.color9:                                   red
 *.color2:                                   grn
@@ -36,8 +36,32 @@
 *.color13:                                  blu
 *.color6:                                   blu
 *.color14:                                  blu
-*.color7:                                   c09
-*.color15:                                  c09
+*.color7:                                   mid_grey
+*.color15:                                  mid_grey
+/*
+*foreground:                                #c5c8c6
+*background:                                #1d1f21
+*cursorColor:                               #aeafad
+*color0:                                    #000000
+*color1:                                    #912226
+*color2:                                    #778900
+*color3:                                    c08
+*color4:                                    #1d2594
+*color5:                                    #682a9b
+*color6:                                    #2b6651
+*color7:                                    #929593
+*color8:                                    #666666
+*color9:                                    #cc6666
+*color10:                                   #b5bd68
+*color11:                                   #f0c674
+*color12:                                   #81a2be
+*color13:                                   #b294bb
+*color14:                                   #8abeb7
+*color15:                                   #ecebec
+*/
+urxvt.colorIT:                              l_blu
+urxvt.colorBD:                              l_grey
+urxvt.colorUL:                              l_blu
 
 urxvt.transparent:                          1
 urxvt.internalBorder:                       10
