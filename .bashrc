@@ -4,7 +4,8 @@
 PS1='[\u@\h \W]\$ '
 HISTFILE=; HISTFILESIZE=; HISTCONTROL="erasedups:ignoreboth"; unset HISTFILE
 export PAGER='/usr/bin/less'; export SUDO_EDITOR='/usr/bin/vim'; export PROMPT_COMMAND=lcmd
-bind -x '"\C-b": clear && printf "\e[3J"'
+bind -x '"\C-b": echo -ne "\033c" '
+bind -x '"\C-n": clear && printf "\033[3J"'
 
 synclient TapButton1=1;synclient TapButton2=3;synclient TapButton3=2
 
