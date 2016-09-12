@@ -4,6 +4,7 @@ no ; :
 no qq :q
 no \\ :nohl
 no \\\ :se hls
+no \\\\ :se nocin noai
 "nmap <Up> <NOP>
 "nmap <Down> <NOP>
 "nmap <Left> <NOP>
