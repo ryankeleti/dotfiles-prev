@@ -39,5 +39,5 @@ files=$HOME/dotfiles
 xrdb -load $HOME/.Xresources
 xrdb -merge $HOME/.Xresources
 
-complete -W "\`grep -oE '^[a-zA-Z0-9_-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9_-]*$//'\`" make
+complete -W "\`grep -oE '^[a-zA-Z0-9_-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9_-]*$//'\`" make;
 
