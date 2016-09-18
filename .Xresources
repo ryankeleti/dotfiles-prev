@@ -63,7 +63,7 @@ urxvt.colorIT:                              l_blu
 urxvt.colorBD:                              l_grey
 urxvt.colorUL:                              l_blu
 
-urxvt.transparent:                          1
+urxvt.transparent:                          0
 urxvt.internalBorder:                       10
 urxvt.depth:                                32
 urxvt.shading:                              10

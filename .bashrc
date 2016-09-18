@@ -2,12 +2,11 @@
 
 [[ $- != *i* ]] && return; shopt -s histappend cmdhist checkwinsize autocd
 PS1='[\u@\h \W]\$ '
-HISTFILE=; HISTFILESIZE=; HISTCONTROL="erasedups:ignoreboth"; unset HISTFILE
+HISTFILE=~/.histfile; HISTFILESIZE=; HISTCONTROL="erasedups:ignoreboth"
+#unset HISTFILE
 export PAGER='/usr/bin/less'; export SUDO_EDITOR='/usr/bin/vim'; export PROMPT_COMMAND=lcmd
 bind -x '"\C-b": echo -ne "\033c" '
 bind -x '"\C-n": clear && printf "\033[3J"'
-
-synclient TapButton1=1;synclient TapButton2=3;synclient TapButton3=2
 
 alias cdd='cd ~/dotfiles';alias qq='exit';alias rm='rm -i';alias mv='mv -i';alias v="vim"
 alias ls='ls --color=auto';alias la='ls -AF';alias lla='ls -Al';alias wm='sudo wifi-menu -o wlp1s0'
