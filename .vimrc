@@ -2,8 +2,8 @@
 
 no ; :
 no qq :q
-no \'\ :sy off
-no \''\ :sy on
+no \''\ :sy off
+no \'\ :sy on
 no nn :se nocin noai
 "nmap <Up> <NOP>
 "nmap <Down> <NOP>
