@@ -106,7 +106,7 @@ function makePrompt {
     export PROMPT_COMMAND=prompt_command
 
     #Custom PS1 string (prompt)
-    PS1="$pred\$errortest$pyellow\! $UNAME_COLOR$SYMBOL$FINAL_COLOR "
+    PS1="$pred\$errortest$pyellow\! $UNAME_COLOR$SYMBOL$FINAL_COLOR   "
     export PS1;
 }
 

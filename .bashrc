@@ -35,8 +35,8 @@ export PS1="\[\033[0;37m\]§\W "
 
 files=$HOME/dotfiles
 . $files/scripts/.commacd.bash
-. $files/info/infobar
 . $files/scripts/.bashbar
+#. $files/info/infobar
 
 #xrdb -load $HOME/.Xresources
 #xrdb -merge $HOME/.Xresources

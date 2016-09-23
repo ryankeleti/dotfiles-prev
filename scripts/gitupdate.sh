@@ -20,7 +20,7 @@ echo -en ":: enter other files    "
 read efiles
 
 git add $files $sdir $efiles
-git commit -m "gitupdate.sh >> dotfiles"
+git commit -m "gitup.sh >> dotfiles"
 git push origin master
 
 gitEX
