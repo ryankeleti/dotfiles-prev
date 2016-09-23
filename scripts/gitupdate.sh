@@ -12,10 +12,10 @@ local EX="$?"
 
 cd $HOME/dotfiles
 
-files=".bashrc .vimrc .Xresources .xinitrc README.md"
-sdir="scripts/ cconfig/"
+files="*"
+sdir=""
 
-echo -e ":: ( $sdir $files ) »» auto included"
+echo -e ":: ( $sdir $files\n `ls` \n) »» auto included"
 echo -en ":: enter other files    "
 read efiles
 
