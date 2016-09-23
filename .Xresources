@@ -14,11 +14,35 @@
 #define l_blu                               #87afd7
 #define l_bwn                               #7c6f64
 #define mustard                             #ae7b00
+
 #define gold                                #ffeeaa
+#define whte                                #e5e5e4
+#define blk                                 #191918
 #define red                                 #7e5c62
 #define grn                                 #658861
 #define blu                                 #628b87
 
+*.background:                               blk
+*.foreground:                               whte
+*.cursorColor:                              whte
+*.color0:                                   blk
+*.color8:                                   whte
+*.color1:                                   whte
+*.color9:                                   whte
+*.color2:                                   whte
+*.color10:                                  whte
+*.color3:                                   whte
+*.color11:                                  whte
+*.color4:                                   whte
+*.color12:                                  whte
+*.color5:                                   whte
+*.color13:                                  whte
+*.color6:                                   whte
+*.color14:                                  whte
+*.color7:                                   whte
+*.color15:                                  whte
+
+/*
 *.background:                               dark
 *.foreground:                               l_grey
 *.cursorColor:                              blu
@@ -38,7 +62,7 @@
 *.color14:                                  blu
 *.color7:                                   mid_grey
 *.color15:                                  mid_grey
-/*
+
 *foreground:                                #c5c8c6
 *background:                                #1d1f21
 *cursorColor:                               #aeafad
