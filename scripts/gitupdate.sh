@@ -13,7 +13,7 @@ local EX="$?"
 cd $HOME/dotfiles
 
 files="*"
-hfiles=".bashrc .Xresources .xinitrc .vimrc .bmenu"
+hfiles=".bashrc .Xresources .xinitrc .xscreensaver .vimrc .bmenu"
 
 echo -e ":: ( $files $hfiles\n`ls`\n) »» auto included"
 echo -en ":: enter other files    "
