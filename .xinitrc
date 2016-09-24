@@ -1,5 +1,12 @@
-#!/bin/sh 
-# https://github.com/ryankeleti/dotfiles
+#!/bin/sh
+
+############################################
+#                                          #
+# .xinitrc                                 #
+#                                          #
+#  https://github.com/ryankeleti/dotfiles  #
+#                                          #
+############################################
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -40,14 +47,17 @@ setxkbmap -option compose:rctrl
 st &
 sxhkd &
 xscreensaver &
-xfce4-power-manager &
-feh --bg-scale $HOME/images/city2.jpg &
+feh --bg-scale $HOME/images/city.jpg &
 
+#while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
+while xsetroot -name "`acpi`"
+do
+  sleep 1
+done &
 exec dwm
 
 #exec openbox
 #exec bspwm
 #exec i3
-#exec startxfce4
 #exec herbstluftwm
 
