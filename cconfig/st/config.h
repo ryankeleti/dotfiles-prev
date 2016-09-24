@@ -17,6 +17,7 @@
 
 #define COLOR_DARK "#191918"
 #define COLOR_WHTE "#e5e5e4"
+#define COLOR_GOLD "#ffeeaa"
 
 #define CURSORCOLOR	"#628b87"
 
@@ -128,12 +129,12 @@ static const char *colorname[] = {
 	"cyan",
 	"white",
   */
+  COLOR_GOLD,
+  COLOR_GOLD,
   COLOR_WHTE,
   COLOR_WHTE,
-  COLOR_WHTE,
-  COLOR_WHTE,
-  COLOR_WHTE,
-  COLOR_WHTE,
+  COLOR_GOLD,
+  COLOR_GOLD,
   COLOR_WHTE,
   COLOR_WHTE,
 

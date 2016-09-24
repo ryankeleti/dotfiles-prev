@@ -1,16 +1,22 @@
 # @ryankeleti
 
 super + Return
-	xterm
+	st -f terminus
 
 super + shift + Return
   urxvt
 
 super + alt + Return
-	cool-retro-term
+	xterm
+
+super + ctrl + Return
+  st
 
 super + shift + e
   xkill
+
+super + z
+  dmenu_run
 
 super + d
 	rofi -show run
