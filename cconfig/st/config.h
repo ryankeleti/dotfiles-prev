@@ -1,19 +1,9 @@
 #define COLOR0  "#1b1b1b"
-#define COLOR8  "#777777"
-#define COLOR1  "#7e5c62"
-#define COLOR9	"#7e5c62"
-#define COLOR2	"#658861"
-#define COLOR10	"#658861"
+#define COLOR1  "#777777"
+#define COLOR2  "#7e5c62"
 #define COLOR3	"#658861"
-#define COLOR11	"#658861"
 #define COLOR4	"#628b87"
-#define COLOR12	"#628b87"
-#define COLOR5	"#628b87"
-#define COLOR13	"#628b87"
-#define COLOR6	"#628b87"
-#define COLOR14	"#628b87"
-#define COLOR7	"#777777"
-#define COLOR15	"#777777"
+#define COLOR5	"#777777"
 
 #define COLOR_DARK "#191918"
 #define COLOR_WHTE "#e5e5e4"
@@ -22,7 +12,7 @@
 #define CURSORCOLOR	"#628b87"
 
 static char font[] = "-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso646-1";
-static int borderpx = 2;
+static int borderpx = 12;
 
 /*
  * What program is execed by st depends of these precedence rules:

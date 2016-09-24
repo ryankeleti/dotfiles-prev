@@ -18,7 +18,7 @@ super + shift + e
 super + z
   dmenu_run
 
-super + d
+super + p
 	rofi -show run
 
 super + a
