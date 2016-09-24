@@ -13,9 +13,9 @@ local EX="$?"
 cd $HOME/dotfiles
 
 files="*"
-sdir=""
+hfiles=".bashrc .Xresources .xinitrc .vimrc .bmenu"
 
-echo -e ":: ( $sdir $files\n `ls` \n) »» auto included"
+echo -e ":: ( $files $hfiles\n`ls`\n) »» auto included"
 echo -en ":: enter other files    "
 read efiles
 
