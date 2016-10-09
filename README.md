@@ -18,18 +18,18 @@
 
         my current setup
 
-        --  window manager    bspwm (w/ sxhkd) or openbox
+        --  window manager    dwm
         --  term font         terminus
         --  gui font          roboto
         --  shell             bash
         --  editor            vim
-        --  term emulators    xterm, urxvt & crt
+        --  term emulators    urxvt & xterm
         --  file managers     ranger & thunar
         --  browser           firefox
         --  theme (gtk)       arc-dark
         --  icons             arc
-        --  statusbar         conky
-        --  launcher          rofi
+        --  statusbar         dwmstatus
+        --  launcher          dmenu
 
         general info
 
@@ -41,8 +41,6 @@
 
 
   @ryankeleti personal dotfiles
-
   contains scripts & configs
-
   some content may not be original
 
