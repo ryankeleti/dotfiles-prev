@@ -26,3 +26,4 @@ END{
     }
       printf("Now: %s\nToday: %s\nTomorrow: %s",CurWeather,forecast[1],forecast[2])
 }'
+echo

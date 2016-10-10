@@ -1,0 +1,81 @@
+#!/bin/bash
+
+[[ $- != *i* ]] && return
+#PS1='[\u@\h \W]\$ '
+
+function makePrompt {
+
+    local pred="\[\033[0;31m\]"
+    local pyellow="\[\033[1;33m\]"
+
+    bold=$'\e[1m'; underline=$'\e[4m'; dim=$'\e[2m'; strickthrough=$'\e[9m'; blink=$'\e[5m'; reverse=$'\e[7m'; hidden=$'\e[8m'; normal=$'\e[0m'; black=$'\e[30m'; red=$'\e[31m'; green=$'\e[32m'; orange=$'\e[33m'; blue=$'\e[34m'; purple=$'\e[35m'; aqua=$'\e[36m'; gray=$'\e[37m'; darkgray=$'\e[90m'; lightred=$'\e[91m'; lightgreen=$'\e[92m'; lightyellow=$'\e[93m'; lightblue=$'\e[94m'; lightpurple=$'\e[95m'; lightaqua=$'\e[96m'; white=$'\e[97m'; default=$'\e[39m'; BLACK=$'\e[40m'; RED=$'\e[41m'; GREEN=$'\e[42m'; ORANGE=$'\e[43m'; BLUE=$'\e[44m'; PURPLE=$'\e[45m'; AQUA=$'\e[46m'; GRAY=$'\e[47m'; DARKGRAY=$'\e[100m'; LIGHTRED=$'\e[101m'; LIGHTGREEN=$'\e[102m'; LIGHTYELLOW=$'\e[103m'; LIGHTBLUE=$'\e[104m'; LIGHTPURPLE=$'\e[105m'; LIGHTAQUA=$'\e[106m'; WHITE=$'\e[107m'; DEFAULT=$'\e[49m';
+    tabChar=$'\t'
+    if [ "$UID" != "0" ]; then
+        local SYMBOL="λ"
+        local UNAME_COLOR="\[\033[1;32m\]"
+        local FINAL_COLOR="\[\033[0m\]"
+        namecolor="$green"
+    else
+        local SYMBOL="#"
+        local UNAME_COLOR="\[\033[1;31m\]"
+        local FINAL_COLOR="\[\033[0;32m\]"
+        namecolor="$red"
+    fi
+    interface=$(/usr/bin/tty | /bin/sed -e 's:/dev/::')
+    PromCurTTY=$(tty | sed -e "s/.*tty\(.*\)/\1/")
+    PromBLUE_BACK="\033[44m"
+    BLUE_BACK="\[\033[44m\]"
+    sedhome=$(sed 's/[][\.*^$(){}?+|/]/\\&/g' <<< "$HOME")
+    function prompt_command {
+        ret="$?"
+        errortest=$(if [[ "$ret" != "0" ]]; then echo "$ret"; fi)
+        currentdir=$(pwd | sed "s/${sedhome}/~/g")
+        stopped=$(jobs -s | wc -l | tr -d " ")
+        running=$(jobs -r | wc -l | tr -d " ")
+        dateget=$(date +"%a %b %d %H:%M")
+        filecount=$(ls -1 | wc -l | tr -d ' ')
+        size=$(ls -lah | grep -m 1 total | /bin/sed "s/total //")
+        length=$(echo "$USER@$HOST on $interface jobs:$running$stopped $filecount files $size   $dateget" | wc -c)
+        full=$(echo "$USER@$HOST on $interface jobs:$running$stopped $filecount files $size $currentdir   $dateget" | wc -c)
+        if [[ "$full" -gt "$COLUMNS" ]]
+        then
+            spaces=$(printf "%$((COLUMNS-length))s\n")
+            echo -en "\033[s\
+            \033[H\033[K"
+            echo -en "$BLACK$bold$namecolor"
+            echo -en "$USER@$HOST$normal$white$BLACK on $bold$blue$interface$red jobs:$green$running$red$stopped$aqua $filecount files $orange$size $normal$BLACK$spaces$battery $purple$dateget\033[K\n$normal$BLACK$green$currentdir \
+\033[K\
+\033[u\033[1A\033[1B$default$DEFAULT"
+        else
+            spaces=$(printf "%$((COLUMNS-fulllength))s\n")
+            echo -en "\033[s\
+            \033[H\033[K"
+            echo -en "$BLACK$bold$namecolor"
+            echo -en "$USER@$HOST$normal$white$BLACK on $bold$blue$interface$red jobs:$green$running$red$stopped$aqua $filecount files $orange$size $normal$BLACK$green$currentdir $spaces$battery $purple$dateget\
+\033[K\
+\033[u\033[1A\033[1B$default$DEFAULT"
+        fi
+        echo "$(date +%Y-%m-%d--%H-%M-%S)$tabChar$(hostname)$tabChar$PWD$tabChar$(history 1)" >> ~/.full_history
+
+    }
+
+    export PROMPT_COMMAND=prompt_command
+
+    #Custom PS1 string (prompt)
+    PS1="$pred\$errortest$pyellow\! $UNAME_COLOR$SYMBOL$FINAL_COLOR   "
+    export PS1;
+}
+
+makePrompt
+
+alias hist='history | grep -i '
+
+alias ll='ls -alF'
+alias l='ls -CF'
+alias lcr='ls -cr'
+alias lc='ls -c'
+
+alias duf='du -sk * | sort -n | while read size fname; do for unit in k M G T P E Z Y; do if [ $size -lt 1024 ]; then echo -e "${size}${unit}\t${fname}"; break; fi; size=$((size/1024)); done; done'
+alias passwordgen="pwgen --no-capitalize 20 1"
+alias watchfile="tail -fs 0.2 -n $LINES"
+
