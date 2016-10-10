@@ -13,7 +13,7 @@ local EX="$?"
 cd $HOME/dotfiles
 
 files="*"
-hfiles=".bashrc .Xresources .xinitrc .xscreensaver .vimrc .bmenu"
+hfiles=".bashrc .Xresources .xinitrc .vimrc .bmenu"
 
 git add `find .`
 git add $files $hfiles
