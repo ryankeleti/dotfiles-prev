@@ -1,12 +1,12 @@
 #!/bin/sh
 
-############################################
+#==========================================#
 #                                          #
 # .xinitrc                                 #
 #                                          #
 #  https://github.com/ryankeleti/dotfiles  #
 #                                          #
-############################################
+#==========================================#
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -44,10 +44,10 @@ xrdb -load $userresources
 xrdb -merge $userresources
 setxkbmap -option compose:rctrl
 
-st &
+urxvt &
 sxhkd &
-xscreensaver &
-feh --bg-scale $HOME/images/city.jpg &
+xmobar &
+feh --bg-scale $HOME/images/earth-horizon.jpg &
 
 #while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
 while xsetroot -name "`acpi`"

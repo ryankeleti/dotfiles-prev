@@ -1,4 +1,10 @@
-"  ~/.vimrc  -- https://github.com/ryankeleti/dotfiles
+"############################################
+"#                                          #
+"#  .vimrc                                  #
+"#                                          #
+"#  https://github.com/ryankeleti/dotfiles  #
+"#                                          #
+"############################################
 
 no ; :
 no qq :q
@@ -18,12 +24,17 @@ au FileType text setl wrap
 colo hybrid_e7
 
 se bg=dark
+se cin 
 
-se nocp noai cin sm sr ar smd mh ic ls=2
+se nocp noai 
+se sm sr ar smd mh ic ls=2
 se t_Co=256 enc=utf-8 shell=/bin/bash\ --login
-se nu rnu title ru more sc et sta sw=2 sts=2 ts=2
+se nu rnu title ru more sc et sta 
+se sw=2 sts=2 ts=2
 se fmr={{{,}}} fdm=marker
-se nowrap nobk noswf noeb lz so=5 ve=all history=10
+se nowrap nobk noswf noeb lz so=5 
+"se ve=all 
+se history=10
 se ff=unix ffs=unix
 se wmnu wc=<TAB>
 

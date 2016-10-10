@@ -1,0 +1,4 @@
+Clear Screen:/usr/bin/clear
+Dir List:/usr/bin/ls -l
+Shell:/bin/bash
+Login Shell:/bin/bash --login

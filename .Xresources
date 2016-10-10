@@ -1,171 +1,121 @@
-!  ~/.Xresources                            https://github.com/ryankeleti/dotfiles
-
-#define hl_blu                              #00cbee
-#define hl_grn                              #a6e22e
-#define hl_grn_l                            #beed5f
-#define hl_pink                             #ff669d
-#define hl_orange                           #fd971f
-#define hl_purple                           #9e6ffe
-#define b_blu                               #6ec6d4
-#define b_grn                               #87ffaf
-#define dark                                #1b1b1b
-#define mid_grey                            #777777
-#define l_grey                              #d3d3d3
-#define l_blu                               #87afd7
-#define l_bwn                               #7c6f64
-#define mustard                             #ae7b00
-
-#define gold                                #ffeeaa
-#define whte                                #e5e5e4
-#define blk                                 #191918
-#define red                                 #7e5c62
-#define grn                                 #658861
-#define blu                                 #628b87
-
-*.background:                               blk
-*.foreground:                               whte
-*.cursorColor:                              whte
-*.color0:                                   blk
-*.color8:                                   whte
-*.color1:                                   whte
-*.color9:                                   whte
-*.color2:                                   whte
-*.color10:                                  whte
-*.color3:                                   whte
-*.color11:                                  whte
-*.color4:                                   whte
-*.color12:                                  whte
-*.color5:                                   whte
-*.color13:                                  whte
-*.color6:                                   whte
-*.color14:                                  whte
-*.color7:                                   whte
-*.color15:                                  whte
-
 /*
-*.background:                               dark
-*.foreground:                               l_grey
-*.cursorColor:                              blu
-*.color0:                                   dark
-*.color8:                                   mid_grey
-*.color1:                                   red
-*.color9:                                   red
-*.color2:                                   grn
-*.color10:                                  grn
-*.color3:                                   grn
-*.color11:                                  grn
-*.color4:                                   blu
-*.color12:                                  blu
-*.color5:                                   blu
-*.color13:                                  blu
-*.color6:                                   blu
-*.color14:                                  blu
-*.color7:                                   mid_grey
-*.color15:                                  mid_grey
-
-*foreground:                                #c5c8c6
-*background:                                #1d1f21
-*cursorColor:                               #aeafad
-*color0:                                    #000000
-*color1:                                    #912226
-*color2:                                    #778900
-*color3:                                    c08
-*color4:                                    #1d2594
-*color5:                                    #682a9b
-*color6:                                    #2b6651
-*color7:                                    #929593
-*color8:                                    #666666
-*color9:                                    #cc6666
-*color10:                                   #b5bd68
-*color11:                                   #f0c674
-*color12:                                   #81a2be
-*color13:                                   #b294bb
-*color14:                                   #8abeb7
-*color15:                                   #ecebec
+#===========================================#
+#                                           #
+#  .Xresources                              #
+#                                           #
+#   https://github.com/ryankeleti/dotfiles  #
+#                                           #
+#===========================================#
 */
-urxvt.colorIT:                              l_blu
-urxvt.colorBD:                              l_grey
-urxvt.colorUL:                              l_blu
+#define gold   #ffeeaa
+#define gold__ #eee586
+#define dark__ #191918
+#define whte   #e5e5e4
+#define red    #7e5c62
+#define grn    #658861
+#define blu    #628b87
+#define dark   #151515                       
 
-urxvt.transparent:                          0
-urxvt.internalBorder:                       10
-urxvt.depth:                                32
-urxvt.shading:                              10
-urxvt.iso14755:                             false
+#define zbg0   #222222
+#define zfg0   #e8e9ca
+#define zc01   #8b3e2f
+#define zc02   #526f33
+#define zc03   #665847
+#define zc04   #4a708b
+#define zc05   #7a378b
+#define zc06   #528b8b
+#define zc07   #999999
+#define zc08   #4c4c4c
+#define zc09   #d75f00
+#define zc10   #cee318
+#define zc11   #eee685
+#define zc12   #9ac0cd
+#define zc13   #9f79ee
+#define zc14   #79cdcd
+#define zc15   #e8e9ca
 
-urxvt.keysym.S-Up:                          \033[1;2A
-urxvt.keysym.S-Down:                        \033[1;2B
-urxvt.keysym.S-Left:                        \033[1;5D
-urxvt.keysym.S-Right:                       \033[1;5C
+*background:zbg0
+*foreground:zfg0
 
-*font:	                                    -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-!*font:	                                    -misc-mathematicalmono-medium-r-normal--17-120-100-100-p-0-iso10646-1
-*savelines:	                                5000
-*loginshell:	                              true
-*eightBitInput:	                            false
-*scrollBar:	                                false
-*cursorBlink:	                              true
-xterm*utf8:	                                1
-xterm*vt100.geometry:	                      80x25
-xterm*charClass:	                          33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
-xterm*termName:	                            xterm-256color
+*color0:    zbg0
+*color1:    zc01
+*color2:    zc02
+*color3:    zc03
+*color4:    zc04
+*color5:    zc05
+*color6:    zc06
+*color7:    zc07
 
-xterm*selectToClipboard:	                  true
-xterm*VT100.Translations:	                  #override \n\
-  Ctrl Shift <Key>V:                        insert-selection(CLIPBOARD) \n\
-  Ctrl Shift <Key>C:                        copy-selection(CLIPBOARD)
+*color8:    zc08
+*color9:    zc09
+*color10:   zc10
+*color11:   zc11
+*color12:   zc12
+*color13:   zc13
+*color14:   zc14
+*color15:   zc15
 
-xft.antialias:                              1
-xft.hinting:                                1
-xft.hintstyle:                              hintslight
-xft.lcdfilter:                              lcddefault
-xft.rgba:                                   rgb
-xft.dpi:                                    96
 
-xcursor.theme:                              Human
+urxvt.transparent:        0
+urxvt.internalBorder:     10
+urxvt.depth:              32
+urxvt.shading:            10
+urxvt.iso14755:           0
 
-xscreensaver.Dialog.Button.background:      #444
-xscreensaver.Dialog.Button.foreground:      #ededff
-xscreensaver.Dialog.background:             #202020
-xscreensaver.Dialog.borderWidth:            0
-xscreensaver.Dialog.bottomShadowColor:      #202024
-xscreensaver.Dialog.foreground:             #ededff
-xscreensaver.Dialog.internalBorderWidth:    24
-xscreensaver.Dialog.shadowThickness:        2
-xscreensaver.Dialog.text.background:        #444
-xscreensaver.Dialog.text.foreground:        #ededff
-xscreensaver.Dialog.text.font:              roboto 10
-xscreensaver.Dialog.topShadowColor:         #202024
-xscreensaver.dateFormat:                    %I:%M%P %a %b %d, %Y
-xscreensaver.passwd.thermometer.background: #202020
-xscreensaver.passwd.thermometer.foreground: #a9b7c4
-xscreensaver.passwd.thermometer.width:      3
+urxvt.colorIT:            #87afd7
+urxvt.colorBD:            #d3d3d3
+urxvt.colorUL:            #87afd7
 
-lal*font:                                   roboto
-lal*fontsize:                               12
+urxvt.keysym.S-Up:        \033[1;2A
+urxvt.keysym.S-Down:      \033[1;2B
+urxvt.keysym.S-Left:      \033[1;5D
+urxvt.keysym.S-Right:     \033[1;5C
 
-rofi.lines:                                 1
-rofi.columns:                               1
-rofi.eh:                                    1
-rofi.bw:                                    1
-rofi.location:                              0
-rofi.width:                                 20
-rofi.padding:                               15
-rofi.opacity:                               95
-rofi.fake-transparency:                     true
-rofi.hide-scrollbar:                        true
-rofi.disable-history:                       true
-rofi.color-enabled:                         true
-rofi.fullscreen:                            false
-rofi.sidebar-mode:                          false
-rofi.fuzzy:                                 false
-rofi.separator-style:                       none
-rofi.terminal:                              xterm
-rofi.fake-background:                       background
-rofi.font:                                  roboto 10
-rofi.kb-clear-line:                         Control+b
-rofi.color-normal:                          dark, l_grey, dark, gold, dark
-rofi.color-urgent:                          dark, l_grey, dark, gold, dark
-rofi.color-active:                          dark, l_grey, dark, gold, dark
-rofi.color-window:                          dark, l_bwn, l_bwn
+*font:	                  -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+*savelines:	              5000
+*loginshell:	            true
+*eightBitInput:	          false
+*scrollBar:	              0
+*cursorBlink:	            1
+xterm*utf8:	              1
+xterm*vt100.geometry:	    80x25
+xterm*charClass:	        33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*termName:	          xterm-256color
+
+xterm*selectToClipboard:	true
+xterm*VT100.Translations:	#override \n\
+  Ctrl Shift <Key>V:      insert-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>C:      copy-selection(CLIPBOARD)
+
+xft.autohint:             0  
+xft.antialias:            1
+xft.hinting:              1
+xft.hintstyle:            hintslight
+xft.lcdfilter:            lcddefault
+xft.rgba:                 rgb
+xft.dpi:                  96
+
+xcursor.theme:            Human
+xscreensaver.dateFormat:  %a %b %d, %Y
+
+lal*font:                 roboto
+lal*fontsize:             12
+
+rofi.lines:               1
+rofi.columns:             1
+rofi.location:            0
+rofi.width:               20
+rofi.fake-transparency:   true
+rofi.hide-scrollbar:      true
+rofi.disable-history:     true
+rofi.color-enabled:       true
+rofi.fuzzy:               false
+rofi.separator-style:     none
+rofi.terminal:            xterm
+rofi.font:                roboto 10
+rofi.kb-clear-line:       Control+b
+rofi.color-normal:        dark, zc07, dark, gold, dark
+rofi.color-active:        dark, zc07, dark, gold, dark
+rofi.color-urgent:        dark, zc07, dark, gold, #cf6a4c
+rofi.color-window:        dark, dark, dark
 
