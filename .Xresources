@@ -16,106 +16,108 @@
 #define blu    #628b87
 #define dark   #151515                       
 
-#define zbg0   #222222
-#define zfg0   #e8e9ca
-#define zc01   #8b3e2f
-#define zc02   #526f33
-#define zc03   #665847
-#define zc04   #4a708b
-#define zc05   #7a378b
-#define zc06   #528b8b
-#define zc07   #999999
-#define zc08   #4c4c4c
-#define zc09   #d75f00
-#define zc10   #cee318
-#define zc11   #eee685
-#define zc12   #9ac0cd
-#define zc13   #9f79ee
-#define zc14   #79cdcd
-#define zc15   #e8e9ca
 
-*background:zbg0
-*foreground:zfg0
+*background: #151b1a
+*foreground: #8fa388
+!alt fg #7e9982
 
-*color0:    zbg0
-*color1:    zc01
-*color2:    zc02
-*color3:    zc03
-*color4:    zc04
-*color5:    zc05
-*color6:    zc06
-*color7:    zc07
+*cursorColor: #9e6438
 
-*color8:    zc08
-*color9:    zc09
-*color10:   zc10
-*color11:   zc11
-*color12:   zc12
-*color13:   zc13
-*color14:   zc14
-*color15:   zc15
+*color0:  #2e2b38
+*color1:  #984e66
+*color2:  #7a8c54
+*color3:  #9e6438
+*color4:  #395667
+*color5:  #9d916b
+*color6:  #536556
+*color7:  #828181
+*color8:  #474159
+*color9:  #a86d56
+*color10: #9fb274
+*color11: #b29f5e
+*color12: #507a91
+*color13: #b89855
+*color14: #7e9982
+*color15: #bdbda4
 
+/*
+*background:#222222
+*foreground:#e8e9ca
 
-urxvt.transparent:        0
-urxvt.internalBorder:     10
-urxvt.depth:              32
-urxvt.shading:            10
-urxvt.iso14755:           0
+*color0:  #222222
+*color1:  #8b3e2f
+*color2:  #526f33
+*color3:  #665847
+*color4:  #4a708b
+*color5:  #7a378b
+*color6:  #528b8b
+*color7:  #999999
+*color8:  #4c4c4c
+*color9:  #d75f00
+*color10: #cee318
+*color11: #eee685
+*color12: #9ac0cd
+*color13: #9f79ee
+*color14: #79cdcd
+*color15: #e8e9ca
+*/
 
-urxvt.colorIT:            #87afd7
-urxvt.colorBD:            #d3d3d3
-urxvt.colorUL:            #87afd7
+urxvt.transparent:      0
+urxvt.internalBorder:   10
+urxvt.depth:            32
+urxvt.shading:          10
+urxvt.iso14755:         0
+urxvt.colorIT:          #87afd7
+urxvt.colorBD:          #d3d3d3
+urxvt.colorUL:          #87afd7
+urxvt.keysym.S-Up:      \033[1;2A
+urxvt.keysym.S-Down:    \033[1;2B
+urxvt.keysym.S-Left:    \033[1;5D
+urxvt.keysym.S-Right:   \033[1;5C
 
-urxvt.keysym.S-Up:        \033[1;2A
-urxvt.keysym.S-Down:      \033[1;2B
-urxvt.keysym.S-Left:      \033[1;5D
-urxvt.keysym.S-Right:     \033[1;5C
-
-*font:	                  -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-*savelines:	              5000
-*loginshell:	            true
-*eightBitInput:	          false
-*scrollBar:	              0
-*cursorBlink:	            1
-xterm*utf8:	              1
-xterm*vt100.geometry:	    80x25
-xterm*charClass:	        33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
-xterm*termName:	          xterm-256color
-
+*font:	                -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+*savelines:	            5000
+*loginshell:	          true
+*eightBitInput:	        false
+*scrollBar:	            0
+*cursorBlink:	          1
+xterm*utf8:	            1
+xterm*vt100.geometry:	  80x25
+xterm*charClass:	      33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*termName:	        xterm-256color
 xterm*selectToClipboard:	true
 xterm*VT100.Translations:	#override \n\
   Ctrl Shift <Key>V:      insert-selection(CLIPBOARD) \n\
   Ctrl Shift <Key>C:      copy-selection(CLIPBOARD)
 
-xft.autohint:             0  
-xft.antialias:            1
-xft.hinting:              1
-xft.hintstyle:            hintslight
-xft.lcdfilter:            lcddefault
-xft.rgba:                 rgb
-xft.dpi:                  96
-
-xcursor.theme:            Human
-xscreensaver.dateFormat:  %a %b %d, %Y
-
-lal*font:                 roboto
-lal*fontsize:             12
-
-rofi.lines:               1
-rofi.columns:             1
-rofi.location:            0
-rofi.width:               20
-rofi.fake-transparency:   true
-rofi.hide-scrollbar:      true
-rofi.disable-history:     true
-rofi.color-enabled:       true
-rofi.fuzzy:               false
-rofi.separator-style:     none
-rofi.terminal:            xterm
-rofi.font:                roboto 10
-rofi.kb-clear-line:       Control+b
-rofi.color-normal:        dark, zc07, dark, gold, dark
-rofi.color-active:        dark, zc07, dark, gold, dark
-rofi.color-urgent:        dark, zc07, dark, gold, #cf6a4c
-rofi.color-window:        dark, dark, dark
+xft.autohint:           0
+xft.antialias:          1
+xft.hinting:            1
+xft.hintstyle:          hintslight
+xft.lcdfilter:          lcddefault
+xft.rgba:               rgb
+xft.dpi:                96
+/*
+xcursor.theme:          Human
+xscreensaver.dateFormat:%a %b %d, %Y
+lal*font:               roboto
+lal*fontsize:           12
+rofi.lines:             1
+rofi.columns:           1
+rofi.location:          0
+rofi.width:             20
+rofi.fake-transparency: true
+rofi.hide-scrollbar:    true
+rofi.disable-history:   true
+rofi.color-enabled:     true
+rofi.fuzzy:             false
+rofi.separator-style:   none
+rofi.terminal:          xterm
+rofi.font:              roboto 10
+rofi.kb-clear-line:     Control+b
+rofi.color-normal:      dark, zc07, dark, gold, dark
+rofi.color-active:      dark, zc07, dark, gold, dark
+rofi.color-urgent:      dark, zc07, dark, gold, #cf6a4c
+rofi.color-window:      dark, dark, dark
+*/
 
