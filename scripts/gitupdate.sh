@@ -16,7 +16,6 @@ files="*"
 hfiles=".bashrc .Xresources .xinitrc .xscreensaver .vimrc .bmenu"
 
 git add $files $hfiles
-echo -e 'git commit -m "update `date`"'
 git commit -m "update `date`"
 git push origin master
 
