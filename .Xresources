@@ -9,14 +9,36 @@
 */
 #define gold   #ffeeaa
 #define gold__ #eee586
-#define dark__ #191918
+#define dark   #191918
 #define whte   #e5e5e4
 #define red    #7e5c62
 #define grn    #658861
 #define blu    #628b87
-#define dark   #151515                       
+#define dark__ #151515                       
+
+*background: #0a0a0a
+*foreground: whte
+*cursorColor: whte
+
+*color0:  dark
+*color1:  #555555
+*color2:  #cccccc
+*color3:  #555555
+*color4:  #cccccc
+*color5:  #777777
+*color6:  #777777
+*color7:  #aaaaaa
+*color8:  #333333
+*color9:  #555555
+*color10: #cccccc
+*color11: #555555
+*color12: #cccccc
+*color13: #777777
+*color14: #777777
+*color15: #ffffff
 
 
+/*
 *background: #151b1a
 *foreground: #8fa388
 !alt fg #7e9982
@@ -40,7 +62,7 @@
 *color14: #7e9982
 *color15: #bdbda4
 
-/*
+
 *background:#222222
 *foreground:#e8e9ca
 
@@ -97,7 +119,7 @@ xft.hintstyle:          hintslight
 xft.lcdfilter:          lcddefault
 xft.rgba:               rgb
 xft.dpi:                96
-/*
+
 xcursor.theme:          Human
 xscreensaver.dateFormat:%a %b %d, %Y
 lal*font:               roboto
@@ -115,9 +137,8 @@ rofi.separator-style:   none
 rofi.terminal:          xterm
 rofi.font:              roboto 10
 rofi.kb-clear-line:     Control+b
-rofi.color-normal:      dark, zc07, dark, gold, dark
-rofi.color-active:      dark, zc07, dark, gold, dark
-rofi.color-urgent:      dark, zc07, dark, gold, #cf6a4c
-rofi.color-window:      dark, dark, dark
-*/
+rofi.color-normal:      dark__, #999999, dark, gold, dark
+rofi.color-active:      dark__, #999999, dark, gold, dark
+rofi.color-urgent:      dark__, #999999, dark, gold, #cf6a4c
+rofi.color-window:      dark__, dark, dark
 
