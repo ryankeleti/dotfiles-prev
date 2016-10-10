@@ -1,1 +1,0 @@
-/home/ryanku/dotfiles/scripts/gitupdate.sh
