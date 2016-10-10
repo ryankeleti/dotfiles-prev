@@ -15,7 +15,7 @@ cd $HOME/dotfiles
 files="*"
 hfiles=".bashrc .Xresources .xinitrc .xscreensaver .vimrc .bmenu"
 
-git add *
+git add `find .`
 git add $files $hfiles
 git commit -m "update `date`"
 git push origin master
