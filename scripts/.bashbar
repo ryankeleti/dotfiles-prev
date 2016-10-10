@@ -3,7 +3,7 @@
 [[ $- != *i* ]] && return
 #PS1='[\u@\h \W]\$ '
 
-files=$HOME/dotfiles
+#files=$HOME/dotfiles
 
 #BEGIN prompt code
 function makePrompt {
