@@ -1,10 +1,10 @@
-"############################################
+"#==========================================#
 "#                                          #
 "#  .vimrc                                  #
 "#                                          #
 "#  https://github.com/ryankeleti/dotfiles  #
 "#                                          #
-"############################################
+"#==========================================#
 
 no ; :
 no qq :q
@@ -21,7 +21,7 @@ filet plugin indent on
 au FileType c setl et sw=2 sts=2
 au FileType python setl et sw=4 sts=4
 au FileType text setl wrap
-colo hybrid_e7
+colo true-monochrome 
 
 se bg=dark
 se cin 

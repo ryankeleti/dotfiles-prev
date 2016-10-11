@@ -6,7 +6,8 @@
 #                                           #
 #===========================================#
 
-[[ $- != *i* ]] && return; shopt -s histappend cmdhist checkwinsize autocd
+[[ $- != *i* ]] && return;
+shopt -s histappend cmdhist checkwinsize autocd
 PS1='[\u@\h \W]\$ '
 
 HISTFILE=~/.histfile; HISTFILESIZE=; HISTCONTROL="erasedups:ignoreboth:ignorespace"
@@ -68,18 +69,21 @@ bar () {
   nofg="\033[0m"
   PS1=''
   function prompt {
+  local ex="$?"
+  ret=$(if [[ "$ex" != "0" ]]; then echo "$ex "; fi)
   len=$(echo -e "¬ $USER@$HOSTNAME | `pwd` | `date +'%a %b %d %H:%M'`" | wc -c)
   spc=$(printf "%$((COLUMNS-len))s\n")
   #echo -e "¬ ${fg[8]}$USER@${fg[5]}$HOSTNAME${nofg} | ${fg[7]}`pwd`${nofg} |$spc${fg[12]}`date +'%a %b %d %H:%M'`${nofg}\033[K\
   #  \033[u\033[1A\033[1B "
   echo -en "\033[s\033[H\033[K"
-  echo -e "¬ ${fgc[8]}$USER${nofg}@${fgc[5]}$HOSTNAME${nofg} | ${fgc[7]}`pwd`${nofg} |$spc${fgc[12]}`date +'%a %b %d %H:%M'`${nofg}"
+  echo -e "¬ ${fgc[8]}$USER${nofg}@${fgc[5]}$HOSTNAME${nofg} | ${fgc[7]}`pwd`${nofg} | $spc${fgc[12]}`date +'%a %b %d %H:%M'`${nofg}"
   echo -en "\033[K \033[u\033[1A\033[1B "
   echo
   }
   export PROMPT_COMMAND=prompt
   export PS1=" ${PS1}${fgc[11]}──────  ${nofg}"
 }
+
 bar
 #PS1="${fg[14]}$(hostname|cut -b-2) "
 
