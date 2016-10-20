@@ -26,7 +26,7 @@ alias mv='mv -i'
 alias v='vim'
 alias ls='ls --color=auto'
 alias la='ls -AF'
-alias lla='ls -Al'
+alias ll='ls -Al'
 alias dud1='du -d1 -h|sort -hr'
 alias diskspace='du -S|sort -nr|more'
 alias wm='sudo wifi-menu -o wlp1s0'
@@ -37,54 +37,16 @@ alias xrdbm='xrdb ~/.Xresources'
 
 branch () { git branch 2> /dev/null|sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/';}
 
-#export PROMPT_COMMAND=
-#lcmd () {
-#local ex="$?"; PS1=""; local ec='\[\033[0m\]'; local rc='\[\033[0;31m\]'; local gc='\[\033[0;32m\]'
-#export PS1="\[\033[0;37m\]§\W "
-#
-#  if [ $ex != 0 ]; then
-#    PS1+="${rc} λ   ${ec}"
-#    if [ $ex == 127 ]; then
-#      printf "%${COLUMNS}s\n" "∄"
-#    else 
-#      printf "%${COLUMNS}s\n" "∵ $ex"
-#    fi
-#  else
-#    PS1+="${gc} λ   ${ec}"
-#    printf "%${COLUMNS}s\n" "¬ $ex "
-#  fi
-#}
-#PS1='\W λ  '
-#local fg=("\[\033[0;30m\]" "\[\033[0;31m\]" "\[\033[0;32m\]" "\[\033[0;33m\]"
-#            "\[\033[0;34m\]" "\[\033[0;35m\]" "\[\033[0;36m\]" "\[\033[0;37m\]"
-#            "\[\033[1;30m\]" "\[\033[1;31m\]" "\[\033[1;32m\]" "\[\033[1;33m\]"
-#            "\[\033[1;34m\]" "\[\033[1;35m\]" "\[\033[1;36m\]" "\[\033[1;37m\]")
-#local nofg="\[\033[0m\]"
-
-bar () {
-  fgc=("\033[0;30m" "\033[0;31m" "\033[0;32m" "\033[0;33m"
-            "\033[0;34m" "\033[0;35m" "\033[0;36m" "\033[0;37m"
-            "\033[1;30m" "\033[1;31m" "\033[1;32m" "\033[1;33m"
-            "\033[1;34m" "\033[1;35m" "\033[1;36m" "\033[1;37m")
-  nofg="\033[0m"
-  PS1=''
-  function prompt {
-  local ex="$?"
-  ret=$(if [[ "$ex" != "0" ]]; then echo "$ex "; fi)
-  len=$(echo -e "¬ $USER@$HOSTNAME | `pwd` | `date +'%a %b %d %H:%M'`" | wc -c)
-  spc=$(printf "%$((COLUMNS-len))s\n")
-  #echo -e "¬ ${fg[8]}$USER@${fg[5]}$HOSTNAME${nofg} | ${fg[7]}`pwd`${nofg} |$spc${fg[12]}`date +'%a %b %d %H:%M'`${nofg}\033[K\
-  #  \033[u\033[1A\033[1B "
-  echo -en "\033[s\033[H\033[K"
-  echo -e "¬ ${fgc[8]}$USER${nofg}@${fgc[5]}$HOSTNAME${nofg} | ${fgc[7]}`pwd`${nofg} | $spc${fgc[12]}`date +'%a %b %d %H:%M'`${nofg}"
-  echo -en "\033[K \033[u\033[1A\033[1B "
-  echo
-  }
-  export PROMPT_COMMAND=prompt
-  export PS1=" ${PS1}${fgc[11]}──────  ${nofg}"
+export PROMPT_COMMAND=prompt
+prompt () {
+PS1=''
+#local ex="$?"
+local fg=('\[\033[0m\]' '\[\033[0;31m\]' '\[\033[0;32m\]') 
+PS1="${PS1}[\u@\h ${fg[1]}§\W${fg[0]}]\$  "
+#PS1="${PS1}${fg[1]}──────   ${fg[0]}"
+echo
 }
 
-bar
 #PS1="${fg[14]}$(hostname|cut -b-2) "
 
 files=$HOME/dotfiles
