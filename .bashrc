@@ -9,7 +9,7 @@
 [[ $- != *i* ]] && return;
 shopt -s histappend cmdhist checkwinsize autocd
 PS1='[\u@\h \W]\$ '
-PS1="[$(hostname|cut -b-2)@\h \[\033[33m\]§\W\[\033[0m\]]\$  "
+PS1="[$(hostname|cut -b-2)@\h \[\033[33m\]§\W\[\033[0m\] $(acpi|tr ' ' '\n'|grep '%'|tr -d '%,')]\$  "
 
 HISTFILE=~/.histfile;HISTFILESIZE=;HISTCONTROL="erasedups:ignoreboth:ignorespace"
 
@@ -35,7 +35,29 @@ alias rme='rm -i `find . -perm /111 -type f`'
 alias tl="find . -print|sed 's;[^/]*/;|__;g;s;__|; |;g'"
 alias redwm='cd ~/dwm;sudo make clean install;cd'
 alias xrdbm='xrdb ~/.Xresources'
+alias setf='setfont /usr/share/kbd/consolefonts/ter-112n.psf.gz'
+alias ac="acpi | tr ' ' '\n' | grep '%' | tr -d '%,'"
 #=========================================================#
+
+if [ "$TERM" = "linux" ]; then
+  echo -en "\e]P0232323"
+  echo -en "\e]P82B2B2B"
+  echo -en "\e]P1D75F5F"
+  echo -en "\e]P9E33636"
+  echo -en "\e]P287AF5F"
+  echo -en "\e]PA98E34D"
+  echo -en "\e]P3D7AF87"
+  echo -en "\e]PBFFD75F"
+  echo -en "\e]P48787AF"
+  echo -en "\e]PC7373C9"
+  echo -en "\e]P5BD53A5"
+  echo -en "\e]PDD633B2"
+  echo -en "\e]P65FAFAF"
+  echo -en "\e]PE44C9C9"
+  echo -en "\e]P7E5E5E5"
+  echo -en "\e]PFFFFFFF"
+  clear
+fi
 
 branch () { git branch 2>/dev/null|sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/';}
 
