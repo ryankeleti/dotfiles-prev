@@ -9,7 +9,9 @@
 [[ $- != *i* ]] && return;
 shopt -s histappend cmdhist checkwinsize autocd
 PS1='[\u@\h \W]\$ '
-PS1="[$(hostname|cut -b-2)@\h \[\033[33m\]§\W\[\033[0m\] $(acpi|tr ' ' '\n'|grep '%'|tr -d '%,')]\$  "
+#PS1="[$(hostname|cut -b-2)@\h \[\033[33m\]§\W\[\033[0m\] $(acpi|tr ' ' '\n'|grep '%'|tr -d '%,')]\$  "
+getbat () { acpi|tr ' ' '\n'|grep '%'|tr -d '%,';}
+PS1="[$(hostname|cut -b-2)@\h \[\033[33m\]§\W\[\033[0m\] $(getbat)]\$  "
 
 HISTFILE=~/.histfile;HISTFILESIZE=;HISTCONTROL="erasedups:ignoreboth:ignorespace"
 
@@ -36,7 +38,7 @@ alias tl="find . -print|sed 's;[^/]*/;|__;g;s;__|; |;g'"
 alias redwm='cd ~/dwm;sudo make clean install;cd'
 alias xrdbm='xrdb ~/.Xresources'
 alias setf='setfont /usr/share/kbd/consolefonts/ter-112n.psf.gz'
-alias ac="acpi | tr ' ' '\n' | grep '%' | tr -d '%,'"
+alias ac="acpi|tr ' ' '\n'|grep '%'|tr -d '%,'"
 #=========================================================#
 
 if [ "$TERM" = "linux" ]; then
