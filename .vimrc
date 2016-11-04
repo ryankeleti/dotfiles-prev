@@ -23,9 +23,9 @@ au FileType python setl et sw=4 sts=4
 au FileType text setl wrap
 "colo true-monochrome 
 "colo default
-"colo apprentice
 "colo hybrid_e7
-colo gruvbox
+"colo gruvbox
+colo apprentice
 
 se bg=dark
 se cin 
