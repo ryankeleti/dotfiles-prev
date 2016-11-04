@@ -21,7 +21,7 @@ bind -x '"\C-n": clear && printf "\033[3J"'
 
 #=========================================================#
 alias c='cd ~/c'
-alias e='cd ~/c/euler'
+alias e='cd ~/c/src/euler'
 alias s='cd src'
 alias qq='exit'
 alias rm='rm -i'
