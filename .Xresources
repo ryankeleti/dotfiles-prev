@@ -8,7 +8,8 @@
 #===========================================#
 */
 
-*font:	       -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+*font:         xft:terminus:pixelsize=12
+!*font:	       -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 *savelines:	   5000
 *loginshell:	 true
 *eightBitInput:false
@@ -17,7 +18,7 @@
 xterm*utf8:	   1
 xterm*vt100.geometry:    80x25
 xterm*charClass:         33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
-xterm*termName:          xterm-256color
+xterm*termName:          xterm
 xterm*selectToClipboard: true
 xterm*VT100.Translations:#override\n\
     Ctrl Shift <Key>V:   insert-selection(CLIPBOARD)\n\
@@ -40,8 +41,12 @@ xft.hinting:   1
 xft.hintstyle: hintslight
 xft.lcdfilter: lcddefault
 xft.rgba:      rgb
-xft.dpi:       96
+xft.dpi:       96 
 
+*.background:#000000
+*.foreground:#ffffff
+
+#if 0
 *.borderColor:#1d1d1d
 *.background:#1d1d1d
 *.foreground:#e0e2e0
@@ -69,7 +74,7 @@ xft.dpi:       96
 
 *color7:#e0e2e0
 *color15:#afb0af
-
+#endif
 #if 0 
 #define gold   #ffeeaa
 #define gold__ #eee586

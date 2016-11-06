@@ -8,17 +8,17 @@
 
 no ; :
 no qq :q
-no \\ :sy off
-no \\\ :sy on
+no \\\ :sy off
+no \\ :sy on
 no nn :se nocin noai
 "nmap <Up> <NOP>
 "nmap <Down> <NOP>
 "nmap <Left> <NOP>
 "nmap <Right> <NOP>
-sy on
+sy off
 filet on
 filet plugin indent on
-au FileType c setl et sw=2 sts=2
+au FileType c setl et sw=2 sts=2 
 au FileType python setl et sw=4 sts=4
 au FileType text setl wrap
 "colo true-monochrome 

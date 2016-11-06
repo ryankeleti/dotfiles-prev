@@ -1,30 +1,26 @@
 #!/bin/sh
 
-if [[ $TERM == "rxvt"* ]]; then 
-  show (){
-  cat $HOME/.Xresources|grep color[0-9]|tr -d ' '\
-    |grep color$1|head -n1|cut -d: -f2
-  }
-fi
-f=3 b=4
-for i in f b; do
-  for j in {0..7}; do
-    printf -v $i$j %b "\033[${!i}${j}m"
-  done
+b="███"
+clear
+col(){
+for FG in '    m' '   1m' ' 1;30m' '0;30m' ' 1;31m' '0;31m' ' 1;32m' \
+          '0;32m' '1;33m' '0;33m' '1;34m' '0;34m' '1;35m' '0;35m' \
+          '1;36m' '0;36m' '1;37m' '0;37m';
+do
+  echo -en "\033[$FG$b";
 done
-
-cat << EOF
+}
+d=$'\033[1m'
+t=$'\033[0m'
+v=$'\033[7m'
+cat<<EOF
 
     wvvvvvvv  /|__/|    |  PK $(pacman -Q|wc -l)
         I   /@,@   |    |  KN $(uname -r)
          | /_____   |   |  SH $SHELL
         J|/^ ^ ^ \  |   |  WM dwm
          |^ ^ ^ ^ |V|   |  FT terminus
-          \m___m__|-|   |
+          \m___m__|-|   |  $(col)
 
 EOF
 
-
-#d=$'\033[1m'
-#t=$'\033[0m'
-#v=$'\033[7m'
