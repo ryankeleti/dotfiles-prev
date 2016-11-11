@@ -15,35 +15,68 @@ no nn :se nocin noai
 "nmap <Down> <NOP>
 "nmap <Left> <NOP>
 "nmap <Right> <NOP>
-sy off
+
+sy on
 filet on
 filet plugin indent on
 au FileType c setl et sw=2 sts=2 
 au FileType python setl et sw=4 sts=4
 au FileType text setl wrap
+au FileType markdown setl wrap
 "colo true-monochrome 
 "colo default
 "colo hybrid_e7
 "colo gruvbox
+"colo bnw
 colo apprentice
+
+"se nohlsearch
+"se noincsearch
 
 se bg=dark
 se cin 
 
-se nocp noai 
-se sm sr ar smd mh ic ls=2
-se t_Co=256 enc=utf-8 shell=/bin/bash\ --login
-se nu rnu title ru more sc et sta 
-se sw=2 sts=2 ts=2
-se fmr={{{,}}} fdm=marker
-se nowrap nobk noswf noeb lz so=5 
+se t_Co=256
+se enc=utf-8 
+se shell=/bin/bash\ --login
+se nu 
+se rnu 
+
+se nocp 
+se noai 
+se sm 
+se sr 
+se ar 
+se smd 
+se mh 
+se ic 
+se ls=2
+se title 
+se ru 
+se more 
+se sc 
+se et 
+se sta 
+se sw=2 
+se sts=2 
+se ts=2
+se fmr={{{,}}} 
+se fdm=marker
+se nowrap 
+se nobk 
+se noswf 
+se noeb 
+se lz 
+se so=5 
 "se ve=all 
 se history=10
-se ff=unix ffs=unix
-se wmnu wc=<TAB>
+se ff=unix 
+se ffs=unix
+se wmnu 
+se wc=<TAB>
 
-hi Search cterm=underline ctermbg=none ctermfg=none
-let @/ =" "
+"hi Search cterm=underline ctermbg=none ctermfg=none
+"let @/ =" "
 
 "highlight Type ctermfg=103
 "highlight cssClassName ctermfg=6

@@ -8,8 +8,9 @@
 #===========================================#
 */
 
-*font:         xft:terminus:pixelsize=12
-!*font:	       -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+urxvt.font:    xft:terminus:pixelsize=12
+!urxvt.font:    xft:monaco:pixelsize=10
+xterm*font:	   -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 *savelines:	   5000
 *loginshell:	 true
 *eightBitInput:false
@@ -51,6 +52,7 @@ xft.dpi:       96
 *.background:#1d1d1d
 *.foreground:#e0e2e0
 *.cursorColor:#e0e2e0
+#endif
 *color0:#1d1d1d
 *color8:#2e2e2e
 
@@ -74,7 +76,7 @@ xft.dpi:       96
 
 *color7:#e0e2e0
 *color15:#afb0af
-#endif
+
 #if 0 
 #define gold   #ffeeaa
 #define gold__ #eee586
