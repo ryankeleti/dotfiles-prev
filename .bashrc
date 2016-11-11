@@ -40,6 +40,7 @@ alias redwm='cd ~/dwm;sudo make clean install;cd'
 alias xrdbm='xrdb ~/.Xresources'
 alias setf='setfont /usr/share/kbd/consolefonts/ter-112n.psf.gz'
 alias ac="acpi|tr ' ' '\n'|grep '%'|tr -d '%,'"
+alias apl='apl --noColor'
 #=========================================================#
 
 if [ "$TERM" = "linux" ]; then
