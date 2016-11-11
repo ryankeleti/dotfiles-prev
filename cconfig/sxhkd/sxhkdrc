@@ -29,15 +29,6 @@ super + shift + e
 super + z
   dmenu_run
 
-super + p
-	rofi -show run
-
-super + a
-	rofi -show window
-
-super + s
-	rofi -dmenu
-
 super + Escape
 	pkill -USR1 -x sxhkd
 

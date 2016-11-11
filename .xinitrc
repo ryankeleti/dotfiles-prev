@@ -43,6 +43,7 @@ synclient TapButton3=2
 xrdb -load $userresources
 xrdb -merge $userresources
 setxkbmap -option compose:rctrl
+setxkbmap -option grp:alt_shift_toggle us,apl
 
 urxvt &
 sxhkd &
@@ -60,4 +61,3 @@ exec dwm
 #exec bspwm
 #exec i3
 #exec herbstluftwm
-
