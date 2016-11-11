@@ -28,9 +28,7 @@
 *.color14:COL
 *.color15:COL
 
-urxvt.font: xft:clearyU:fontsize:10
-!urxvt.font: xft:apl385\ unicode:fontsize:7
-xterm*font:	   -xos4-terminus-medium-r-normal--14-*-72-72-c-60-iso10646-1
+!xterm*font:	   -xos4-terminus-medium-r-normal--14-*-72-72-c-60-iso10646-1
 !*font:	       -misc-apl385\ unicode-medium-r-normal--17-*-*-*-m-*-iso10646-1
 *savelines:	   5000
 *loginshell:	 true
