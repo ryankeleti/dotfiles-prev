@@ -7,10 +7,28 @@
 #                                           #
 #===========================================#
 */
+#define COL #0ccc68
 
-urxvt.font:    xft:terminus:pixelsize=12
-!urxvt.font:    xft:monaco:pixelsize=10
-xterm*font:	   -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+*.background:#000000
+*.foreground:COL
+*.color0:COL
+*.color1:COL
+*.color2:COL
+*.color3:COL
+*.color4:COL
+*.color5:COL
+*.color6:COL
+*.color7:COL
+*.color8:COL
+*.color9:COL
+*.color10:COL
+*.color11:COL
+*.color12:COL
+*.color13:COL
+*.color14:COL
+*.color15:COL
+
+*font:	       -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 *savelines:	   5000
 *loginshell:	 true
 *eightBitInput:false
@@ -29,13 +47,14 @@ urxvt.internalBorder:    10
 urxvt.depth:             32
 urxvt.shading:           10
 urxvt.iso14755:          0
-urxvt.colorIT:       #87afd7
-urxvt.colorBD:       #d3d3d3
-urxvt.colorUL:       #87afd7
+!urxvt.colorIT:       #87afd7
+!urxvt.colorBD:       #d3d3d3
+!urxvt.colorUL:       #87afd7
 urxvt.keysym.S-Up:   \033[1;2A
 urxvt.keysym.S-Down: \033[1;2B
 urxvt.keysym.S-Left: \033[1;5D
 urxvt.keysym.S-Right:\033[1;5C
+#if 0
 xft.autohint:  0
 xft.antialias: 1
 xft.hinting:   1
@@ -43,9 +62,6 @@ xft.hintstyle: hintslight
 xft.lcdfilter: lcddefault
 xft.rgba:      rgb
 xft.dpi:       96 
-
-*.background:#000000
-*.foreground:#ffffff
 
 #if 0
 *.borderColor:#1d1d1d
@@ -76,7 +92,7 @@ xft.dpi:       96
 
 *color7:#e0e2e0
 *color15:#afb0af
-
+#endif
 #if 0 
 #define gold   #ffeeaa
 #define gold__ #eee586
