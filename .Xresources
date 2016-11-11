@@ -28,8 +28,7 @@
 *.color14:COL
 *.color15:COL
 
-!xterm*font:	   -xos4-terminus-medium-r-normal--14-*-72-72-c-60-iso10646-1
-!*font:	       -misc-apl385\ unicode-medium-r-normal--17-*-*-*-m-*-iso10646-1
+!*font:	   -xos4-terminus-medium-r-normal--14-*-72-72-c-60-iso10646-1
 *savelines:	   5000
 *loginshell:	 true
 *eightBitInput:false
