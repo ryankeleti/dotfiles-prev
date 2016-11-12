@@ -12,7 +12,7 @@ PS1='[\u@\h \W]\$ '
 #PS1="[$(hostname|cut -b-2)@\h \[\033[33m\]§\W\[\033[0m\] $(acpi|tr ' ' '\n'|grep '%'|tr -d '%,')]\$  "
 getbat () { acpi|tr ' ' '\n'|grep '%'|tr -d '%,';}
 #PS1="[$(hostname|cut -b-2)@\h \[\033[33m\]§\W\[\033[0m\] $(getbat)]\$  "
-PS1='\h: Δ\W \u »>  '
+PS1='\h: \W \u$  '
 
 HISTFILE=~/.histfile;HISTFILESIZE=;HISTCONTROL="erasedups:ignoreboth:ignorespace"
 

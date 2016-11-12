@@ -11,6 +11,7 @@
 
 *.background:#000000
 *.foreground:COL
+*.cursorColor:#e0e2e0
 *.color0:COL
 *.color1:COL
 *.color2:COL

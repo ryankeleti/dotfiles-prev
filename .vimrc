@@ -16,7 +16,7 @@ no nn :se nocin noai
 "nmap <Left> <NOP>
 "nmap <Right> <NOP>
 
-sy off
+sy on
 filet on
 filet plugin indent on
 au FileType c setl et sw=2 sts=2 
@@ -28,7 +28,7 @@ au FileType markdown setl wrap
 "colo hybrid_e7
 "colo gruvbox
 "colo bnw
-"colo apprentice
+colo apprentice
 
 "se nohlsearch
 "se noincsearch
