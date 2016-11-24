@@ -44,6 +44,7 @@ alias apl='apl --noColor'
 #=========================================================#
 
 if [ "$TERM" = "linux" ]; then
+  setfont /usr/share/kbd/consolefonts/ter-114n.psf.gz
   echo -en "\e]P0232323"
   echo -en "\e]P82B2B2B"
   echo -en "\e]P1D75F5F"
@@ -72,37 +73,4 @@ files=$HOME/dotfiles
 #unset HISTFILE
 #complete -W "\`grep -oE '^[a-zA-Z0-9_-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9_-]*$//'\`" make
 cd
-
-#α
-#β
-#γ Γ
-#δ Δ
-#η
-#ω Ω
-#π Π
-#σ Σ
-#ξ Ξ
-#ν
-#μ
-#θ Θ
-#κ
-#λ Λ
-#ρ
-#τ
-#φ Φ
-#χ
-#ζ
-#------
-#×
-#±
-#¬
-#»
-#«
-#≥
-#≤
-#°
-#¡!
-#å
-#ß
-#¿?
 

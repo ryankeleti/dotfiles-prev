@@ -11,6 +11,8 @@ no qq :q
 no \\\ :sy off
 no \\ :sy on
 no nn :se nocin noai
+no co :colo apprentice
+no oc :colo gotham
 "nmap <Up> <NOP>
 "nmap <Down> <NOP>
 "nmap <Left> <NOP>
@@ -29,6 +31,7 @@ au FileType markdown setl wrap
 "colo gruvbox
 "colo bnw
 colo apprentice
+"colo desert
 
 "se nohlsearch
 "se noincsearch

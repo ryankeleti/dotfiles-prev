@@ -7,8 +7,26 @@
 #                                           #
 #===========================================#
 */
+    *.foreground: #BCBCBC
+    *.background: #262626
+    *.color0:     #1C1C1C
+    *.color8:     #444444
+    *.color1:     #AF5F5F
+    *.color9:     #FF8700
+    *.color2:     #5F875F
+    *.color10:    #87AF87
+    *.color3:     #87875F
+    *.color11:    #FFFFAF
+    *.color4:     #5F87AF
+    *.color12:    #8FAFD7
+    *.color5:     #5F5F87
+    *.color13:    #8787AF
+    *.color6:     #5F8787
+    *.color14:    #5FAFAF
+    *.color7:     #6C6C6C
+    *.color15:    #FFFFFF
+#if 0
 #define COL #0ccc68
-
 *.background:#000000
 *.foreground:COL
 *.cursorColor:#e0e2e0
@@ -28,8 +46,8 @@
 *.color13:COL
 *.color14:COL
 *.color15:COL
-
-!*font:	   -xos4-terminus-medium-r-normal--14-*-72-72-c-60-iso10646-1
+#endif
+*font:	   -xos4-terminus-medium-r-normal--14-*-72-72-c-60-iso10646-1
 *savelines:	   5000
 *loginshell:	 true
 *eightBitInput:false
