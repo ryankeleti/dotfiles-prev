@@ -12,7 +12,7 @@ no \\\ :sy off
 no \\ :sy on
 no nn :se nocin noai
 no co :colo apprentice
-no oc :colo gotham
+no oc :colo gotham256
 "nmap <Up> <NOP>
 "nmap <Down> <NOP>
 "nmap <Left> <NOP>

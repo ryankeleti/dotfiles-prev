@@ -12,7 +12,8 @@ PS1='[\u@\h \W]\$ '
 #PS1="[$(hostname|cut -b-2)@\h \[\033[33m\]§\W\[\033[0m\] $(acpi|tr ' ' '\n'|grep '%'|tr -d '%,')]\$  "
 getbat () { acpi|tr ' ' '\n'|grep '%'|tr -d '%,';}
 #PS1="[$(hostname|cut -b-2)@\h \[\033[33m\]§\W\[\033[0m\] $(getbat)]\$  "
-PS1='\h: \W \u$  '
+#PS1='\h: \W \u$  '
+PS1='\W |  '
 
 HISTFILE=~/.histfile;HISTFILESIZE=;HISTCONTROL="erasedups:ignoreboth:ignorespace"
 
@@ -22,7 +23,7 @@ bind -x '"\C-n": clear && printf "\033[3J"'
 
 #=========================================================#
 alias c='cd ~/c'
-alias e='cd ~/c/src/euler'
+alias e='cd ~/c/math/euler'
 alias s='cd src'
 alias qq='exit'
 alias rm='rm -i'
